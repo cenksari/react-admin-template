@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
+
+::selection {
+  color: #111111;
+  background: #dadada;
+}
+
+html, body, input, select, button, div, span, p, ul, li, p, h1, h2, h3, h4, h5, h6, em, strong, a, table, tr, th, td, img, svg {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  color: #000000;
+  appearance: none;
+  font-size: 1.02em;
+  list-style-type: none;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  user-select: none;
+  margin-bottom: 20px;
+  --webkit-user-select: none;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+a, input, textarea, select, button {
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.material-symbols-outlined {
+  user-select: none;
+  --webkit-user-select: none;
+}
+
+.site-frame {
+  margin: 0 auto;
+  max-width: 1500px;
+  border-radius: 10px;
+  padding-bottom: 20px;
+  background-color: #ffffff;
+  box-shadow:
+    0 4px 6px -4px rgba(0, 0, 0, 0.1),
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(17, 24, 39, 0.05);
+}
+
+.container {
+  padding: 0 20px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.flex-inline {
+  display: inline-flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-h-center {
+  justify-content: center;
+}
+
+.flex-v-center {
+  align-items: center;
+}
+
+.flex-space-between {
+  justify-content: space-between;
+}
+
+.no-select {
+  user-select: none;
+  --webkit-user-select: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.button {
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: 600;
+  user-select: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  --webkit-user-select: none;
+  background-color: #000000;
+}
+
+.button:active {
+  background-color: #222222;
+}
+
+.input {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid #dadada;
+}
+
+.input::placeholder {
+  user-select: none;
+  --webkit-user-select: none;
+}
+
+.input-group input {
+  margin-right: 10px;
+}
+
+header {
+  padding: 20px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #dadada;
+}
+
+.header-menu {
+  padding: 10px;
+  min-width: 250px;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid #dadada;
+}
+
+.header-menu:active {
+  background-color: #f5f5f5;
+}
+
+.header-links {
+  padding-left: 10px;
+}
+
+.header-links a {
+  margin: 0 10px;
+  color: #333333;
+  font-weight: 600;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.header-links a:hover {
+  text-decoration: underline;
+}
+
+.user-photo {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  border-radius: 50em;
+}
+
+.button-group {
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.button-group li {
+  padding: 8px 15px;
+}
+
+.button-group a {
+  color: #999999;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.button-group a:hover {
+  color: #000000;
+}
+
+.button-group li.active {
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.button-group li.active a {
+  color: #000000;
+  pointer-events: none;
+}
+
+.box-container {
+  gap: 20px;
+  display: grid;
+  padding: 10px 0;
+}
+
+.box-container-1 {
+  grid-template-columns: 1fr;
+}
+
+.box-container-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.box-container-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.box-container-4 {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.box-inner {
+  flex-grow: 1;
+  border-radius: 10px;
+  border: 1px solid #dadada;
+}
+
+.box-header {
+  padding: 25px 25px 0 25px;
+}
+
+.box-title {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.data {
+  font-size: 2em;
+  padding: 0 25px;
+  font-weight: 600;
+}
+
+.muted {
+  color: #999999;
+  padding: 0 25px 15px 25px;
+}
+
+.content {
+  padding: 0 25px 25px 25px;
+}
