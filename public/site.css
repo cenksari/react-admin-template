@@ -39,6 +39,12 @@ a, input, textarea, select, button {
   background-color: transparent;
 }
 
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .material-symbols-outlined {
   user-select: none;
   --webkit-user-select: none;
@@ -70,6 +76,14 @@ a, input, textarea, select, button {
 
 .flex-end {
   justify-content: flex-end;
+}
+
+.flex-gap {
+  gap: 15px;
+}
+
+.flex-grow {
+  flex-grow: 1;
 }
 
 .flex-inline {
@@ -184,6 +198,10 @@ header {
   border-radius: 50em;
 }
 
+.user-photo.no-margin {
+  margin: 0;
+}
+
 .button-group {
   padding: 5px;
   margin-bottom: 10px;
@@ -267,4 +285,99 @@ header {
 
 .content {
   padding: 0 25px 25px 25px;
+}
+
+.radio {
+  margin: 0;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  display: inline-block;
+}
+
+.radio input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.radio-description {
+  font-size: 0.9em;
+  margin-left: 10px;
+}
+
+.radio .slider {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  transition: 0.4s;
+  position: absolute;
+  background-color: #dadada;
+}
+
+.radio .slider:before {
+  transition: 0.4s;
+  position: absolute;
+  background-color: transparent;
+}
+
+.radio .slider.round {
+  border-radius: 5px;
+}
+
+.radio.blue input:checked + .slider {
+  background-color: #000000;
+}
+
+.radio input:checked + .slider:before {
+  content: '\e876';
+  font-size: 0.8em;
+  color: #ffffff;
+  font-family: 'Material Symbols Outlined';
+}
+
+.message {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dadada;
+}
+
+.message:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.scroller {
+  overflow: auto;
+  max-height: 365px;
+}
+
+.scroller::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 5px;
+}
+
+.scroller::-webkit-scrollbar-track {
+  width: 10px;
+  border-radius: 5px;
+}
+
+.scroller::-webkit-scrollbar-thumb {
+  width: 10px;
+  border-radius: 5px;
+  background-color: #666666;
+}
+
+.scroller::-webkit-scrollbar-thumb:window-inactive {
+  border-radius: 5px;
+  background-color: #666666;
+}
+
+footer {
+  color: #555555;
+  margin: 30px auto;
+  text-align: center;
 }

@@ -9,7 +9,7 @@ const Heading = ({ text, children }: IProps): React.JSX.Element => {
   return (
     <div className='flex flex-v-center flex-space-between'>
       <h1>{text}</h1>
-      <div className='input-group'>
+      <div className='input-group flex'>
         {children}
       </div>
     </div>

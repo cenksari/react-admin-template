@@ -9,11 +9,11 @@ import Box from './components/Containers/Box';
 import Input from './components/Forms/Input';
 import Button from './components/Forms/Button';
 import Master from './components/Layout/Master';
-import Header from './components/Header/Header';
 import Heading from './components/Headings/Heading';
 import Container from './components/Containers/Container';
 import ButtonGroup from './components/ButtonGroup/ButtonGroup';
 import BoxContainer from './components/Containers/BoxContainer';
+import MessageLine from './components/Messages/MessageLine';
 
 const options: ApexOptions = {
   stroke: {
@@ -88,8 +88,6 @@ const series2 = [{
 const App = (): React.JSX.Element => {
   return (
     <Master>
-      <Header />
-
       <Container>
         <Heading text='Dashboard'>
           <Input
@@ -143,7 +141,15 @@ const App = (): React.JSX.Element => {
 
         <BoxContainer boxes={2}>
           <Box type='multi' title='Messages' icon='message'>
-            <div className='content'>deneme</div>
+            <div className='content scroller'>
+              <MessageLine from='Cenk' image='https://i.pravatar.cc/100?img=1' subject='Thank you' />
+              <MessageLine from='Buğra' image='https://i.pravatar.cc/100?img=2' subject='Complaint' />
+              <MessageLine from='Ayşe' image='https://i.pravatar.cc/100?img=3' subject='Returns' />
+              <MessageLine from='Can' image='https://i.pravatar.cc/100?img=4' subject='Complaint' />
+              <MessageLine from='Gül' image='https://i.pravatar.cc/100?img=5' subject='Delivery' />
+              <MessageLine from='James' image='https://i.pravatar.cc/100?img=6' subject='Guarantee' />
+              <MessageLine from='Adrian' image='https://i.pravatar.cc/100?img=7' subject='Other' />
+            </div>
           </Box>
 
           <Box type='multi' title='Traffic sources' icon='traffic'>

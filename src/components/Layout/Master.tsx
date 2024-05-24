@@ -1,14 +1,21 @@
 import React from 'react'
 
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+
 interface IProps {
   children: React.ReactNode;
 }
 
 const Master = ({ children }: IProps): React.JSX.Element => {
   return (
-    <div className='site-frame'>
-      {children}
-    </div>
+    <>
+      <div className='site-frame'>
+        <Header />
+        {children}
+      </div>
+      <Footer />
+    </>
   )
 }
 

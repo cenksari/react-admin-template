@@ -13,8 +13,8 @@ const Header = (): React.JSX.Element => {
         <Menu />
 
         <div className='header-links flex flex-1'>
-          <Link to='/'>Overview</Link>
-          <Link to='/'>Subscribers</Link>
+          <Link to='/'>Products</Link>
+          <Link to='/'>Orders</Link>
           <Link to='/'>Settings</Link>
         </div>
 
