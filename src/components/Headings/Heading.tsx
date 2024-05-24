@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 interface IProps {
   text: string;
@@ -7,7 +7,7 @@ interface IProps {
 
 const Heading = ({ text, children }: IProps): React.JSX.Element => {
   return (
-    <div className='flex flex-v-center flex-space-between'>
+    <div className='flex flex-v-center flex-space-between heading'>
       <h1>{text}</h1>
       <div className='input-group flex'>
         {children}
