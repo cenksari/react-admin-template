@@ -6,7 +6,7 @@ interface IProps {
 }
 
 const Dropdown = ({ color, children }: IProps): React.JSX.Element => (
-  <div className={`dropdown ${color}`}>{children}</div>
+  <div className={`dropdown no-select ${color}`}>{children}</div>
 );
 
 export default Dropdown;

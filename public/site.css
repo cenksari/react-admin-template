@@ -607,6 +607,10 @@ footer {
   background-color: #3e4649;
 }
 
+.table-containment {
+  overflow: auto;
+}
+
 .table {
   width: 100%;
   background-color: #ffffff;
@@ -733,5 +737,38 @@ footer {
 @media (max-width: 500px) {
   html, body {
     padding: 0;
+  }
+
+  .site-frame {
+    padding-bottom: 10px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .box-header {
+    padding: 15px 15px 0 15px;
+  }
+
+  .data {
+    padding: 0 15px;
+  }
+
+  .muted {
+    padding: 0 15px 15px 15px;
+  }
+
+  .content {
+    padding: 0 15px 15px 15px;
+  }
+
+  footer {
+    display: none;
+  }
+
+  .button-group {
+    overflow: auto;
+    max-width: 100%;
   }
 }
