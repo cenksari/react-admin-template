@@ -26,10 +26,10 @@ const MessageLine = ({ id, from, image, subject }: IProps): React.JSX.Element =>
     <div>
       <div className='cover user-photo no-margin' style={{ backgroundImage: `url('${image}')` }} />
     </div>
-    <div className='flex-grow'>
+    <div className='flex flex-v-center flex-grow'>
       <Link to={`/message/${id}`}>{subject}</Link>
-      {' '}
-      from {from}
+      <span className='material-symbols-outlined from'>people</span>
+      <strong>{from}</strong>
     </div>
     <div className='flex flex-gap'>
       <button type='button' className='pointer'>

@@ -347,6 +347,7 @@ header {
 }
 
 .message {
+  font-size: 0.9em;
   margin-bottom: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid #dadada;
@@ -356,6 +357,11 @@ header {
   margin-bottom: 0;
   padding-bottom: 0;
   border-bottom: none;
+}
+
+.message .from {
+  margin: 0 10px;
+  color: #999999;
 }
 
 .scroller {
