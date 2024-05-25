@@ -7,16 +7,14 @@ interface IProps {
   children: React.ReactNode;
 }
 
-const Master = ({ children }: IProps): React.JSX.Element => {
-  return (
-    <>
-      <div className='site-frame'>
-        <Header />
-        {children}
-      </div>
-      <Footer />
-    </>
-  )
-}
+const Master = ({ children }: IProps): React.JSX.Element => (
+  <>
+    <div className='site-frame'>
+      <Header />
+      {children}
+    </div>
+    <Footer />
+  </>
+);
 
 export default Master;

@@ -16,7 +16,7 @@ const Menu = (): React.JSX.Element => {
 
   return (
     <div ref={wrapperRef} className='header-dropdown'>
-      <div className='header-menu flex flex-1 flex-v-center flex-space-between pointer no-select' onClick={() => setDropdown(!dropdown)}>
+      <div className='header-menu flex flex-grow flex-v-center flex-space-between pointer no-select' onClick={() => setDropdown(!dropdown)}>
         <span className='value'>Dashboard</span>
         <span className='material-symbols-outlined'>expand_all</span>
       </div>

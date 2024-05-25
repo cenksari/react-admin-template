@@ -14,6 +14,7 @@ html, body, input, select, button, div, span, p, ul, li, p, h1, h2, h3, h4, h5, 
   color: #000000;
   appearance: none;
   font-size: 1.02em;
+  font-style: normal;
   list-style-type: none;
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
@@ -80,6 +81,10 @@ button {
 
 .flex-gap {
   gap: 15px;
+}
+
+.flex-gap-small {
+  gap: 5px;
 }
 
 .flex-grow {
@@ -152,14 +157,6 @@ strong {
   --webkit-user-select: none;
 }
 
-.input-group form {
-  display: flex;
-}
-
-.input-group input {
-  margin-right: 10px;
-}
-
 header {
   padding: 20px 0;
   margin-bottom: 20px;
@@ -184,7 +181,6 @@ header {
 }
 
 .header-links a {
-  margin: 0 10px;
   color: #333333;
   font-weight: 600;
   display: inline-block;
@@ -202,12 +198,7 @@ header {
 .user-photo {
   width: 40px;
   height: 40px;
-  margin: 0 10px;
   border-radius: 50em;
-}
-
-.user-photo.no-margin {
-  margin: 0;
 }
 
 .button-group {
@@ -431,14 +422,16 @@ footer {
   justify-content: center;
 }
 
-.badge span {
-  font-size: 1.1em;
-  margin-right: 10px;
+.badge em {
+  font-size: 1em;
 }
 
 .badge.dark {
-  color: #ffffff;
   background-color: #222222;
+}
+
+.badge.dark em {
+  color: #ffffff;
 }
 
 .badge.light {

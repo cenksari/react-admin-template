@@ -24,7 +24,7 @@ const MessageLine = ({ id, from, image, subject }: IProps): React.JSX.Element =>
       <Checkbox name={`cb-${id}`} checked={state} onChange={handleCheckboxChange} />
     </div>
     <div>
-      <div className='cover user-photo no-margin' style={{ backgroundImage: `url('${image}')` }} />
+      <div className='cover user-photo' style={{ backgroundImage: `url('${image}')` }} />
     </div>
     <div className='flex flex-v-center flex-grow'>
       <Link to={`/message/${id}`}>{subject}</Link>

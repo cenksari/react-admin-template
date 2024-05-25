@@ -11,14 +11,12 @@ interface IProps {
   }[];
 }
 
-const ButtonGroup = ({ items }: IProps): React.JSX.Element => {
-  return (
-    <ul className='button-group flex-inline no-select'>
-      {items.map((item) => (
-        <ButtonGroupItem key={item.id} url={item.url} text={item.text} active={item.active} />
-      ))}
-    </ul>
-  );
-};
+const ButtonGroup = ({ items }: IProps): React.JSX.Element => (
+  <ul className='button-group flex-inline no-select'>
+    {items.map((item) => (
+      <ButtonGroupItem key={item.id} url={item.url} text={item.text} active={item.active} />
+    ))}
+  </ul>
+);
 
 export default ButtonGroup;

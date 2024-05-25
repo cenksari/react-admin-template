@@ -14,15 +14,13 @@ interface IProps {
   stock: number;
 }
 
-const Product = ({ url, name, price, image, stock}: IProps): React.JSX.Element => {
-  return (
-    <Link to={url} className='product'>
-      <div className='cover image' style={{ backgroundImage: `url('${image}')` }} />
-      <span className='name'>{name}</span>
-      <span className='price'>{formatCurrency(price)}</span>
-      <Stock quantity={stock} />
-    </Link>
-  );
-};
+const Product = ({ url, name, price, image, stock}: IProps): React.JSX.Element => (
+  <Link to={url} className='product'>
+    <div className='cover image' style={{ backgroundImage: `url('${image}')` }} />
+    <span className='name'>{name}</span>
+    <span className='price'>{formatCurrency(price)}</span>
+    <Stock quantity={stock} />
+  </Link>
+);
 
 export default Product;
