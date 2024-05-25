@@ -29,6 +29,7 @@ const Menu = (): React.JSX.Element => {
           <DropdownItem url='/products' text='Products' />
           <DropdownItem url='/messages' text='Messages' />
           <DropdownItem url='/comments' text='Comments' />
+          <DropdownItem url='/statistics' text='Statistics' />
           <hr />
           <DropdownItem url='/settings' text='Settings' />
         </Dropdown>

@@ -111,7 +111,7 @@ const App = (): React.JSX.Element => {
             </Sparklines>
           </Box>
 
-          <Box type='multi' title='Subscribers' icon='subscriptions'>
+          <Box type='multi' title='Users' icon='subscriptions'>
             <p className='data'>1809</p>
             <p className='muted'>+64.5% from last month</p>
             <Sparklines data={[10, 3, 4, 10, 10, 20]} height={40}>
