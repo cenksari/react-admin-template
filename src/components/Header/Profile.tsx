@@ -30,7 +30,7 @@ const Profile = ({ name, picture }: IProps): React.JSX.Element => {
         <Link to='/members/notifications' className='flex'>
           <span className='material-symbols-outlined'>notifications</span>
         </Link>
-        <div ref={wrapperRef} className='flex flex-v-center flex-gap-small'>
+        <div ref={wrapperRef} className='flex flex-v-center flex-gap-medium'>
           <Link to='/members/profile'>
             <div className='user-photo cover' style={{ backgroundImage: `url('${picture}')` }} />
           </Link>

@@ -87,6 +87,10 @@ button {
   gap: 5px;
 }
 
+.flex-gap-medium {
+  gap: 10px;
+}
+
 .flex-grow {
   flex-grow: 1;
 }
