@@ -447,3 +447,83 @@ footer {
 .spacing {
   height: 20px;
 }
+
+.dropdown {
+  top: 95px;
+  opacity: 0;
+  right: 40px;
+  z-index: 9999;
+  overflow: hidden;
+  min-width: 200px;
+  position: absolute;
+  border-radius: 10px;
+  display: inline-block;
+  animation: fadeIn 0.5s;
+  background-color: #ffffff;
+  border: 1px solid #dadada;
+  animation-fill-mode: forwards;
+  box-shadow:
+    0 4px 6px -4px rgba(0, 0, 0, 0.1),
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(17, 24, 39, 0.05);
+}
+
+.dropdown a,
+.dropdown button {
+  margin: 0;
+  width: 100%;
+  line-height: 1;
+  display: block;
+  text-align: left;
+  border-radius: 0;
+  padding: 13px 20px;
+  text-decoration: none;
+}
+
+.dropdown a:hover,
+.dropdown button:hover {
+  color: #ffffff;
+}
+
+.dropdown a.active,
+.dropdown button.active {
+  color: #ffffff;
+  pointer-events: none;
+}
+
+.dropdown a:first-child,
+.dropdown button:first-child {
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+}
+
+.dropdown a:last-child,
+.dropdown button:last-child {
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+}
+
+.dropdown hr {
+  margin: 0;
+  height: 0;
+  padding: 0;
+  opacity: 0.5;
+  border: 1px solid #dadada;
+}
+
+.dropdown.gray a {
+  color: #111111;
+}
+
+.dropdown.gray a:hover,
+.dropdown.gray a.active,
+.dropdown.gray button:hover,
+.dropdown.gray button.active {
+  color: #ffffff;
+  background-color: #3e4649;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
