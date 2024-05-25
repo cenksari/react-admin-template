@@ -98,19 +98,19 @@ const buttonGroup = [
   {
     id: 2,
     text: 'Focused',
-    url: '/focused',
+    url: '/dashboard/focused',
     active: false,
   },
   {
     id: 3,
     text: 'Detailed',
-    url: '/detailed',
+    url: '/dashboard/detailed',
     active: false,
   },
   {
     id: 4,
     text: 'Financial',
-    url: '/financial',
+    url: '/dashboard/financial',
     active: false,
   },
 ];

@@ -31,7 +31,7 @@ const Profile = ({ name, picture }: IProps): React.JSX.Element => {
           <span className='material-symbols-outlined'>notifications</span>
         </Link>
         <div ref={wrapperRef} className='flex flex-v-center flex-gap-medium'>
-          <Link to='/members/profile'>
+          <Link to='/members/account'>
             <div className='user-photo cover' style={{ backgroundImage: `url('${picture}')` }} />
           </Link>
           <button className='flex flex-v-center pointer' onClick={() => setDropdown(!dropdown)}>
