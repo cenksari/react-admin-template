@@ -27,7 +27,9 @@ const Profile = ({ name, picture }: IProps): React.JSX.Element => {
         <Link to='/members/notifications' className='flex'>
           <span className='material-symbols-outlined'>notifications</span>
         </Link>
-        <div className='user-photo cover pointer' style={{ backgroundImage: `url('${picture}')` }} />
+        <Link to='/members/profile'>
+          <div className='user-photo cover' style={{ backgroundImage: `url('${picture}')` }} />
+        </Link>
         <div className='flex flex-v-center pointer' onClick={() => setDropdown(!dropdown)}>
           <strong>{name}</strong>
           <span className='material-symbols-outlined'>keyboard_arrow_down</span>
