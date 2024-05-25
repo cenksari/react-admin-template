@@ -104,7 +104,7 @@ const App = (): React.JSX.Element => {
 
         <BoxContainer boxes={4}>
           <Box type='multi' title='Orders' icon='shopping_cart'>
-            <p className='data'>€ 12305</p>
+            <p className='data'>£12305</p>
             <p className='muted'>+11.5% from last month</p>
             <Sparklines data={[5, 10, 5, 20, 8, 15]} height={40}>
               <SparklinesLine style={{ strokeWidth: 2, stroke: "#222222", fill: "none" }} />
@@ -178,7 +178,7 @@ const App = (): React.JSX.Element => {
               <Product
                 url='/product/1'
                 name='Nike Air Max Alpha Trainer 5'
-                price='€120'
+                price='£120'
                 image='https://static.nike.com/a/images/t_default/0dbef9d2-e69b-4df8-b52f-4e679d20e486/air-max-alpha-trainer-5-workout-shoes-rdbbk2.png'
                 stock={3}
               />
@@ -190,7 +190,7 @@ const App = (): React.JSX.Element => {
               <Product
                 url='/product/2'
                 name='Sony XZ75WL 4K Ultra HD HDR Smart TV'
-                price='€1499'
+                price='£1499'
                 image='https://sony.scene7.com/is/image/sonyglobalsolutions/TVFY23_X75WL_Primary-Image-1?$primaryshotPreset$&fmt=png-alpha&wid=515&hei=515&trf=trim'
                 stock={20}
               />
@@ -202,7 +202,7 @@ const App = (): React.JSX.Element => {
               <Product
                 url='/product/3'
                 name='Apple iPhone 15 Pro Max 256GB Titanium Black'
-                price='€1200'
+                price='£1200'
                 image='https://ee.co.uk/medias/iphone-15-pro-max-natural-titanium-desktop-detail-1-WebP-Format-488?context=bWFzdGVyfHJvb3R8Mjc4NTh8aW1hZ2Uvd2VicHxzeXMtbWFzdGVyL3Jvb3QvaDQ1L2gyYi8xMDA3MzgwNDcwMTcyNi9pcGhvbmUtMTUtcHJvLW1heC1uYXR1cmFsLXRpdGFuaXVtLWRlc2t0b3AtZGV0YWlsLTFfV2ViUC1Gb3JtYXQtNDg4fGFkN2Q0YWUwMDQ2NmIxYzg0ZGJjYTY2NTUwM2RjZWI4ZjUxYmJmOTM5NjI4OTEyNTVmY2ZiMDExYTE5NTFmYzg'
                 stock={0}
               />
@@ -214,7 +214,7 @@ const App = (): React.JSX.Element => {
               <Product
                 url='/product/4'
                 name='Dell UltraSharp 40 Curved Thunderbolt Monitor'
-                price='€1600'
+                price='£1600'
                 image='https://m.media-amazon.com/images/I/61xDLgFEJiL._AC_UF1000,1000_QL80_.jpg'
                 stock={10}
               />
