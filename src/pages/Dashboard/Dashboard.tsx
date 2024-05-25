@@ -88,6 +88,33 @@ const series2 = [{
   data: [7.3, 3.1, 4.0, 10.1, 8.0, 11.6, ],
 }];
 
+const buttonGroup = [
+  {
+    id: 1,
+    text: 'Overview',
+    url: '/',
+    active: true,
+  },
+  {
+    id: 2,
+    text: 'Focused',
+    url: '/focused',
+    active: false,
+  },
+  {
+    id: 3,
+    text: 'Detailed',
+    url: '/detailed',
+    active: false,
+  },
+  {
+    id: 4,
+    text: 'Financial',
+    url: '/financial',
+    active: false,
+  },
+];
+
 const Dashboard = (): React.JSX.Element => {
   return (
     <Master>
@@ -102,7 +129,7 @@ const Dashboard = (): React.JSX.Element => {
           </form>
         </Heading>
 
-        <ButtonGroup />
+        <ButtonGroup items={buttonGroup} />
 
         <BoxContainer boxes={4}>
           <Box type='multi' title='Orders' icon='shopping_cart'>

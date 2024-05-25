@@ -2,13 +2,21 @@ import React from 'react';
 
 import ButtonGroupItem from './ButtonGroupItem';
 
-const ButtonGroup = (): React.JSX.Element => {
+interface IProps {
+  items: {
+    id: number;
+    url: string;
+    text: string;
+    active?: boolean
+  }[];
+}
+
+const ButtonGroup = ({ items }: IProps): React.JSX.Element => {
   return (
     <ul className='button-group flex-inline no-select'>
-      <ButtonGroupItem url='/' text='Overview' active />
-      <ButtonGroupItem url='/focused' text='Focused' />
-      <ButtonGroupItem url='/detailed' text='Detailed' />
-      <ButtonGroupItem url='/financial' text='Financial' />
+      {items.map((item) => (
+        <ButtonGroupItem key={item.id} url={item.url} text={item.text} active={item.active} />
+      ))}
     </ul>
   );
 };
