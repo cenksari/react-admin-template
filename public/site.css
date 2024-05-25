@@ -262,19 +262,20 @@ header {
 }
 
 .button-group {
-  padding: 5px;
   margin-bottom: 10px;
   border-radius: 10px;
   background-color: #f5f5f5;
 }
 
 .button-group li {
-  padding: 8px 15px;
+  margin: 5px;
+  padding: 8px 10px;
 }
 
 .button-group a {
   color: #999999;
   font-weight: 600;
+  white-space: nowrap;
   text-decoration: none;
 }
 
@@ -495,7 +496,7 @@ footer {
 }
 
 .badge.white {
-  background-color: #ffffff;
+  background-color: transparent;
 }
 
 .badge.light {
@@ -606,9 +607,6 @@ footer {
   background-color: #3e4649;
 }
 
-.table-containment {
-}
-
 .table {
   width: 100%;
   background-color: #ffffff;
@@ -627,6 +625,8 @@ footer {
   height: 50px;
   font-weight: 600;
   text-align: left;
+  user-select: none;
+  --webkit-user-select: none;
   background-color: #f1f1f1;
   border-bottom: 1px solid #dddddd;
 }
@@ -654,5 +654,84 @@ footer {
   }
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width: 800px) {
+  html,
+  body,
+  header,
+  footer,
+  main,
+  section,
+  article,
+  aside,
+  nav,
+  form,
+  input,
+  select,
+  button,
+  textarea,
+  div,
+  span,
+  p,
+  i,
+  ul,
+  ol,
+  dl,
+  dt,
+  dd,
+  li,
+  p,
+  em,
+  strong,
+  a,
+  table,
+  tr,
+  th,
+  td,
+  img,
+  svg {
+    font-size: 1em;
+  }
+
+  .box-container-2,
+  .box-container-3,
+  .box-container-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .header-links {
+    display: none;
+  }
+
+  .scroller {
+    max-height: unset;
+  }
+
+  .heading {
+    flex-direction: column;
+  }
+
+  .heading h1 {
+    margin-bottom: 20px;
+  }
+
+  .input-group {
+    width: 100%;
+  }
+
+  .input-group .input {
+    flex-grow: 1;
+  }
+
+  .header-menu {
+    min-width: 140px;
+  }
+}
+
+@media (max-width: 500px) {
+  html, body {
+    padding: 0;
   }
 }
