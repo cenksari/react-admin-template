@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import Dropdown from '../Dropdown/Dropdown';
 import DropdownItem from '../Dropdown/DropdownItem';
 
@@ -22,9 +24,9 @@ const Profile = ({ name, picture }: IProps): React.JSX.Element => {
   return (
     <div ref={wrapperRef} className='header-user flex flex-1 flex-end'>
       <div className='flex flex-h-center flex-v-center'>
-        <div className='flex'>
-          <span className='material-symbols-outlined pointer'>notifications</span>
-        </div>
+        <Link to='/members/notifications' className='flex'>
+          <span className='material-symbols-outlined'>notifications</span>
+        </Link>
         <div className='user-photo cover pointer' style={{ backgroundImage: `url('${picture}')` }} />
         <div className='flex flex-v-center pointer' onClick={() => setDropdown(!dropdown)}>
           <strong>{name}</strong>

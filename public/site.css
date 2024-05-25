@@ -152,6 +152,10 @@ strong {
   --webkit-user-select: none;
 }
 
+.input-group form {
+  display: flex;
+}
+
 .input-group input {
   margin-right: 10px;
 }
@@ -189,6 +193,10 @@ header {
 
 .header-links a:hover {
   text-decoration: underline;
+}
+
+.header-user a {
+  text-decoration: none;
 }
 
 .user-photo {

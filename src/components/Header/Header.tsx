@@ -13,9 +13,9 @@ const Header = (): React.JSX.Element => {
         <Menu />
 
         <div className='header-links flex flex-1'>
-          <Link to='/'>Products</Link>
-          <Link to='/'>Orders</Link>
-          <Link to='/'>Settings</Link>
+          <Link to='/products'>Products</Link>
+          <Link to='/orders'>Orders</Link>
+          <Link to='/settings'>Settings</Link>
         </div>
 
         <Profile name='Cenk' picture='https://i.pravatar.cc/60?img=60' />

@@ -5,10 +5,10 @@ import ButtonGroupItem from './ButtonGroupItem';
 const ButtonGroup = (): React.JSX.Element => {
   return (
     <ul className='button-group flex-inline no-select'>
-      <ButtonGroupItem text='Overview' active />
-      <ButtonGroupItem text='Focused' />
-      <ButtonGroupItem text='Detailed' />
-      <ButtonGroupItem text='Financial' />
+      <ButtonGroupItem url='/' text='Overview' active />
+      <ButtonGroupItem url='/focused' text='Focused' />
+      <ButtonGroupItem url='/detailed' text='Detailed' />
+      <ButtonGroupItem url='/financial' text='Financial' />
     </ul>
   );
 };

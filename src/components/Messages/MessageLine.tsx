@@ -5,12 +5,13 @@ import { Link } from 'react-router-dom';
 import Checkbox from '../Forms/Checkbox';
 
 interface IProps {
+  id: string;
   from: string;
   image: string;
   subject: string;
 }
 
-const MessageLine = ({ from, image, subject }: IProps): React.JSX.Element => {
+const MessageLine = ({ id, from, image, subject }: IProps): React.JSX.Element => {
   const [state, setState] = React.useState<boolean>(false);
 
   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -20,13 +21,13 @@ const MessageLine = ({ from, image, subject }: IProps): React.JSX.Element => {
   return (
     <div className='message flex flex-gap flex-v-center flex-space-between'>
     <div>
-      <Checkbox name='message' checked={state} onChange={handleCheckboxChange} />
+      <Checkbox name={`cb-${id}`} checked={state} onChange={handleCheckboxChange} />
     </div>
     <div>
       <div className='cover user-photo no-margin' style={{ backgroundImage: `url('${image}')` }} />
     </div>
     <div className='flex-grow'>
-      <Link to='/'>{subject}</Link>
+      <Link to={`/message/${id}`}>{subject}</Link>
       {' '}
       from {from}
     </div>

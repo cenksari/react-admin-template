@@ -3,14 +3,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 interface IProps {
+  url: string;
   text: string;
   active?: boolean;
 }
 
-const ButtonGroupItem = ({ text, active = false}: IProps): React.JSX.Element => {
+const ButtonGroupItem = ({ url, text, active = false}: IProps): React.JSX.Element => {
   return (
     <li className={active ? 'active' : ''}>
-      <Link to='/'>{text}</Link>
+      <Link to={url}>{text}</Link>
     </li>
   )
 }
