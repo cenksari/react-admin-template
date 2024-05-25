@@ -46,6 +46,11 @@ button {
   justify-content: center;
 }
 
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
 .material-symbols-outlined {
   user-select: none;
   --webkit-user-select: none;
@@ -128,6 +133,10 @@ button {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.center {
+  text-align: center !important;
 }
 
 strong {
@@ -438,6 +447,10 @@ footer {
   color: #ffffff;
 }
 
+.badge.white {
+  background-color: #ffffff;
+}
+
 .badge.light {
   background-color: #f1f1f1;
 }
@@ -540,6 +553,48 @@ footer {
 .dropdown.gray button.active {
   color: #ffffff;
   background-color: #3e4649;
+}
+
+.table-containment {
+}
+
+.table {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.table tr {
+  position: relative;
+  border-bottom: 1px solid #dddddd;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+.table th {
+  height: 50px;
+  font-weight: 600;
+  text-align: left;
+  background-color: #f1f1f1;
+  border-bottom: 1px solid #dddddd;
+}
+
+.table th,
+.table td {
+  padding: 0 10px;
+  min-height: 60px;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.table .badge {
+  padding: 0;
+}
+
+.table .dropdown {
+  top: 50px;
+  min-width: 150px;
 }
 
 @keyframes fadeIn {

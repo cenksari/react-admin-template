@@ -9,6 +9,7 @@ import Box from '../../components/Containers/Box';
 import Input from '../../components/Forms/Input';
 import Button from '../../components/Forms/Button';
 import Master from '../../components/Layout/Master';
+import Spacer from '../../components/Spacer/Spacer';
 import Product from '../../components/Product/Product';
 import Heading from '../../components/Headings/Heading';
 import Container from '../../components/Containers/Container';
@@ -188,7 +189,7 @@ const Dashboard = (): React.JSX.Element => (
         </Box>
       </BoxContainer>
 
-      <div className='spacing' />
+      <Spacer />
 
       <Heading text='Top selling products'>
         <form className='flex flex-gap' noValidate>
