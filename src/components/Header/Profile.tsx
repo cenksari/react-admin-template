@@ -35,10 +35,10 @@ const Profile = ({ name, picture }: IProps): React.JSX.Element => {
       </div>
       {dropdown && (
         <Dropdown color='gray'>
-          <DropdownItem url='members/account' text='Account' />
-          <DropdownItem url='members/notifications' text='Notifications' />
+          <DropdownItem url='/members/account' text='Account' />
+          <DropdownItem url='/members/notifications' text='Notifications' />
           <hr />
-          <DropdownItem url='members/signout' text='Sign out' />
+          <DropdownItem url='/members/signout' text='Sign out' />
         </Dropdown>
       )}
     </div>

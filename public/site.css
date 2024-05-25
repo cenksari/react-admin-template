@@ -456,13 +456,21 @@ footer {
   height: 20px;
 }
 
-.dropdown {
+.header-user .dropdown {
   top: 95px;
-  opacity: 0;
   right: 40px;
+  min-width: 200px;
+}
+
+.header-dropdown .dropdown {
+  top: 95px;
+  min-width: 250px;
+}
+
+.dropdown {
+  opacity: 0;
   z-index: 9999;
   overflow: hidden;
-  min-width: 200px;
   position: absolute;
   border-radius: 10px;
   display: inline-block;

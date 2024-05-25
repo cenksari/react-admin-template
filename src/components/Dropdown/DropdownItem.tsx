@@ -9,7 +9,7 @@ interface IProps {
 }
 
 const DropdownItem = ({ url, text, active }: IProps): React.JSX.Element => (
-  <Link className={active === true ? 'active' : 'passive'} to={`/${url}`}>
+  <Link className={active === true ? 'active' : 'passive'} to={url}>
     {text}
   </Link>
 );
