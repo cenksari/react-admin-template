@@ -49,9 +49,10 @@ const UserRow = ({ id, name, email, image, country, status }: IProps): React.JSX
         <span className='material-symbols-outlined pointer' onClick={() => setDropdown(!dropdown)}>more_vert</span>
         {dropdown && (
           <Dropdown color='gray'>
-            <DropdownItem url={`/user/edit/${id}`} text='Edit' />
-            <DropdownItem url={`/user/profile/${id}`} text='View' />
-            <DropdownItem url={`/user/delete/${id}`} text='Delete' />
+            <DropdownItem icon='edit' url={`/user/edit/${id}`} text='Edit' />
+            <DropdownItem icon='visibility' url={`/user/profile/${id}`} text='View' />
+            <hr />
+            <DropdownItem icon='delete' url={`/user/delete/${id}`} text='Delete' />
           </Dropdown>
         )}
       </td>

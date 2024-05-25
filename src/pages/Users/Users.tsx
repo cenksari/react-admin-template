@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Table from '../../components/Tables/Table';
 import Input from '../../components/Forms/Input';
 import Button from '../../components/Forms/Button';
 import Master from '../../components/Layout/Master';
@@ -53,27 +54,22 @@ const Users = (): React.JSX.Element => (
 
       <Spacer />
 
-      <div className='table-containment'>
-        <table className='table'>
-          <thead>
-            <tr>
-              <th></th>
-              <th></th>
-              <th>Name</th>
-              <th>E-mail</th>
-              <th>Country</th>
-              <th className='center'>Status</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <UserRow id={1} name='Cenk SARI' email='cenk@cenksari.com' image='https://i.pravatar.cc/32?img=1' country='United Kingdom' status={true} />
-            <UserRow id={2} name='Cenk SARI' email='cenk@cenksari.com' image='https://i.pravatar.cc/32?img=2' country='United Kingdom' status={false} />
-            <UserRow id={3} name='Cenk SARI' email='cenk@cenksari.com' image='https://i.pravatar.cc/32?img=3' country='United Kingdom' status={true} />
-            <UserRow id={4} name='Cenk SARI' email='cenk@cenksari.com' image='https://i.pravatar.cc/32?img=4' country='United Kingdom' status={false} />
-          </tbody>
-        </table>
-      </div>
+      <Table header={
+        <tr>
+          <th></th>
+          <th></th>
+          <th>Name</th>
+          <th>E-mail</th>
+          <th>Country</th>
+          <th className='center'>Status</th>
+          <th></th>
+        </tr>
+      }>
+        <UserRow id={1} name='Cenk SARI' email='cenk@cenksari.com' image='https://i.pravatar.cc/32?img=1' country='United Kingdom' status={true} />
+        <UserRow id={2} name='Cenk SARI' email='cenk@cenksari.com' image='https://i.pravatar.cc/32?img=2' country='United Kingdom' status={false} />
+        <UserRow id={3} name='Cenk SARI' email='cenk@cenksari.com' image='https://i.pravatar.cc/32?img=3' country='United Kingdom' status={true} />
+        <UserRow id={4} name='Cenk SARI' email='cenk@cenksari.com' image='https://i.pravatar.cc/32?img=4' country='United Kingdom' status={false} />
+      </Table>
     </Container>
   </Master>
 );
