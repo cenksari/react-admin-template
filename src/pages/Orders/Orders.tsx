@@ -5,6 +5,7 @@ import Table from '../../components/Tables/Table';
 import Button from '../../components/Forms/Button';
 import Master from '../../components/Layout/Master';
 import Spacer from '../../components/Spacer/Spacer';
+import Paging from '../../components/Paging/Paging';
 import OrderRow from '../../components/Tables/OrderRow';
 import Heading from '../../components/Headings/Heading';
 import Container from '../../components/Containers/Container';
@@ -75,9 +76,11 @@ const Orders = (): React.JSX.Element => (
         </tr>
       }>
         {orders && orders.map((order) => (
-          <OrderRow id={order.id} date={order.date} user={order.user} products={order.products} totalPrice={order.totalPrice} status={order.status} />
+          <OrderRow key={order.id} id={order.id} date={order.date} user={order.user} products={order.products} totalPrice={order.totalPrice} status={order.status} />
         ))}
       </Table>
+
+      <Paging url='/orders' pageSize={30} totalRows={200} currentPage={1} />
     </Container>
   </Master>
 );

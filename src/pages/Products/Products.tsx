@@ -4,6 +4,7 @@ import Box from '../../components/Containers/Box';
 import Input from '../../components/Forms/Input';
 import Button from '../../components/Forms/Button';
 import Master from '../../components/Layout/Master';
+import Paging from '../../components/Paging/Paging';
 import Product from '../../components/Product/Product';
 import Heading from '../../components/Headings/Heading';
 import Container from '../../components/Containers/Container';
@@ -76,6 +77,8 @@ const Products = (): React.JSX.Element => (
           </Box>
         ))}
       </BoxContainer>
+
+      <Paging url='/products' pageSize={30} totalRows={200} currentPage={1} />
     </Container>
   </Master>
 );

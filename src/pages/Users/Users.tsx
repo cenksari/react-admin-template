@@ -5,6 +5,7 @@ import Input from '../../components/Forms/Input';
 import Button from '../../components/Forms/Button';
 import Master from '../../components/Layout/Master';
 import Spacer from '../../components/Spacer/Spacer';
+import Paging from '../../components/Paging/Paging';
 import UserRow from '../../components/Tables/UserRow';
 import Heading from '../../components/Headings/Heading';
 import Container from '../../components/Containers/Container';
@@ -71,6 +72,8 @@ const Users = (): React.JSX.Element => (
           <UserRow key={user.id} id={user.id} name={user.name} email={user.email} image={user.image} country={user.country} status={user.status} />
         ))}
       </Table>
+
+      <Paging url='/users' pageSize={30} totalRows={200} currentPage={1} />
     </Container>
   </Master>
 );
