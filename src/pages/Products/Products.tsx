@@ -62,7 +62,7 @@ const Products = (): React.JSX.Element => (
 
       <BoxContainer boxes={4}>
         {products && products.map((product) => (
-          <Box type='multi' title='Shoes' icon='category' key={product.id}>
+          <Box type='multi' title={product.category} icon='category' key={product.id}>
             <div className='content'>
               <Product
                 url={`/product/${product.id}`}

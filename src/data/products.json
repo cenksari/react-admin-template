@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "name": "Nike Air Max Alpha Trainer 5 Black",
-    "price": 120,
-    "image": "https://static.nike.com/a/images/t_default/0dbef9d2-e69b-4df8-b52f-4e679d20e486/air-max-alpha-trainer-5-workout-shoes-rdbbk2.png",
-    "stock": 3,
-    "category": "Shoes",
+    "name": "Bose Dolby 3 Channels Soundbar",
+    "price": 199,
+    "image": "https://media.currys.biz/i/currysprod/10207493_004?$l-large$&fmt=auto",
+    "stock": 32,
+    "category": "Electronics",
     "orders": 3
   },
   {
@@ -21,7 +21,7 @@
     "id": 3,
     "name": "Apple iPhone 15 Pro Max 256GB Titanium Black",
     "price": 1200,
-    "image": "https://ee.co.uk/medias/iphone-15-pro-max-natural-titanium-desktop-detail-1-WebP-Format-488?context=bWFzdGVyfHJvb3R8Mjc4NTh8aW1hZ2Uvd2VicHxzeXMtbWFzdGVyL3Jvb3QvaDQ1L2gyYi8xMDA3MzgwNDcwMTcyNi9pcGhvbmUtMTUtcHJvLW1heC1uYXR1cmFsLXRpdGFuaXVtLWRlc2t0b3AtZGV0YWlsLTFfV2ViUC1Gb3JtYXQtNDg4fGFkN2Q0YWUwMDQ2NmIxYzg0ZGJjYTY2NTUwM2RjZWI4ZjUxYmJmOTM5NjI4OTEyNTVmY2ZiMDExYTE5NTFmYzg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFXN-B7cIYy8JSWzwUPGhso6GlZhoLBmjNZymt-wFEpg&s",
     "stock": 0,
     "category": "Phones",
     "orders": 42
@@ -34,5 +34,113 @@
     "stock": 10,
     "category": "Electronics",
     "orders": 11
+  },
+  {
+    "id": 5,
+    "name": "Asus ROG Strix GeForce RTX 4090 24GB Graphics Card",
+    "price": 1300,
+    "image": "https://webshop.asus.com/media/51/d1/35/1688058315/c09e7f612f07a9287a99423401ece4fc.png",
+    "stock": 6,
+    "category": "Computers",
+    "orders": 98
+  },
+  {
+    "id": 6,
+    "name": "NZXT Kraken Elite 240 RGB AIO CPU Liquid Cooler",
+    "price": 159,
+    "image": "https://m.media-amazon.com/images/I/51N3O--IiUL.jpg",
+    "stock": 44,
+    "category": "Computers",
+    "orders": 12
+  },
+  {
+    "id": 7,
+    "name": "Apple iPad Air 5th Gen Wi-Fi 64 GB Space Gray",
+    "price": 587,
+    "image": "https://comet.co.uk/cdn/shop/products/5e66ba8d9e71bef44ead9c5a255919b5.jpg?v=1710399913&width=700",
+    "stock": 13,
+    "category": "Tablets",
+    "orders": 99
+  },
+  {
+    "id": 8,
+    "name": "Presonus Eris E4.5 Studio Monitor",
+    "price": 159,
+    "image": "https://cdn11.bigcommerce.com/s-3by9a48r25/images/stencil/1280x1280/products/3167/5347/presonus_eris_e4_1__82696.1712671810.jpg?c=1",
+    "stock": 23,
+    "category": "HiFi",
+    "orders": 198
+  },
+  {
+    "id": 9,
+    "name": "Elgato Wave DX 24bits 96 kHz Microphone",
+    "price": 99,
+    "image": "https://media.ldlc.com/r1600/ld/products/00/05/98/48/LD0005984879.jpg",
+    "stock": 67,
+    "category": "Studio",
+    "orders": 4
+  },
+  {
+    "id": 10,
+    "name": "Audient EVO 4 External Sound Card",
+    "price": 110,
+    "image": "https://www.progear.eu/media/catalog/product/cache/3a812f1e3c5652206b25d1b1ef456f6d/a/u/audient_evo_4_3.png",
+    "stock": 34,
+    "category": "Studio",
+    "orders": 2
+  },
+  {
+    "id": 11,
+    "name": "Ergotron HX Heavy Monitor Arm",
+    "price": 285,
+    "image": "https://files.ekmcdn.com/a00616/images/ergotron-hx-heavy-monitor-arm-9039-p.webp",
+    "stock": 5,
+    "category": "Monitor Arms",
+    "orders": 7
+  },
+  {
+    "id": 12,
+    "name": "Logitech MX Master 3S Wireless Mouse",
+    "price": 99,
+    "image": "https://resource.logitech.com/w_800,c_lpad,ar_1:1,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/mice/mx-master-3s-business-wireless-mouse/gallery/mx-master-3s-for-business-gallery-1.png?v=1",
+    "stock": 25,
+    "category": "Accessories",
+    "orders": 204
+  },
+  {
+    "id": 13,
+    "name": "Apple 14 inch MacBook Pro M3 11 core CPU 14 core GPU",
+    "price": 1800,
+    "image": "https://s8j2v9n6.rocketcdn.me/wp-content/uploads/2024/01/5132_638405686150615565.jpeg",
+    "stock": 13,
+    "category": "Laptops",
+    "orders": 3
+  },
+  {
+    "id": 14,
+    "name": "Sennheiser HD 450 BT Audio Headphones",
+    "price": 119,
+    "image": "https://www.audilo.co.uk/10387-large_default/sennheiser-hd-450-bt-audio-headphones.jpg",
+    "stock": 34,
+    "category": "Headphones",
+    "orders": 4
+  },
+  {
+    "id": 15,
+    "name": "Dell UltraSharp WB7022 4K Webcam",
+    "price": 110,
+    "image": "https://m.media-amazon.com/images/I/71u8yMdId5L.jpg",
+    "stock": 5,
+    "category": "Webcams",
+    "orders": 7
+  },
+  {
+    "id": 16,
+    "name": "Apple HomePod Mini Smart Speaker",
+    "price": 101,
+    "image": "https://cdn.cs.1worldsync.com/7b/e7/7be72268-4f4e-4ab8-bb92-0db0b2807ff9.jpg",
+    "stock": 25,
+    "category": "Speakers",
+    "orders": 32
   }
 ]
