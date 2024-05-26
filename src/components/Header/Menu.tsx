@@ -1,11 +1,15 @@
 import React from 'react';
 
+import { useLocation } from 'react-router-dom';
+
 import Dropdown from '../Dropdown/Dropdown';
 import DropdownItem from '../Dropdown/DropdownItem';
 
 import useClickOutside from '../../hooks/useClickOutside';
 
 const Menu = (): React.JSX.Element => {
+  const location = useLocation();
+
   const wrapperRef = React.useRef<any>();
 
   const [dropdown, setDropdown] = React.useState<boolean>(false);
@@ -13,6 +17,10 @@ const Menu = (): React.JSX.Element => {
   useClickOutside(wrapperRef, () => {
     setDropdown(false);
   });
+
+  const { pathname } = location;
+
+  const splitLocation = pathname.split('/');
 
   return (
     <div ref={wrapperRef} className='header-dropdown'>
@@ -22,16 +30,16 @@ const Menu = (): React.JSX.Element => {
       </div>
       {dropdown && (
         <Dropdown color='gray'>
-          <DropdownItem url='/' text='Dashboard' active />
-          <DropdownItem url='/users' text='Users' />
-          <DropdownItem url='/orders' text='Orders' />
-          <DropdownItem url='/traffic' text='Traffic' />
-          <DropdownItem url='/products' text='Products' />
-          <DropdownItem url='/messages' text='Messages' />
-          <DropdownItem url='/comments' text='Comments' />
-          <DropdownItem url='/statistics' text='Statistics' />
+          <DropdownItem url='/' text='Dashboard' active={splitLocation[1] === '' ? true : false} />
+          <DropdownItem url='/users' text='Users' active={splitLocation[1] === 'users' ? true : false} />
+          <DropdownItem url='/orders' text='Orders' active={splitLocation[1] === 'orders' ? true : false} />
+          <DropdownItem url='/traffic' text='Traffic' active={splitLocation[1] === 'traffic' ? true : false} />
+          <DropdownItem url='/products' text='Products' active={splitLocation[1] === 'products' ? true : false} />
+          <DropdownItem url='/messages' text='Messages' active={splitLocation[1] === 'messages' ? true : false} />
+          <DropdownItem url='/comments' text='Comments' active={splitLocation[1] === 'comments' ? true : false} />
+          <DropdownItem url='/statistics' text='Statistics' active={splitLocation[1] === 'statistics' ? true : false} />
           <hr />
-          <DropdownItem url='/settings' text='Settings' />
+          <DropdownItem url='/settings' text='Settings' active={splitLocation[1] === 'settings' ? true : false} />
         </Dropdown>
       )}
     </div>
