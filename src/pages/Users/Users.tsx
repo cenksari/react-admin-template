@@ -10,6 +10,8 @@ import Heading from '../../components/Headings/Heading';
 import Container from '../../components/Containers/Container';
 import ButtonGroup from '../../components/ButtonGroup/ButtonGroup';
 
+import users from '../../data/users.json';
+
 const buttonGroup = [
   {
     id: 1,
@@ -65,22 +67,9 @@ const Users = (): React.JSX.Element => (
           <th></th>
         </tr>
       }>
-        <UserRow id={1} name='Cenk SARI' email='cenk@cenksari.com' image='https://i.pravatar.cc/32?img=1' country='United Kingdom' status={true} />
-        <UserRow id={2} name='Richard Belmont' email='richard@belmont.net' image='https://i.pravatar.cc/32?img=2' country='Italy' status={true} />
-        <UserRow id={3} name='John Bellevue' email='john@bellevue.net' image='https://i.pravatar.cc/32?img=3' country='United States' status={true} />
-        <UserRow id={4} name='Charles Miller' email='charles@miller.com' image='https://i.pravatar.cc/32?img=4' country='Germany' status={false} />
-        <UserRow id={5} name='Adrian Smith' email='adrian@smith.co.uk' image='https://i.pravatar.cc/32?img=5' country='United Kingdom' status={true} />
-        <UserRow id={6} name='Melissa Friedman' email='melissa@friedman.co.uk' image='https://i.pravatar.cc/32?img=6' country='United Kingdom' status={false} />
-        <UserRow id={7} name='Mike Brown' email='mike@brown.com.tr' image='https://i.pravatar.cc/32?img=7' country='Turkey' status={true} />
-        <UserRow id={8} name='Eric Stanton' email='eric@stanton.info' image='https://i.pravatar.cc/32?img=8' country='France' status={true} />
-        <UserRow id={9} name='James Williams' email='james@williams.co.uk' image='https://i.pravatar.cc/32?img=9' country='United Kingdom' status={true} />
-        <UserRow id={10} name='Jordan Hill' email='jordan@hill.tech' image='https://i.pravatar.cc/32?img=10' country='Hungary' status={true} />
-        <UserRow id={11} name='Billie Dafoe' email='billie@dafoe.org' image='https://i.pravatar.cc/32?img=11' country='Netherlands' status={true} />
-        <UserRow id={12} name='Stuart Wilson' email='stuart@wilson.net' image='https://i.pravatar.cc/32?img=12' country='Brazil' status={false} />
-        <UserRow id={13} name='Amit Gupta' email='amit@gupta.co.uk' image='https://i.pravatar.cc/32?img=13' country='United Kingdom' status={true} />
-        <UserRow id={14} name='Steven Johnson' email='steven@johnson.ca' image='https://i.pravatar.cc/32?img=14' country='Canada' status={true} />
-        <UserRow id={15} name='Mark Bird' email='mark@bird.org' image='https://i.pravatar.cc/32?img=15' country='United Kingdom' status={true} />
-        <UserRow id={16} name='Kevin Grunt' email='kevin@grunt.net' image='https://i.pravatar.cc/32?img=16' country='France' status={false} />
+        {users && users.map((user) => (
+          <UserRow key={user.id} id={user.id} name={user.name} email={user.email} image={user.image} country={user.country} status={user.status} />
+        ))}
       </Table>
     </Container>
   </Master>

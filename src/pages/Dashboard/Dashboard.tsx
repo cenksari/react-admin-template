@@ -140,6 +140,7 @@ const Dashboard = (): React.JSX.Element => (
                 price={product.price}
                 image={product.image}
                 stock={product.stock}
+                orders={product.orders}
               />
             </div>
           </Box>

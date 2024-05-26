@@ -12,14 +12,16 @@ interface IProps {
   price: number;
   image: string;
   stock: number;
+  orders: number;
 }
 
-const Product = ({ url, name, price, image, stock}: IProps): React.JSX.Element => (
+const Product = ({ url, name, price, image, stock, orders }: IProps): React.JSX.Element => (
   <Link to={url} className='product'>
     <div className='cover image' style={{ backgroundImage: `url('${image}')` }} />
     <span className='name'>{name}</span>
     <span className='price'>{formatCurrency(price)}</span>
     <Stock quantity={stock} />
+    <span className='orders'>{orders} orders</span>
   </Link>
 );
 

@@ -1,11 +1,16 @@
 import React from 'react';
 
+import Box from '../../components/Containers/Box';
 import Input from '../../components/Forms/Input';
 import Button from '../../components/Forms/Button';
 import Master from '../../components/Layout/Master';
+import Product from '../../components/Product/Product';
 import Heading from '../../components/Headings/Heading';
 import Container from '../../components/Containers/Container';
 import ButtonGroup from '../../components/ButtonGroup/ButtonGroup';
+import BoxContainer from '../../components/Containers/BoxContainer';
+
+import products from '../../data/products.json';
 
 const buttonGroup = [
   {
@@ -54,6 +59,23 @@ const Products = (): React.JSX.Element => (
       </Heading>
 
       <ButtonGroup items={buttonGroup} />
+
+      <BoxContainer boxes={4}>
+        {products && products.map((product) => (
+          <Box type='multi' title='Shoes' icon='category' key={product.id}>
+            <div className='content'>
+              <Product
+                url={`/product/${product.id}`}
+                name={product.name}
+                price={product.price}
+                image={product.image}
+                stock={product.stock}
+                orders={product.orders}
+              />
+            </div>
+          </Box>
+        ))}
+      </BoxContainer>
     </Container>
   </Master>
 );
