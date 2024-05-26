@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "from": "Cenk",
+    "image": "https://i.pravatar.cc/32?img=1",
+    "message": "Hello, how are you?",
+    "subject": "Thank you"
+  },
+  {
+    "id": 2,
+    "from": "Richard",
+    "image": "https://i.pravatar.cc/32?img=2",
+    "message": "Hello, how are you?",
+    "subject": "Complaint"
+  },
+  {
+    "id": 3,
+    "from": "John",
+    "image": "https://i.pravatar.cc/32?img=3",
+    "message": "Hello, how are you?",
+    "subject": "Returns"
+  },
+  {
+    "id": 4,
+    "from": "Melissa",
+    "image": "https://i.pravatar.cc/32?img=4",
+    "message": "Hello, how are you?",
+    "subject": "Complaint"
+  },
+  {
+    "id": 5,
+    "from": "Brad",
+    "image": "https://i.pravatar.cc/32?img=5",
+    "message": "Hello, how are you?",
+    "subject": "Delivery"
+  },
+  {
+    "id": 6,
+    "from": "James",
+    "image": "https://i.pravatar.cc/32?img=6",
+    "message": "Hello, how are you?",
+    "subject": "Guarantee"
+  },
+  {
+    "id": 7,
+    "from": "Adrian",
+    "image": "https://i.pravatar.cc/32?img=7",
+    "message": "Hello, how are you?",
+    "subject": "Other"
+  }
+]

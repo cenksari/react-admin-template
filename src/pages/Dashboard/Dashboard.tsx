@@ -17,6 +17,9 @@ import BoxContainer from '../../components/Containers/BoxContainer';
 
 import { formatCurrency } from '../../utils/Toolbox';
 
+import messages from '../../data/messages.json';
+import products from '../../data/products.json';
+
 const series1 = [{
   name: 'Orders',
   data: [2.3, 3.1, 4.0, 10.1, 4.0, 3.6, 3.2, 2.3, 1.4, 0.8, 0.5, 0.2],
@@ -104,13 +107,9 @@ const Dashboard = (): React.JSX.Element => (
       <BoxContainer boxes={2}>
         <Box type='multi' title='Messages' icon='message'>
           <div className='content scroller'>
-            <MessageLine id='1' from='Cenk' image='https://i.pravatar.cc/100?img=1' subject='Thank you' />
-            <MessageLine id='2' from='Richard' image='https://i.pravatar.cc/100?img=2' subject='Complaint' />
-            <MessageLine id='3' from='John' image='https://i.pravatar.cc/100?img=3' subject='Returns' />
-            <MessageLine id='4' from='Melissa' image='https://i.pravatar.cc/100?img=4' subject='Complaint' />
-            <MessageLine id='5' from='Brad' image='https://i.pravatar.cc/100?img=5' subject='Delivery' />
-            <MessageLine id='6' from='James' image='https://i.pravatar.cc/100?img=6' subject='Guarantee' />
-            <MessageLine id='7' from='Adrian' image='https://i.pravatar.cc/100?img=7' subject='Other' />
+            {messages && messages.map((message) => (
+              <MessageLine key={message.id} id={message.id.toString()} from={message.from} image={message.image} subject={message.subject} />
+            ))}
           </div>
         </Box>
 
@@ -132,53 +131,19 @@ const Dashboard = (): React.JSX.Element => (
       </Heading>
 
       <BoxContainer boxes={4}>
-        <Box type='multi' title='Shoes' icon='category'>
-          <div className='content'>
-            <Product
-              url='/product/1'
-              name='Nike Air Max Alpha Trainer 5'
-              price={120}
-              image='https://static.nike.com/a/images/t_default/0dbef9d2-e69b-4df8-b52f-4e679d20e486/air-max-alpha-trainer-5-workout-shoes-rdbbk2.png'
-              stock={3}
-            />
-          </div>
-        </Box>
-
-        <Box type='multi' title='Electronics' icon='category'>
-          <div className='content'>
-            <Product
-              url='/product/2'
-              name='Sony XZ75WL 4K Ultra HD HDR Smart TV'
-              price={1499}
-              image='https://sony.scene7.com/is/image/sonyglobalsolutions/TVFY23_X75WL_Primary-Image-1?$primaryshotPreset$&fmt=png-alpha&wid=515&hei=515&trf=trim'
-              stock={20}
-            />
-          </div>
-        </Box>
-
-        <Box type='multi' title='Phones' icon='category'>
-          <div className='content'>
-            <Product
-              url='/product/3'
-              name='Apple iPhone 15 Pro Max 256GB Titanium Black'
-              price={1200}
-              image='https://ee.co.uk/medias/iphone-15-pro-max-natural-titanium-desktop-detail-1-WebP-Format-488?context=bWFzdGVyfHJvb3R8Mjc4NTh8aW1hZ2Uvd2VicHxzeXMtbWFzdGVyL3Jvb3QvaDQ1L2gyYi8xMDA3MzgwNDcwMTcyNi9pcGhvbmUtMTUtcHJvLW1heC1uYXR1cmFsLXRpdGFuaXVtLWRlc2t0b3AtZGV0YWlsLTFfV2ViUC1Gb3JtYXQtNDg4fGFkN2Q0YWUwMDQ2NmIxYzg0ZGJjYTY2NTUwM2RjZWI4ZjUxYmJmOTM5NjI4OTEyNTVmY2ZiMDExYTE5NTFmYzg'
-              stock={0}
-            />
-          </div>
-        </Box>
-
-        <Box type='multi' title='Computers' icon='category'>
-          <div className='content'>
-            <Product
-              url='/product/4'
-              name='Dell UltraSharp 40 Curved Thunderbolt Monitor'
-              price={1600}
-              image='https://m.media-amazon.com/images/I/61xDLgFEJiL._AC_UF1000,1000_QL80_.jpg'
-              stock={10}
-            />
-          </div>
-        </Box>
+        {products && products.map((product) => (
+          <Box type='multi' title='Shoes' icon='category' key={product.id}>
+            <div className='content'>
+              <Product
+                url={`/product/${product.id}`}
+                name={product.name}
+                price={product.price}
+                image={product.image}
+                stock={product.stock}
+              />
+            </div>
+          </Box>
+        ))}
       </BoxContainer>
     </Container>
   </Master>
