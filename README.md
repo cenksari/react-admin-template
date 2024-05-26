@@ -6,6 +6,8 @@ If you like this resource, please follow me on GitHub. Thank you!
 ## Screenshots
 ![Dashboard](https://raw.githubusercontent.com/cenksari/react-admin/master/public/screenshots/dashboard.png)
 
+![Tables](https://raw.githubusercontent.com/cenksari/react-admin/master/public/screenshots/tables.png)
+
 ## Authors
 @cenksari
 

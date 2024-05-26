@@ -39,8 +39,8 @@ const buttonGroup = [
   },
   {
     id: 5,
-    text: 'Canceled',
-    url: '/orders?filter=canceled',
+    text: 'Cancelled',
+    url: '/orders?filter=cancelled',
     active: false,
   },
 ];
