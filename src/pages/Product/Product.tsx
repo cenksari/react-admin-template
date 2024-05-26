@@ -12,6 +12,7 @@ import OrderRow from '../../components/Tables/OrderRow';
 import BarChart from '../../components/Charts/BarChart';
 import Heading from '../../components/Headings/Heading';
 import AreaChart from '../../components/Charts/AreaChart';
+import Sparkline from '../../components/Charts/Sparkline';
 import Container from '../../components/Containers/Container';
 import BoxContainer from '../../components/Containers/BoxContainer';
 
@@ -122,6 +123,32 @@ const Product = (): React.JSX.Element => {
           </Box>
           <Box type='multi' title='Returns' icon='bar_chart'>
             <AreaChart series={series3} />
+          </Box>
+        </BoxContainer>
+
+        <BoxContainer boxes={4}>
+          <Box type='multi' title='Revenue' icon='shopping_cart'>
+            <p className='data'>{formatCurrency(151981)}</p>
+            <p className='muted'>+11.5% from last month</p>
+            <Sparkline data={[5, 10, 5, 20, 8, 15]} />
+          </Box>
+
+          <Box type='multi' title='Likes' icon='favorite'>
+            <p className='data'>268</p>
+            <p className='muted'>+64.5% from last month</p>
+            <Sparkline data={[10, 3, 4, 10, 10, 20]} />
+          </Box>
+
+          <Box type='multi' title='Traffic' icon='pie_chart'>
+            <p className='data'>110</p>
+            <p className='muted'>+52.6% from last month</p>
+            <Sparkline data={[20, 3, 8, 10, 20, 0]} />
+          </Box>
+
+          <Box type='multi' title='Comments' icon='reviews'>
+            <p className='data'>98</p>
+            <p className='muted'>+4.1% from last month</p>
+            <Sparkline data={[30, 10, 5, 10, 8, 30]} />
           </Box>
         </BoxContainer>
       </Container>
