@@ -754,6 +754,15 @@ footer {
     padding: 0 10px;
   }
 
+  .header-user .dropdown {
+    top: 75px;
+    right: 10px;
+  }
+
+  .header-dropdown .dropdown {
+    top: 75px;
+  }
+
   .box-header {
     padding: 15px 15px 0 15px;
   }
