@@ -8,6 +8,8 @@ If you like this resource, please follow me on GitHub. Thank you!
 
 ![Products](https://raw.githubusercontent.com/cenksari/react-admin/master/public/screenshots/products.png)
 
+![Product](https://raw.githubusercontent.com/cenksari/react-admin/master/public/screenshots/product.png)
+
 ![Tables](https://raw.githubusercontent.com/cenksari/react-admin/master/public/screenshots/tables.png)
 
 ## Authors

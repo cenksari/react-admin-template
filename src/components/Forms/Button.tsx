@@ -1,11 +1,12 @@
 import React from 'react';
 
 interface IProps {
+  type: string;
   text: string;
 }
 
-const Button = ({ text }: IProps): React.JSX.Element => (
-  <button type='button' className='button'>{text}</button>
+const Button = ({ type, text }: IProps): React.JSX.Element => (
+  <button type={type === 'button' ? 'button' : 'submit'} className='button'>{text}</button>
 );
 
 export default Button;

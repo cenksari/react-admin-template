@@ -49,7 +49,7 @@ const Users = (): React.JSX.Element => (
             name='keyword'
             placeholder='Please enter keyword'
           />
-          <Button text='Search' />
+          <Button type='button' text='Search' />
         </form>
       </Heading>
 

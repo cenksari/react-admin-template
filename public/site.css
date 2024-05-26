@@ -80,6 +80,22 @@ h1 {
   font-size: 2em;
 }
 
+h2 {
+  font-size: 1.8em;
+}
+
+h3 {
+  font-size: 1.6em;
+}
+
+h4 {
+  font-size: 1.4em;
+}
+
+h5 {
+  font-size: 1.2em;
+}
+
 a,
 input,
 textarea,
@@ -98,6 +114,11 @@ button {
 table {
   border-spacing: 0;
   border-collapse: collapse;
+}
+
+p {
+  line-height: 160%;
+  margin-bottom: 10px;
 }
 
 .material-symbols-outlined {
@@ -736,6 +757,23 @@ header {
   line-height: 2.5rem;
   pointer-events: none;
   font-family: 'Material Symbols Outlined';
+}
+
+.product-info {
+  margin-bottom: 20px;
+}
+
+.product-info h4 {
+  margin-bottom: 10px;
+}
+
+.product-image {
+  width: 200px;
+  height: 200px;
+}
+
+.product-buttons {
+  margin-top: 20px;
 }
 
 @keyframes fadeIn {
