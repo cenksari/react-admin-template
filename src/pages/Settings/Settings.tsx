@@ -5,9 +5,10 @@ import { Link } from 'react-router-dom';
 import Input from '../../components/Forms/Input';
 import Button from '../../components/Forms/Button';
 import Master from '../../components/Layout/Master';
+import Textarea from '../../components/Forms/Textarea';
 import Checkbox from '../../components/Forms/Checkbox';
-import Container from '../../components/Containers/Container';
 import Heading from '../../components/Headings/Heading';
+import Container from '../../components/Containers/Container';
 
 interface IFormValues {
   name: '',
@@ -20,6 +21,7 @@ interface IFormValues {
   fromMail: string;
   fromName: string;
   comments: boolean,
+  appleLogin: boolean;
   googleLogin: boolean,
   guestCheckout: boolean;
 }
@@ -28,7 +30,7 @@ const Settings = (): React.JSX.Element => {
   const [values, setValues] = React.useState<IFormValues>({
     name: '',
     maintenance: false,
-    maintenanceMessage: 'Site is under maintenance',
+    maintenanceMessage: 'Site is under maintenance. Thank your for your patience.',
     siteName: 'E-commerce Store',
     siteDesc: 'Worlds greatest e-commerce store',
     smtpPort: '80',
@@ -36,11 +38,12 @@ const Settings = (): React.JSX.Element => {
     fromMail: 'noreply@example.com',
     fromName: 'E-commerce Store',
     comments: true,
+    appleLogin: false,
     googleLogin: true,
     guestCheckout: true,
   });
 
-  const handleTextChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+  const handleTextChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>): void => {
     const { name, value } = e.target;
 
     setValues({
@@ -67,12 +70,11 @@ const Settings = (): React.JSX.Element => {
             <Button type='button' text='User management' />
           </div>
         </Heading>
-
         <form noValidate>
           <div className='form-elements'>
             <h4>Logos</h4>
             <div className='form-line'>
-              <Link to=''>Click here for logo management</Link>
+              <Link to='/'>Click here for logo management</Link>
             </div>
             <h4>General</h4>
             <div className='form-line flex flex-gap'>
@@ -111,6 +113,18 @@ const Settings = (): React.JSX.Element => {
                 </div>
               </div>
             </div>
+            <h4>Login mode</h4>
+            <div className='form-line'>
+              <div className='label-line'>
+                <label htmlFor='loginMode'>Select login mode</label>
+              </div>
+              <div className='input-line'>
+                <select name='loginMode' id='loginMode' className='select pointer'>
+                  <option value='email'>Email mode</option>
+                  <option value='phone'>Phone mode</option>
+                </select>
+              </div>
+            </div>
             <h4>Maintenance</h4>
             <div className='form-line'>
               <div className='label-line'>
@@ -130,16 +144,16 @@ const Settings = (): React.JSX.Element => {
                 <label htmlFor='maintenanceMessage'>Maintenance message</label>
               </div>
               <div className='input-line'>
-                <Input
-                    required
-                    name='maintenanceMessage'
-                    type='text'
-                    value={values.maintenanceMessage}
-                    tabIndex={0}
-                    maxLength={128}
-                    onChange={handleTextChange}
-                    placeholder='Please enter maintenanceMessage'
-                  />
+                <Textarea
+                  rows={4}
+                  required
+                  name='maintenanceMessage'
+                  value={values.maintenanceMessage}
+                  tabIndex={0}
+                  maxLength={128}
+                  onChange={handleTextChange}
+                  placeholder='Please enter maintenanceMessage'
+                />
               </div>
             </div>
 
@@ -220,6 +234,14 @@ const Settings = (): React.JSX.Element => {
             <div className='form-line'>
               <div className='label-line'>
                 <label>Features</label>
+              </div>
+              <div className='checkbox-line'>
+                <Checkbox
+                  name='appleLogin'
+                  checked={values.appleLogin}
+                  placeholder='Enable Apple login'
+                  onChange={handleRadioChange}
+                />
               </div>
               <div className='checkbox-line'>
                 <Checkbox

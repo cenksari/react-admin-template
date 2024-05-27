@@ -101,6 +101,7 @@ input,
 textarea,
 select,
 button {
+  resize: none;
   transition: all 0.3s ease;
   background-color: transparent;
 }
@@ -237,7 +238,7 @@ strong {
   background-color: #222222;
 }
 
-.input {
+.input, .select {
   padding: 10px;
   border-radius: 10px;
   background-color: #ffffff;
@@ -249,7 +250,7 @@ strong {
   --webkit-user-select: none;
 }
 
-.input:focus {
+.input:focus, .select:focus {
   background-color: #f9f9f9;
   border: 1px solid #999999;
 }
@@ -405,7 +406,9 @@ header {
   --webkit-user-select: none;
 }
 
-.form-line .input-line input {
+.form-line .input-line input,
+.form-line .input-line select,
+.form-line .input-line textarea {
   width: 100%;
 }
 
