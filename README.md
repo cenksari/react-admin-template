@@ -4,17 +4,17 @@ You are free to download, change and use it anywhere. I will regularly update th
 If you like this resource, please follow me on GitHub. Thank you!
 
 ## Screenshots
-![Dashboard](https://raw.githubusercontent.com/cenksari/react-admin/master/public/screenshots/dashboard.png)
+![Dashboard](https://raw.githubusercontent.com/cenksari/react-admin/master/screenshots/dashboard.png)
 
-![Products](https://raw.githubusercontent.com/cenksari/react-admin/master/public/screenshots/products.png)
+![Products](https://raw.githubusercontent.com/cenksari/react-admin/master/screenshots/products.png)
 
-![Product](https://raw.githubusercontent.com/cenksari/react-admin/master/public/screenshots/product.png)
+![Product](https://raw.githubusercontent.com/cenksari/react-admin/master/screenshots/product.png)
 
-![Tables](https://raw.githubusercontent.com/cenksari/react-admin/master/public/screenshots/tables.png)
+![Tables](https://raw.githubusercontent.com/cenksari/react-admin/master/screenshots/tables.png)
 
-![Signin](https://raw.githubusercontent.com/cenksari/react-admin/master/public/screenshots/signin.png)
+![Signin](https://raw.githubusercontent.com/cenksari/react-admin/master/screenshots/signin.png)
 
-![Forms](https://raw.githubusercontent.com/cenksari/react-admin/master/public/screenshots/forms.png)
+![Forms](https://raw.githubusercontent.com/cenksari/react-admin/master/screenshots/forms.png)
 
 ## Authors
 @cenksari
