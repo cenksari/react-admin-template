@@ -409,6 +409,10 @@ header {
   width: 100%;
 }
 
+.form-line .checkbox-line {
+  margin-bottom: 15px;
+}
+
 .google-button {
   width: 100%;
   font-size: 1em;

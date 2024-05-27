@@ -14,6 +14,8 @@ If you like this resource, please follow me on GitHub. Thank you!
 
 ![Signin](https://raw.githubusercontent.com/cenksari/react-admin/master/public/screenshots/signin.png)
 
+![Forms](https://raw.githubusercontent.com/cenksari/react-admin/master/public/screenshots/forms.png)
+
 ## Authors
 @cenksari
 
