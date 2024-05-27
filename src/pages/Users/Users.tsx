@@ -79,7 +79,7 @@ const Users = (): React.JSX.Element => (
         ))}
       </Table>
 
-      <Paging url='/users' pageSize={30} totalRows={200} currentPage={1} />
+      <Paging url='/users' pageSize={30} totalRows={150} currentPage={1} />
     </Container>
   </Master>
 );

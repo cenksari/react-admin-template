@@ -84,7 +84,7 @@ const Products = (): React.JSX.Element => (
         ))}
       </BoxContainer>
 
-      <Paging url='/products' pageSize={30} totalRows={200} currentPage={1} />
+      <Paging url='/products' pageSize={30} totalRows={150} currentPage={1} />
     </Container>
   </Master>
 );

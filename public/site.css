@@ -930,7 +930,7 @@ header {
   td,
   img,
   svg {
-    font-size: 1em;
+    font-size: 1.01em;
   }
 
   .box-container-2,
@@ -964,7 +964,7 @@ header {
   }
 
   .header-menu {
-    min-width: 140px;
+    min-width: 150px;
   }
 
   .single-frame {

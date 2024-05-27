@@ -86,7 +86,7 @@ const Orders = (): React.JSX.Element => (
         ))}
       </Table>
 
-      <Paging url='/orders' pageSize={30} totalRows={200} currentPage={1} />
+      <Paging url='/orders' pageSize={30} totalRows={150} currentPage={1} />
     </Container>
   </Master>
 );
