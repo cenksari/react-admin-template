@@ -10,7 +10,7 @@ interface IProps {
 }
 
 const DropdownItem = ({ url, text, icon, active }: IProps): React.JSX.Element => (
-  <Link className={active === true ? 'flex flex-gap-medium flex-v-center active' : 'flex flex-gap-medium flex-v-center passive'} to={url}>
+  <Link className={active === true ? 'flex flex-gap-medium flex-v-center active' : 'flex flex-gap-medium flex-v-center passive active-opacity'} to={url}>
     {icon && <span className='material-symbols-outlined'>{icon}</span>}
     <em>{text}</em>
   </Link>

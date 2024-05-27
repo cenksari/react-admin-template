@@ -2,8 +2,6 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import Checkbox from '../Forms/Checkbox';
-
 interface IProps {
   id: string;
   from: string;
@@ -12,17 +10,8 @@ interface IProps {
 }
 
 const MessageLine = ({ id, from, image, subject }: IProps): React.JSX.Element => {
-  const [state, setState] = React.useState<boolean>(false);
-
-  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    setState(e.target.checked);
-  };
-
   return (
     <div className='message flex flex-gap flex-v-center flex-space-between'>
-    <div>
-      <Checkbox name={`cb-${id}`} checked={state} onChange={handleCheckboxChange} />
-    </div>
     <div>
       <div className='cover user-photo' style={{ backgroundImage: `url('${image}')` }} />
     </div>
@@ -32,10 +21,10 @@ const MessageLine = ({ id, from, image, subject }: IProps): React.JSX.Element =>
       <strong>{from}</strong>
     </div>
     <div className='flex flex-gap'>
-      <button type='button' className='pointer'>
+      <button type='button' className='pointer active-opacity'>
         <span className='material-symbols-outlined'>forward</span>
       </button>
-      <button type='button' className='pointer'>
+      <button type='button' className='pointer active-opacity'>
         <span className='material-symbols-outlined'>delete</span>
       </button>
     </div>

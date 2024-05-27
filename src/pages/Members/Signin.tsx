@@ -70,7 +70,7 @@ const Signin = (): React.JSX.Element => {
         <form noValidate onSubmit={handleSubmit}>
           <div className='form-elements'>
             <div className='form-line'>
-              <button type='button' className='google-button'>
+              <button type='button' className='google-button active-opacity'>
                 <svg
                   version='1.1'
                   xmlns='http://www.w3.org/2000/svg'
@@ -124,7 +124,7 @@ const Signin = (): React.JSX.Element => {
             <div className='form-line'>
               <div className='label-line flex flex-space-between'>
                 <label htmlFor='password'>Password</label>
-                <Link to='/'>
+                <Link to='/forgot-password' className='active-opacity'>
                   Forgot password
                 </Link>
               </div>

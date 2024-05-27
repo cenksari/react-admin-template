@@ -33,13 +33,12 @@ const Menu = (): React.JSX.Element => {
           <DropdownItem url='/' text='Dashboard' active={splitLocation[1] === '' ? true : false} />
           <DropdownItem url='/users' text='Users' active={splitLocation[1] === 'users' ? true : false} />
           <DropdownItem url='/orders' text='Orders' active={splitLocation[1] === 'orders' ? true : false} />
-          <DropdownItem url='/traffic' text='Traffic' active={splitLocation[1] === 'traffic' ? true : false} />
           <DropdownItem url='/products' text='Products' active={splitLocation[1] === 'products' ? true : false} />
           <DropdownItem url='/messages' text='Messages' active={splitLocation[1] === 'messages' ? true : false} />
           <DropdownItem url='/comments' text='Comments' active={splitLocation[1] === 'comments' ? true : false} />
-          <DropdownItem url='/statistics' text='Statistics' active={splitLocation[1] === 'statistics' ? true : false} />
           <hr />
           <DropdownItem url='/settings' text='Settings' active={splitLocation[1] === 'settings' ? true : false} />
+          <DropdownItem url='/settings/admins' text='Administrators' active={splitLocation[1] === 'admins' ? true : false} />
         </Dropdown>
       )}
     </div>

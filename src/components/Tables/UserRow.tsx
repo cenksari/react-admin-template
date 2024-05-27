@@ -46,7 +46,7 @@ const UserRow = ({ id, name, email, image, country, status }: IProps): React.JSX
         {status ? (<Badge text='Active' color='white' />) : (<Badge text='Passive' color='dark' />)}
       </td>
       <td ref={wrapperRef} className='flex flex-v-center flex-end flex-gap-small'>
-        <span className='material-symbols-outlined pointer' onClick={() => setDropdown(!dropdown)}>more_vert</span>
+        <span className='material-symbols-outlined pointer active-opacity' onClick={() => setDropdown(!dropdown)}>more_vert</span>
         {dropdown && (
           <Dropdown color='gray'>
             <DropdownItem icon='edit' url={`/user/edit/${id}`} text='Edit' />

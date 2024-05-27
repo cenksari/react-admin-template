@@ -1,51 +1,79 @@
 [
   {
     "id": 1,
-    "from": "Cenk",
+    "name": "Robert",
+    "lastname": "Wilson",
     "image": "https://i.pravatar.cc/32?img=1",
     "message": "Hello, how are you?",
-    "subject": "Thank you"
+    "subject": "Thank you",
+    "date": "May 19, 2024 10:22",
+    "status": "resolved",
+    "attachments": true
   },
   {
     "id": 2,
-    "from": "Richard",
+    "name": "Emily",
+    "lastname": "Davis",
     "image": "https://i.pravatar.cc/32?img=2",
     "message": "Hello, how are you?",
-    "subject": "Complaint"
+    "subject": "Complaint",
+    "date": "May 18, 2024 14:35",
+    "status": "unresolved",
+    "attachments": true
   },
   {
     "id": 3,
-    "from": "John",
+    "name": "Michael",
+    "lastname": "Johnson",
     "image": "https://i.pravatar.cc/32?img=3",
     "message": "Hello, how are you?",
-    "subject": "Returns"
+    "subject": "Returns",
+    "date": "May 17, 2024 09:50",
+    "status": "waiting",
+    "attachments": false
   },
   {
     "id": 4,
-    "from": "Melissa",
+    "name": "Sarah",
+    "lastname": "Brown",
     "image": "https://i.pravatar.cc/32?img=4",
     "message": "Hello, how are you?",
-    "subject": "Complaint"
+    "subject": "Complaint",
+    "date": "May 16, 2024 11:15",
+    "status": "resolved",
+    "attachments": false
   },
   {
     "id": 5,
-    "from": "Brad",
+    "name": "David",
+    "lastname": "Anderson",
     "image": "https://i.pravatar.cc/32?img=5",
     "message": "Hello, how are you?",
-    "subject": "Delivery"
+    "subject": "Delivery",
+    "date": "May 15, 2024 16:45",
+    "status": "waiting",
+    "attachments": false
   },
   {
     "id": 6,
-    "from": "James",
+    "name": "Laura",
+    "lastname": "Martinez",
     "image": "https://i.pravatar.cc/32?img=6",
     "message": "Hello, how are you?",
-    "subject": "Guarantee"
+    "subject": "Guarantee",
+    "date": "May 14, 2024 13:30",
+    "status": "resolved",
+    "attachments": false
   },
   {
     "id": 7,
-    "from": "Adrian",
+    "name": "James",
+    "lastname": "Lee",
     "image": "https://i.pravatar.cc/32?img=7",
     "message": "Hello, how are you?",
-    "subject": "Other"
+    "subject": "Other",
+    "date": "May 13, 2024 08:22",
+    "status": "unresolved",
+    "attachments": true
   }
 ]

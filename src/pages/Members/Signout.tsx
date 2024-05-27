@@ -21,7 +21,7 @@ const Signout = (): React.JSX.Element => {
     <Single>
       <Container>
         <h1>Signed out</h1>
-        <p>You have been successfully signed out. <Link to='/'>Click here</Link> to go to home page.</p>
+        <p>You have been successfully signed out. <Link to='/' className='active-opacity'>Click here</Link> to go to home page.</p>
         <Spacer />
         <div className='flex flex-h-center'>
           <ButtonLink text='Sign in again' url='/' />

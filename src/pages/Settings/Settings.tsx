@@ -21,6 +21,7 @@ interface IFormValues {
   fromMail: string;
   fromName: string;
   comments: boolean,
+  activation: boolean,
   appleLogin: boolean;
   googleLogin: boolean,
   guestCheckout: boolean;
@@ -38,6 +39,7 @@ const Settings = (): React.JSX.Element => {
     fromMail: 'noreply@example.com',
     fromName: 'E-commerce Store',
     comments: true,
+    activation: true,
     appleLogin: false,
     googleLogin: true,
     guestCheckout: true,
@@ -61,20 +63,24 @@ const Settings = (): React.JSX.Element => {
     })
   };
 
+  const handleSubmit = (e: React.FormEvent): void => {
+    e.preventDefault();
+  };
+
   return (
     <Master>
       <Container>
         <Heading text='Settings'>
           <div className='flex flex-gap'>
             <Button type='button' text='Templates' />
-            <Button type='button' text='User management' />
+            <Button type='button' text='Administrators' />
           </div>
         </Heading>
-        <form noValidate>
+        <form noValidate onSubmit={handleSubmit}>
           <div className='form-elements'>
             <h4>Logos</h4>
             <div className='form-line'>
-              <Link to='/'>Click here for logo management</Link>
+              <Link to='/' className='active-opacity'>Click here for logo management</Link>
             </div>
             <h4>General</h4>
             <div className='form-line flex flex-gap'>
@@ -120,8 +126,8 @@ const Settings = (): React.JSX.Element => {
               </div>
               <div className='input-line'>
                 <select name='loginMode' id='loginMode' className='select pointer'>
-                  <option value='email'>Email mode</option>
-                  <option value='phone'>Phone mode</option>
+                  <option value='email'>Users login with email address</option>
+                  <option value='phone'>Users login with phone number</option>
                 </select>
               </div>
             </div>
@@ -214,7 +220,7 @@ const Settings = (): React.JSX.Element => {
               </div>
               <div className='flex-grow'>
                 <div className='label-line'>
-                  <label htmlFor='smtp'>SMTP port</label>
+                  <label htmlFor='smtpPort'>SMTP port</label>
                 </div>
                 <div className='input-line'>
                   <Input
@@ -253,6 +259,14 @@ const Settings = (): React.JSX.Element => {
               </div>
               <div className='checkbox-line'>
                 <Checkbox
+                  name='guestCheckout'
+                  checked={values.guestCheckout}
+                  placeholder='Enable guest check out'
+                  onChange={handleRadioChange}
+                />
+              </div>
+              <div className='checkbox-line'>
+                <Checkbox
                   name='comments'
                   checked={values.comments}
                   placeholder='Enable product comments'
@@ -261,16 +275,15 @@ const Settings = (): React.JSX.Element => {
               </div>
               <div className='checkbox-line'>
                 <Checkbox
-                  name='guestCheckout'
-                  checked={values.guestCheckout}
-                  placeholder='Enable guest check out'
+                  name='activation'
+                  checked={values.activation}
+                  placeholder='New members email activation'
                   onChange={handleRadioChange}
                 />
               </div>
             </div>
             <div className='button-line flex flex-gap flex-end'>
-              <Button type='button' text='Reset to defaults' />
-              <Button type='submit' text='Save' />
+              <Button type='submit' text='Save configuration' />
             </div>
           </div>
         </form>

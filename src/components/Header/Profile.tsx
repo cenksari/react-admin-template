@@ -26,17 +26,20 @@ const Profile = ({ name, lastname, picture }: IProps): React.JSX.Element => {
     <div className='header-user flex flex-end'>
       <div className='flex flex-h-center flex-v-center flex-gap'>
         <Link to='/settings' className='flex'>
-          <span className='material-symbols-outlined'>settings</span>
+          <span className='material-symbols-outlined icon active-opacity'>settings</span>
         </Link>
-        <Link to='/members/notifications' className='flex'>
-          <span className='material-symbols-outlined'>notifications</span>
-        </Link>
+        <div className='flex relative'>
+          <Link to='/members/notifications' className='flex'>
+            <span className='material-symbols-outlined icon active-opacity'>notifications</span>
+            <em className='notification flex flex-v-center flex-h-center no-select'>3</em>
+          </Link>
+        </div>
         <div ref={wrapperRef} className='flex flex-v-center flex-gap-medium'>
           <Link to='/members/account'>
             {picture ? (
-              <div className='user-photo cover' style={{ backgroundImage: `url('${picture}')` }} />
+              <div className='user-photo cover active-opacity' style={{ backgroundImage: `url('${picture}')` }} />
             ) : (
-              <div className='user-photo flex flex-v-center flex-h-center'>
+              <div className='user-photo flex flex-v-center flex-h-center active-opacity'>
                 <em>
                   {name.substring(0, 1).toUpperCase()}
                   {lastname.substring(0, 1).toUpperCase()}
@@ -44,7 +47,7 @@ const Profile = ({ name, lastname, picture }: IProps): React.JSX.Element => {
               </div>
             )}
           </Link>
-          <button className='flex flex-v-center pointer' onClick={() => setDropdown(!dropdown)}>
+          <button className='flex flex-v-center pointer active-opacity' onClick={() => setDropdown(!dropdown)}>
             <strong>{name}</strong>
             <span className='material-symbols-outlined'>keyboard_arrow_down</span>
           </button>

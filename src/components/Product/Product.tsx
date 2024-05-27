@@ -16,7 +16,7 @@ interface IProps {
 }
 
 const Product = ({ url, name, price, image, stock, orders }: IProps): React.JSX.Element => (
-  <Link to={url} className='product'>
+  <Link to={url} className='product active-opacity'>
     <div className='cover image' style={{ backgroundImage: `url('${image}')` }} />
     <span className='name'>{name}</span>
     <span className='price'>{formatCurrency(price)}</span>
