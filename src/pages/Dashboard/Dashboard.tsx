@@ -63,7 +63,13 @@ const Dashboard = (): React.JSX.Element => (
       <Heading text='Dashboard'>
         <form className='flex flex-gap' noValidate>
           <Input
+            required
             name='keyword'
+            type='text'
+            value=''
+            tabIndex={0}
+            maxLength={64}
+            onChange={() => {}}
             placeholder='Please enter keyword'
           />
           <Button type='button' text='Search' />
@@ -123,7 +129,13 @@ const Dashboard = (): React.JSX.Element => (
       <Heading text='Top selling products'>
         <form className='flex flex-gap' noValidate>
           <Input
+            required
             name='keyword'
+            type='text'
+            value=''
+            tabIndex={0}
+            maxLength={64}
+            onChange={() => {}}
             placeholder='Please enter keyword'
           />
           <Button type='button' text='Search' />

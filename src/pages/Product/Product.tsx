@@ -59,7 +59,13 @@ const Product = (): React.JSX.Element => {
         <Heading text='Product'>
           <form className='flex flex-gap' noValidate>
             <Input
+              required
               name='keyword'
+              type='text'
+              value=''
+              tabIndex={0}
+              maxLength={64}
+              onChange={() => {}}
               placeholder='Please enter keyword'
             />
             <Button type='button' text='Search' />
@@ -77,10 +83,9 @@ const Product = (): React.JSX.Element => {
               Price <strong>{formatCurrency(current.price)}</strong>, orders <strong>{current.orders}</strong>, stock <strong>{current.stock}</strong>, category <strong>{current.category}</strong>
             </p>
 
-            <div className='product-buttons flex flex-gap'>
-              <Button type='button' text='Go to live URL' />
+            <div className='product-buttons flex flex-gap-medium'>
               <Button type='button' text='Edit product' />
-              <Button type='button' text='Disable product' />
+              <Button type='button' text='Visit live url' />
             </div>
           </div>
           <div>

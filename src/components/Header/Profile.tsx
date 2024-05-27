@@ -9,10 +9,11 @@ import useClickOutside from '../../hooks/useClickOutside';
 
 interface IProps {
   name: string;
-  picture: string;
+  lastname: string;
+  picture?: string;
 }
 
-const Profile = ({ name, picture }: IProps): React.JSX.Element => {
+const Profile = ({ name, lastname, picture }: IProps): React.JSX.Element => {
   const wrapperRef = React.useRef<any>();
 
   const [dropdown, setDropdown] = React.useState<boolean>(false);
@@ -32,7 +33,16 @@ const Profile = ({ name, picture }: IProps): React.JSX.Element => {
         </Link>
         <div ref={wrapperRef} className='flex flex-v-center flex-gap-medium'>
           <Link to='/members/account'>
-            <div className='user-photo cover' style={{ backgroundImage: `url('${picture}')` }} />
+            {picture ? (
+              <div className='user-photo cover' style={{ backgroundImage: `url('${picture}')` }} />
+            ) : (
+              <div className='user-photo flex flex-v-center flex-h-center'>
+                <em>
+                  {name.substring(0, 1).toUpperCase()}
+                  {lastname.substring(0, 1).toUpperCase()}
+                </em>
+              </div>
+            )}
           </Link>
           <button className='flex flex-v-center pointer' onClick={() => setDropdown(!dropdown)}>
             <strong>{name}</strong>

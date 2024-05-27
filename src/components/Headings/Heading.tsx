@@ -2,15 +2,17 @@ import React from 'react';
 
 interface IProps {
   text: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const Heading = ({ text, children }: IProps): React.JSX.Element => (
-  <div className='flex flex-v-center flex-space-between heading'>
+  <div className='flex flex-space-between heading'>
     <h1>{text}</h1>
-    <div className='input-group'>
-      {children}
-    </div>
+    {children && (
+      <div className='input-group'>
+        {children}
+      </div>
+    )}
   </div>
 );
 
