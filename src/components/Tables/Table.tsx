@@ -6,7 +6,7 @@ interface IProps {
 }
 
 const Table = ({ header, children }: IProps): React.JSX.Element => (
-  <div className='table-containment'>
+  <div className='table-containment scroller-horizontal scroller-vertical'>
     <table className='table'>
       <thead>
         {header}

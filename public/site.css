@@ -319,6 +319,48 @@ strong {
   transition: 0.2s all ease;
 }
 
+.scroller-vertical::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 5px;
+}
+
+.scroller-vertical::-webkit-scrollbar-track {
+  width: 5px;
+  border-radius: 5px;
+}
+
+.scroller-vertical::-webkit-scrollbar-thumb {
+  width: 5px;
+  border-radius: 5px;
+  background-color: #666666;
+}
+
+.scroller-vertical::-webkit-scrollbar-thumb:window-inactive {
+  border-radius: 5px;
+  background-color: #666666;
+}
+
+.scroller-horizontal::-webkit-scrollbar {
+  height: 5px;
+  border-radius: 5px;
+}
+
+.scroller-horizontal::-webkit-scrollbar-track {
+  height: 5px;
+  border-radius: 5px;
+}
+
+.scroller-horizontal::-webkit-scrollbar-thumb {
+  height: 5px;
+  border-radius: 5px;
+  background-color: #666666;
+}
+
+.scroller-horizontal::-webkit-scrollbar-thumb:window-inactive {
+  border-radius: 5px;
+  background-color: #666666;
+}
+
 header {
   padding: 20px 0;
   margin-bottom: 20px;
@@ -650,27 +692,6 @@ header {
 .scroller {
   overflow: auto;
   max-height: 365px;
-}
-
-.scroller::-webkit-scrollbar {
-  width: 10px;
-  border-radius: 5px;
-}
-
-.scroller::-webkit-scrollbar-track {
-  width: 10px;
-  border-radius: 5px;
-}
-
-.scroller::-webkit-scrollbar-thumb {
-  width: 10px;
-  border-radius: 5px;
-  background-color: #666666;
-}
-
-.scroller::-webkit-scrollbar-thumb:window-inactive {
-  border-radius: 5px;
-  background-color: #666666;
 }
 
 .product {

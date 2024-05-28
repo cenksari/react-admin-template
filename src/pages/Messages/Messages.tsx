@@ -79,7 +79,7 @@ const Messages = (): React.JSX.Element => (
         ))}
       </Table>
 
-      <Paging url='/users' pageSize={30} totalRows={100} currentPage={1} />
+      <Paging url='/messages' pageSize={30} totalRows={100} currentPage={1} />
     </Container>
   </Master>
 );

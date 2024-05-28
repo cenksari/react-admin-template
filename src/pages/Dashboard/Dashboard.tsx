@@ -112,7 +112,7 @@ const Dashboard = (): React.JSX.Element => (
 
       <BoxContainer boxes={2}>
         <Box type='multi' title='Messages' icon='message'>
-          <div className='content scroller'>
+          <div className='content scroller scroller-vertical'>
             {messages && messages.map((message) => (
               <MessageLine key={message.id} id={message.id.toString()} from={message.name} image={message.image} subject={message.subject} />
             ))}

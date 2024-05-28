@@ -2,6 +2,7 @@ import React from 'react';
 
 import Input from '../../components/Forms/Input';
 import Button from '../../components/Forms/Button';
+import Paging from '../../components/Paging/Paging';
 import Master from '../../components/Layout/Master';
 import Heading from '../../components/Headings/Heading';
 import Container from '../../components/Containers/Container';
@@ -54,6 +55,8 @@ const Comments = (): React.JSX.Element => (
       </Heading>
 
       <ButtonGroup items={buttonGroup} />
+
+      <Paging url='/comments' pageSize={30} totalRows={150} currentPage={1} />
     </Container>
   </Master>
 );
