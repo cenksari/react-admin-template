@@ -10,6 +10,7 @@ import Orders from '../pages/Orders/Orders';
 import Account from '../pages/Members/Account';
 import Signout from '../pages/Members/Signout';
 import Product from '../pages/Product/Product';
+import Message from '../pages/Message/Message';
 import Settings from '../pages/Settings/Settings';
 import Products from '../pages/Products/Products';
 import Comments from '../pages/Comments/Comments';
@@ -33,6 +34,7 @@ const Navigation = (): React.JSX.Element => {
           <Route path='/products' element={<Products />} />
           <Route path='/comments' element={<Comments />} />
           <Route path='/messages' element={<Messages />} />
+          <Route path='/message/:id' element={<Message />} />
           <Route path='/product/:id' element={<Product />} />
           <Route path='/members/account' element={<Account />} />
           <Route path='/members/notifications' element={<Notifications />} />

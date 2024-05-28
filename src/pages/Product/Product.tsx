@@ -13,6 +13,7 @@ import BarChart from '../../components/Charts/BarChart';
 import Heading from '../../components/Headings/Heading';
 import AreaChart from '../../components/Charts/AreaChart';
 import Sparkline from '../../components/Charts/Sparkline';
+import ButtonLink from '../../components/Forms/ButtonLink';
 import Container from '../../components/Containers/Container';
 import BoxContainer from '../../components/Containers/BoxContainer';
 
@@ -84,8 +85,8 @@ const Product = (): React.JSX.Element => {
             </p>
 
             <div className='product-buttons flex flex-gap-medium'>
-              <Button type='button' text='Edit product' />
-              <Button type='button' text='Visit live url' />
+              <ButtonLink text='Edit product' url='/' />
+              <ButtonLink text='Visit live url' url='/' />
             </div>
           </div>
           <div>

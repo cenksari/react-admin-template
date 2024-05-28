@@ -327,6 +327,11 @@ header {
   font-size: 0.9em;
 }
 
+.user-photo.medium {
+  width: 60px;
+  height: 60px;
+}
+
 .notification {
   top: -8px;
   right: -8px;
@@ -571,6 +576,10 @@ header {
 .message .from {
   margin: 0 10px;
   color: #999999;
+}
+
+.message-body .date {
+  font-size: 0.8em;
 }
 
 .scroller {
