@@ -65,7 +65,7 @@ const Message = (): React.JSX.Element => {
               onChange={() => {}}
               placeholder='Please enter keyword'
             />
-            <Button type='button' text='Search' />
+            <Button type='button' text='Search' rightIcon='search' />
           </form>
         </Heading>
 

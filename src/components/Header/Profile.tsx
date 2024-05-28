@@ -49,7 +49,9 @@ const Profile = ({ name, lastname, picture }: IProps): React.JSX.Element => {
           </Link>
           <button className='flex flex-v-center pointer active-opacity' onClick={() => setDropdown(!dropdown)}>
             <strong>{name}</strong>
-            <span className='material-symbols-outlined'>keyboard_arrow_down</span>
+            <span className='material-symbols-outlined'>
+              {dropdown ? 'expand_less' : 'expand_more'}
+            </span>
           </button>
           {dropdown && (
             <Dropdown color='gray'>

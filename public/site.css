@@ -282,6 +282,10 @@ strong {
   margin-left: 15px;
 }
 
+.button .material-symbols-outlined {
+  margin-top: 1px;
+}
+
 .input, .select {
   padding: 10px;
   border-radius: 10px;
