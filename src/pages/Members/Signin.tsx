@@ -55,7 +55,7 @@ const Signin = (): React.JSX.Element => {
       lastname: 'SARI',
       email: 'cenk@cenksari.com',
       token: '12345678901234567890',
-      picture: 'https://i.pravatar.cc/32?img=60',
+      picture: 'https://i.pravatar.cc/300?img=60',
     };
 
     addMember(details);

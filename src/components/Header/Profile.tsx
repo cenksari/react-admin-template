@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import Dropdown from '../Dropdown/Dropdown';
 import DropdownItem from '../Dropdown/DropdownItem';
@@ -14,6 +14,8 @@ interface IProps {
 }
 
 const Profile = ({ name, lastname, picture }: IProps): React.JSX.Element => {
+  const location = useLocation();
+
   const wrapperRef = React.useRef<any>();
 
   const [dropdown, setDropdown] = React.useState<boolean>(false);
@@ -21,6 +23,8 @@ const Profile = ({ name, lastname, picture }: IProps): React.JSX.Element => {
   useClickOutside(wrapperRef, () => {
     setDropdown(false);
   });
+
+  const { pathname } = location;
 
   return (
     <div className='header-user flex flex-end'>
@@ -47,16 +51,16 @@ const Profile = ({ name, lastname, picture }: IProps): React.JSX.Element => {
               </div>
             )}
           </Link>
-          <button className='flex flex-v-center pointer active-opacity' onClick={() => setDropdown(!dropdown)}>
+          <button className='flex flex-v-center flex-gap-small pointer active-opacity' onClick={() => setDropdown(!dropdown)}>
             <strong>{name}</strong>
-            <span className='material-symbols-outlined'>
+            <span className='material-symbols-outlined dropdown-arrow'>
               {dropdown ? 'expand_less' : 'expand_more'}
             </span>
           </button>
           {dropdown && (
             <Dropdown color='gray'>
-              <DropdownItem url='/members/account' text='Account' />
-              <DropdownItem url='/members/notifications' text='Notifications' />
+              <DropdownItem url='/members/account' text='Account' active={pathname === '/members/account' ? true : false} />
+              <DropdownItem url='/members/notifications' text='Notifications' active={pathname === '/members/notifications' ? true : false} />
               <hr />
               <DropdownItem url='/members/signout' text='Sign out' />
             </Dropdown>
