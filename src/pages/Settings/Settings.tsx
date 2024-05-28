@@ -158,7 +158,7 @@ const Settings = (): React.JSX.Element => {
                   tabIndex={0}
                   maxLength={128}
                   onChange={handleTextChange}
-                  placeholder='Please enter maintenanceMessage'
+                  placeholder='Please enter maintenance message'
                 />
               </div>
             </div>
