@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "date": "May 19, 2024 10:22",
+    "status": "unread",
+    "message": "Order RXTHEISM23 has been dispatched."
+  },
+  {
+    "id": 2,
+    "date": "May 18, 2024 08:14",
+    "status": "unread",
+    "message": "Apple iPhone 15 Pro Max 256GB Titanium Black is out of stock."
+  },
+  {
+    "id": 3,
+    "date": "May 18, 2024 11:32",
+    "status": "unread",
+    "message": "Asus ROG Strix GeForce RTX 4090 24GB Graphics Card is out of stock."
+  },
+  {
+    "id": 4,
+    "date": "May 17, 2024 16:46",
+    "status": "read",
+    "message": "Order UOSKDU29DS has been dispatched."
+  },
+  {
+    "id": 5,
+    "date": "May 16, 2024 09:16",
+    "status": "read",
+    "message": "Order NMPSEUR23F has been dispatched."
+  },
+  {
+    "id": 6,
+    "date": "May 15, 2024 14:56",
+    "status": "read",
+    "message": "Ergotron HX Heavy Monitor Arm is out of stock."
+  },
+  {
+    "id": 7,
+    "date": "May 14, 2024 13:16",
+    "status": "read",
+    "message": "Sony XZ75WL 4K Ultra HD HDR Smart TV going too fast."
+  },
+  {
+    "id": 8,
+    "date": "May 14, 2024 10:22",
+    "status": "read",
+    "message": "Order UEYSHHENN8 has been dispatched."
+  },
+  {
+    "id": 9,
+    "date": "May 14, 2024 08:02",
+    "status": "read",
+    "message": "Logitech MX Master 3S Wireless Mouse going too fast."
+  },
+  {
+    "id": 10,
+    "date": "May 13, 2024 23:59",
+    "status": "read",
+    "message": "Dell UltraSharp WB7022 4K Webcam selling started."
+  }
+]

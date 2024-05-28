@@ -31,7 +31,7 @@ const Profile = ({ name, lastname, picture }: IProps): React.JSX.Element => {
         <div className='flex relative'>
           <Link to='/members/notifications' className='flex'>
             <span className='material-symbols-outlined icon active-opacity'>notifications</span>
-            <em className='notification flex flex-v-center flex-h-center no-select'>3</em>
+            <em className='notification red absolute flex flex-v-center flex-h-center no-select'>3</em>
           </Link>
         </div>
         <div ref={wrapperRef} className='flex flex-v-center flex-gap-medium'>

@@ -220,7 +220,7 @@ const Message = (): React.JSX.Element => {
             </div>
             <div className='button-line flex'>
               <div className='flex flex-grow flex-gap'>
-                <Button separator type='button' text='Resolved' className='light' rightIcon='arrow_downward' />
+                <Button separator type='button' text='Resolved' className='light' rightIcon='expand_all' />
               </div>
               <div className='flex flex-end'>
                 <Button type='submit' text='Send message' rightIcon='send' />

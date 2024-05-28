@@ -423,16 +423,32 @@ header {
 }
 
 .notification {
-  top: -8px;
-  right: -8px;
   width: 20px;
   height: 20px;
   color: #ffffff;
   font-size: 0.5em;
   font-weight: 500;
-  position: absolute;
   border-radius: 50em;
-  background-color: red;
+}
+
+.notification.absolute {
+  top: -8px;
+  right: -8px;
+  position: absolute;
+}
+
+.notification.red {
+  background-color: #ff0000;
+}
+
+.notification.blue {
+  display: block;
+  background-color: #007bff;
+}
+
+.notification.gray {
+  display: block;
+  background-color: #999999;
 }
 
 .button-group {
