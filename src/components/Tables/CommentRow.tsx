@@ -38,8 +38,20 @@ const CommentRow = ({ name, date, image, product, comment, status }: IProps): Re
         <h6>{product}</h6>
         {comment}
       </div>
-      <div className='buttons flex flex-end flex-gap'>
-        <Button separator type='button' text={status} className='light' rightIcon='expand_all' />
+      <div className='buttons flex flex-v-center flex-space-between flex-gap'>
+        <div className='flex flex-gap no-select'>
+          <button type='button' className='flex flex-gap-small pointer active-opacity'>
+            <span className='material-symbols-outlined'>reply</span>
+            <strong>Reply</strong>
+          </button>
+          <button type='button' className='flex flex-gap-small pointer active-opacity'>
+            <span className='material-symbols-outlined'>delete</span>
+            <strong>Delete</strong>
+          </button>
+        </div>
+        <div>
+          <Button separator type='button' text={status} className='light' rightIcon='expand_all' />
+        </div>
       </div>
     </div>
   );

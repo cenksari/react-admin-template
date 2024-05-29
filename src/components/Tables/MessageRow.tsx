@@ -41,7 +41,7 @@ const MessageRow = ({ id, name, image, subject, status, attachments }: IProps): 
       </td>
       <td className='flex flex-v-center flex-end flex-gap'>
         <button type='button' className='pointer active-opacity'>
-          <span className='material-symbols-outlined'>forward</span>
+          <span className='material-symbols-outlined'>reply</span>
         </button>
         <button type='button' className='pointer active-opacity'>
           <span className='material-symbols-outlined'>delete</span>

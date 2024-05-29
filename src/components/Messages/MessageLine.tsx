@@ -22,7 +22,7 @@ const MessageLine = ({ id, from, image, subject }: IProps): React.JSX.Element =>
     </div>
     <div className='flex flex-gap'>
       <button type='button' className='pointer active-opacity'>
-        <span className='material-symbols-outlined'>forward</span>
+        <span className='material-symbols-outlined'>reply</span>
       </button>
       <button type='button' className='pointer active-opacity'>
         <span className='material-symbols-outlined'>delete</span>

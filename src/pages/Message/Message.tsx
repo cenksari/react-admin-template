@@ -90,6 +90,16 @@ const Message = (): React.JSX.Element => {
                 <div className='content'>
                   {current.message}
                 </div>
+                <div className='flex flex-end flex-gap'>
+                  <button type='button' className='flex flex-gap-small pointer active-opacity'>
+                    <span className='material-symbols-outlined'>reply</span>
+                    <strong>Reply</strong>
+                  </button>
+                  <button type='button' className='flex flex-gap-small pointer active-opacity'>
+                    <span className='material-symbols-outlined'>delete</span>
+                    <strong>Delete</strong>
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -110,11 +120,13 @@ const Message = (): React.JSX.Element => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </div>
                 <div className='flex flex-end flex-gap'>
-                  <button type='button' className='pointer active-opacity'>
-                    <span className='material-symbols-outlined'>forward</span>
+                  <button type='button' className='flex flex-gap-small pointer active-opacity'>
+                    <span className='material-symbols-outlined'>reply</span>
+                    <strong>Reply</strong>
                   </button>
-                  <button type='button' className='pointer active-opacity'>
+                  <button type='button' className='flex flex-gap-small pointer active-opacity'>
                     <span className='material-symbols-outlined'>delete</span>
+                    <strong>Delete</strong>
                   </button>
                 </div>
               </div>
@@ -136,6 +148,16 @@ const Message = (): React.JSX.Element => {
                 <div className='content'>
                   {current.message}
                 </div>
+                <div className='flex flex-end flex-gap'>
+                  <button type='button' className='flex flex-gap-small pointer active-opacity'>
+                    <span className='material-symbols-outlined'>reply</span>
+                    <strong>Reply</strong>
+                  </button>
+                  <button type='button' className='flex flex-gap-small pointer active-opacity'>
+                    <span className='material-symbols-outlined'>delete</span>
+                    <strong>Delete</strong>
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -156,11 +178,13 @@ const Message = (): React.JSX.Element => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </div>
                 <div className='flex flex-end flex-gap'>
-                  <button type='button' className='pointer active-opacity'>
-                    <span className='material-symbols-outlined'>forward</span>
+                  <button type='button' className='flex flex-gap-small pointer active-opacity'>
+                    <span className='material-symbols-outlined'>reply</span>
+                    <strong>Reply</strong>
                   </button>
-                  <button type='button' className='pointer active-opacity'>
+                  <button type='button' className='flex flex-gap-small pointer active-opacity'>
                     <span className='material-symbols-outlined'>delete</span>
+                    <strong>Delete</strong>
                   </button>
                 </div>
               </div>
@@ -183,11 +207,13 @@ const Message = (): React.JSX.Element => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </div>
                 <div className='flex flex-end flex-gap'>
-                  <button type='button' className='pointer active-opacity'>
-                    <span className='material-symbols-outlined'>forward</span>
+                  <button type='button' className='flex flex-gap-small pointer active-opacity'>
+                    <span className='material-symbols-outlined'>reply</span>
+                    <strong>Reply</strong>
                   </button>
-                  <button type='button' className='pointer active-opacity'>
+                  <button type='button' className='flex flex-gap-small pointer active-opacity'>
                     <span className='material-symbols-outlined'>delete</span>
+                    <strong>Delete</strong>
                   </button>
                 </div>
               </div>
