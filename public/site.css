@@ -231,11 +231,11 @@ strong {
   cursor: pointer;
   font-weight: 600;
   user-select: none;
-  padding: 10px 20px;
   border-radius: 10px;
   align-items: center;
   text-decoration: none;
   --webkit-user-select: none;
+  padding: 10px 20px 12px 20px;
   justify-content: space-between;
 }
 
@@ -425,8 +425,8 @@ header {
 }
 
 .user-photo.large {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
 }
 
 .notification {
@@ -710,6 +710,31 @@ header {
 
 .message-body .content {
   padding-top: 20px;
+  line-height: 160%;
+}
+
+.comment {
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  border: 1px solid #dadada;
+}
+
+.comment .date {
+  font-size: 0.8em;
+}
+
+.comment .content {
+  padding-top: 20px;
+  line-height: 160%;
+}
+
+.comment .content h6 {
+  margin-bottom: 5px;
+}
+
+.comment .buttons {
+  margin-top: 20px;
 }
 
 .scroller {

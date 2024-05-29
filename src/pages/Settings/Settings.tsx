@@ -5,10 +5,12 @@ import { Link } from 'react-router-dom';
 import Input from '../../components/Forms/Input';
 import Button from '../../components/Forms/Button';
 import Master from '../../components/Layout/Master';
+import Spacer from '../../components/Spacer/Spacer';
 import Textarea from '../../components/Forms/Textarea';
 import Checkbox from '../../components/Forms/Checkbox';
 import Heading from '../../components/Headings/Heading';
 import Container from '../../components/Containers/Container';
+import ButtonGroup from '../../components/ButtonGroup/ButtonGroup';
 
 interface IFormValues {
   name: '',
@@ -27,11 +29,38 @@ interface IFormValues {
   guestCheckout: boolean;
 }
 
+const buttonGroup = [
+  {
+    id: 1,
+    text: 'General',
+    url: '/settings',
+    active: true,
+  },
+  {
+    id: 2,
+    text: 'Maintenance',
+    url: '/settings?filter=maintenance',
+    active: false,
+  },
+  {
+    id: 3,
+    text: 'Mail settings',
+    url: '/settings?filter=mailsettings',
+    active: false,
+  },
+  {
+    id: 4,
+    text: 'Site features',
+    url: '/settings?filter=sitefeatures',
+    active: false,
+  },
+];
+
 const Settings = (): React.JSX.Element => {
   const [values, setValues] = React.useState<IFormValues>({
     name: '',
     maintenance: false,
-    maintenanceMessage: 'Site is under maintenance. Thank your for your patience.',
+    maintenanceMessage: 'Site is under maintenance. Thank you for your patience.',
     siteName: 'E-commerce Store',
     siteDesc: 'Worlds greatest e-commerce store',
     smtpPort: '80',
@@ -76,6 +105,11 @@ const Settings = (): React.JSX.Element => {
             <Button type='button' text='Administrators' />
           </div>
         </Heading>
+
+        <ButtonGroup items={buttonGroup} />
+
+        <Spacer />
+
         <form noValidate onSubmit={handleSubmit}>
           <div className='form-elements'>
             <h4>Logos</h4>

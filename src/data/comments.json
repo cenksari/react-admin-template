@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Robert Wilson",
+    "date": "May 19, 2024 10:22",
+    "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "image": "https://i.pravatar.cc/100?img=1",
+    "status": "waiting",
+    "product": "Logitech MX Master 3S Wireless Mouse"
+  },
+  {
+    "id": 2,
+    "name": "Emily Davis",
+    "date": "May 18, 2024 09:14",
+    "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "image": "https://i.pravatar.cc/100?img=2",
+    "status": "published",
+    "product": "Sennheiser HD 450 BT Audio Headphones"
+  },
+  {
+    "id": 3,
+    "name": "Michael Johnson",
+    "date": "May 17, 2024 22:31",
+    "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "image": "https://i.pravatar.cc/100?img=3",
+    "status": "published",
+    "product": "Dell UltraSharp WB7022 4K Webcam"
+  },
+  {
+    "id": 4,
+    "name": "Sarah Brown",
+    "date": "May 16, 2024 16:54",
+    "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "image": "https://i.pravatar.cc/100?img=4",
+    "status": "unpublished",
+    "product": "Apple HomePod Mini Smart Speaker"
+  }
+]

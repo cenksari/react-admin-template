@@ -4,9 +4,13 @@ import Input from '../../components/Forms/Input';
 import Button from '../../components/Forms/Button';
 import Paging from '../../components/Paging/Paging';
 import Master from '../../components/Layout/Master';
+import Spacer from '../../components/Spacer/Spacer';
 import Heading from '../../components/Headings/Heading';
+import CommentRow from '../../components/Tables/CommentRow';
 import Container from '../../components/Containers/Container';
 import ButtonGroup from '../../components/ButtonGroup/ButtonGroup';
+
+import comments from '../../data/comments.json';
 
 const buttonGroup = [
   {
@@ -55,6 +59,12 @@ const Comments = (): React.JSX.Element => (
       </Heading>
 
       <ButtonGroup items={buttonGroup} />
+
+      <Spacer />
+
+      {comments && comments.map((comment) => (
+        <CommentRow key={comment.id} name={comment.name} date={comment.date} image={comment.image} product={comment.product} comment={comment.comment} status={comment.status} />
+      ))}
 
       <Paging url='/comments' pageSize={30} totalRows={150} currentPage={1} />
     </Container>
