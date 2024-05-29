@@ -371,9 +371,9 @@ header {
 
 footer {
   color: #666666;
+  margin: 20px auto;
   padding-top: 30px;
   text-align: center;
-  margin: 30px auto 10px auto;
   border-top: 1px solid #dadada;
 }
 
