@@ -710,15 +710,26 @@ footer strong {
 
 .message-body {
   padding: 30px;
-  min-width: 80%;
-  max-width: 80%;
+  position: relative;
   border-radius: 10px;
   border: 1px solid #dadada;
   background-color: #f5f5f5;
 }
 
 .message-body.right {
+  width: 89%;
+  float: right;
   background-color: #ffffff;
+}
+
+.message-body.right::before {
+  top: 0;
+  left: -50px;
+  font-size: 2.3em;
+  content: '\f4f6';
+  color: #666666;
+  position: absolute;
+  font-family: 'Material Symbols Outlined';
 }
 
 .message-body .date {
@@ -728,6 +739,10 @@ footer strong {
 .message-body .content {
   padding-top: 20px;
   line-height: 160%;
+}
+
+.message-body .buttons {
+  margin-top: 20px;
 }
 
 .comment {
