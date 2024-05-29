@@ -25,7 +25,7 @@ const CommentRow = ({ name, date, image, product, comment, status }: IProps): Re
               <em className='date'>{date}</em>
             </div>
           </div>
-          <div>
+          <div className='no-select'>
             <img src='https://img.icons8.com/?size=30&id=19417&format=png&color=000000' alt='' />
             <img src='https://img.icons8.com/?size=30&id=19417&format=png&color=000000' alt='' />
             <img src='https://img.icons8.com/?size=30&id=19417&format=png&color=000000' alt='' />

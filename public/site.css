@@ -369,6 +369,23 @@ header {
   border-bottom: 1px solid #dadada;
 }
 
+footer {
+  color: #666666;
+  padding-top: 30px;
+  text-align: center;
+  margin: 30px auto 10px auto;
+  border-top: 1px solid #dadada;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer strong {
+  display: block;
+  margin-bottom: 10px;
+}
+
 .header-menu {
   padding: 10px;
   min-width: 250px;
@@ -1178,7 +1195,6 @@ header {
 
   .site-frame {
     border-radius: 0;
-    padding-bottom: 10px;
   }
 
   .container {
