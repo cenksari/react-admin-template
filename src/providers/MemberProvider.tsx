@@ -11,17 +11,13 @@ interface IProps {
 export const MemberProvider = ({ children }: IProps): React.JSX.Element => {
   const { getData, setData, removeData } = useLocalStorage();
 
-  const [member, setMember] = React.useState<IMember | null>(null);
+  const [member, setMember] = React.useState<IMember | null>(getData('member') as IMember | null);
 
-  React.useEffect(() => {
-    setMember(getData('member') as IMember | null);
-  }, [getData]);
-
-  const addMember = React.useCallback((payload: IMember): void => {
+  const addMember = (payload: IMember): void => {
     setMember(payload);
 
     setData('member', payload);
-  }, [setData]);
+  };
 
   const removeMember = (): void => {
     setMember(null);
