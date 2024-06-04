@@ -13,7 +13,7 @@ import Container from '../../components/Containers/Container';
 import ButtonGroup from '../../components/ButtonGroup/ButtonGroup';
 
 interface IFormValues {
-  name: '',
+  name: '';
   maintenance: boolean;
   maintenanceMessage: string;
   siteName: string;
@@ -22,10 +22,10 @@ interface IFormValues {
   smtpAddress: string;
   fromMail: string;
   fromName: string;
-  comments: boolean,
-  activation: boolean,
+  comments: boolean;
+  activation: boolean;
   appleLogin: boolean;
-  googleLogin: boolean,
+  googleLogin: boolean;
   guestCheckout: boolean;
 }
 
@@ -74,7 +74,9 @@ const Settings = (): React.JSX.Element => {
     guestCheckout: true,
   });
 
-  const handleTextChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>): void => {
+  const handleTextChange = (
+    e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>
+  ): void => {
     const { name, value } = e.target;
 
     setValues({
@@ -89,7 +91,7 @@ const Settings = (): React.JSX.Element => {
     setValues({
       ...values,
       [name]: checked,
-    })
+    });
   };
 
   const handleSubmit = (e: React.FormEvent): void => {
@@ -114,7 +116,9 @@ const Settings = (): React.JSX.Element => {
           <div className='form-elements'>
             <h4>Logos</h4>
             <div className='form-line'>
-              <Link to='/' className='active-opacity'>Click here for logo management</Link>
+              <Link to='/' className='active-opacity'>
+                Click here for logo management
+              </Link>
             </div>
             <h4>General</h4>
             <div className='form-line flex flex-gap'>

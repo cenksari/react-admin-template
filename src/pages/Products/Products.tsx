@@ -68,20 +68,21 @@ const Products = (): React.JSX.Element => (
       <ButtonGroup items={buttonGroup} />
 
       <BoxContainer boxes={4}>
-        {products && products.map((product) => (
-          <Box type='multi' title={product.category} icon='category' key={product.id}>
-            <div className='content'>
-              <Product
-                url={`/product/${product.id}`}
-                name={product.name}
-                price={product.price}
-                image={product.image}
-                stock={product.stock}
-                orders={product.orders}
-              />
-            </div>
-          </Box>
-        ))}
+        {products &&
+          products.map((product) => (
+            <Box type='multi' title={product.category} icon='category' key={product.id}>
+              <div className='content'>
+                <Product
+                  url={`/product/${product.id}`}
+                  name={product.name}
+                  price={product.price}
+                  image={product.image}
+                  stock={product.stock}
+                  orders={product.orders}
+                />
+              </div>
+            </Box>
+          ))}
       </BoxContainer>
 
       <Paging url='/products' pageSize={30} totalRows={150} currentPage={1} />

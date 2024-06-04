@@ -8,13 +8,11 @@ interface IProps {
 }
 
 const Master = ({ children }: IProps): React.JSX.Element => (
-  <>
-    <div className='site-frame'>
-      <Header />
-      {children}
-      <Footer />
-    </div>
-  </>
+  <div className='site-frame'>
+    <Header />
+    {children}
+    <Footer />
+  </div>
 );
 
 export default Master;

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Pages from './Pages';
-import PagesSelect from "./PagesSelect";
+import PagesSelect from './PagesSelect';
 
 interface IProps {
   url: string;
@@ -14,11 +14,11 @@ const Paging = ({ url, pageSize, totalRows, currentPage }: IProps): React.JSX.El
   const totalPages = Math.floor((totalRows + pageSize - 1) / pageSize);
 
   if (totalPages < 1) {
-    return <></>;
+    return <div />;
   }
 
   if (currentPage > totalPages) {
-    return <></>;
+    return <div />;
   }
 
   const prevPage = () => {
@@ -178,7 +178,7 @@ const Paging = ({ url, pageSize, totalRows, currentPage }: IProps): React.JSX.El
     );
   }
 
-  return <></>;
+  return <div />;
 };
 
 export default Paging;

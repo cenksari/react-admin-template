@@ -3,7 +3,7 @@
  *
  * @param {string} key - Storage key
  */
-const getData = (key: string): any => {
+const getData = (key: string): object | [] | null => {
   try {
     const item = localStorage.getItem(key);
 
@@ -19,7 +19,7 @@ const getData = (key: string): any => {
  * @param {string} key - Storage key
  * @param {object} value - Storage value
  */
-const setData = (key: string, value: any): boolean => {
+const setData = (key: string, value: object): boolean => {
   try {
     if (value) {
       localStorage.setItem(key, JSON.stringify(value));
@@ -48,10 +48,8 @@ const removeData = (key: string): boolean => {
   }
 };
 
-const Storage = {
+export default {
   getData,
   setData,
   removeData,
 };
-
-export default Storage;

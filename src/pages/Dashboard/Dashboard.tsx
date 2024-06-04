@@ -20,15 +20,19 @@ import { formatCurrency } from '../../utils/Toolbox';
 import messages from '../../data/messages.json';
 import products from '../../data/products.json';
 
-const series1 = [{
-  name: 'Orders',
-  data: [2.3, 3.1, 4.0, 10.1, 4.0, 3.6, 3.2, 2.3, 1.4, 0.8, 0.5, 0.2],
-}];
+const series1 = [
+  {
+    name: 'Orders',
+    data: [2.3, 3.1, 4.0, 10.1, 4.0, 3.6, 3.2, 2.3, 1.4, 0.8, 0.5, 0.2],
+  },
+];
 
-const series2 = [{
-  name: 'Traffic',
-  data: [7.3, 3.1, 4.0, 10.1, 8.0, 11.6, ],
-}];
+const series2 = [
+  {
+    name: 'Traffic',
+    data: [7.3, 3.1, 4.0, 10.1, 8.0, 11.6],
+  },
+];
 
 const buttonGroup = [
   {
@@ -113,9 +117,16 @@ const Dashboard = (): React.JSX.Element => (
       <BoxContainer boxes={2}>
         <Box type='multi' title='Messages' icon='message'>
           <div className='content scroller scroller-vertical'>
-            {messages && messages.map((message) => (
-              <MessageLine key={message.id} id={message.id.toString()} from={message.name} image={message.image} subject={message.subject} />
-            ))}
+            {messages &&
+              messages.map((message) => (
+                <MessageLine
+                  key={message.id}
+                  id={message.id.toString()}
+                  from={message.name}
+                  image={message.image}
+                  subject={message.subject}
+                />
+              ))}
           </div>
         </Box>
 
@@ -143,20 +154,21 @@ const Dashboard = (): React.JSX.Element => (
       </Heading>
 
       <BoxContainer boxes={4}>
-        {products && products.slice(0, 4).map((product) => (
-          <Box type='multi' title={product.category} icon='category' key={product.id}>
-            <div className='content'>
-              <Product
-                url={`/product/${product.id}`}
-                name={product.name}
-                price={product.price}
-                image={product.image}
-                stock={product.stock}
-                orders={product.orders}
-              />
-            </div>
-          </Box>
-        ))}
+        {products &&
+          products.slice(0, 4).map((product) => (
+            <Box type='multi' title={product.category} icon='category' key={product.id}>
+              <div className='content'>
+                <Product
+                  url={`/product/${product.id}`}
+                  name={product.name}
+                  price={product.price}
+                  image={product.image}
+                  stock={product.stock}
+                  orders={product.orders}
+                />
+              </div>
+            </Box>
+          ))}
       </BoxContainer>
     </Container>
   </Master>

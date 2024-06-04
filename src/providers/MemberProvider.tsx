@@ -8,7 +8,7 @@ interface IProps {
   children: React.ReactNode;
 }
 
-export const MemberProvider = ({ children }: IProps): React.JSX.Element => {
+const MemberProvider = ({ children }: IProps): React.JSX.Element => {
   const { getData, setData, removeData } = useLocalStorage();
 
   const [member, setMember] = React.useState<IMember | null>(getData('member') as IMember | null);
@@ -25,11 +25,10 @@ export const MemberProvider = ({ children }: IProps): React.JSX.Element => {
     removeData('member');
   };
 
-  return (
-    <MemberContext.Provider value={{ member, addMember, removeMember }}>
-      {children}
-    </MemberContext.Provider>
-  );
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const contextValues = React.useMemo(() => ({ member, addMember, removeMember }), []);
+
+  return <MemberContext.Provider value={contextValues}>{children}</MemberContext.Provider>;
 };
 
 export default MemberProvider;

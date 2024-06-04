@@ -16,7 +16,7 @@ interface IProps {
 const Profile = ({ name, lastname, picture }: IProps): React.JSX.Element => {
   const location = useLocation();
 
-  const wrapperRef = React.useRef<any>();
+  const wrapperRef = React.useRef<HTMLDivElement>(null);
 
   const [dropdown, setDropdown] = React.useState<boolean>(false);
 
@@ -35,13 +35,18 @@ const Profile = ({ name, lastname, picture }: IProps): React.JSX.Element => {
         <div className='flex relative'>
           <Link to='/members/notifications' className='flex'>
             <span className='material-symbols-outlined icon active-opacity'>notifications</span>
-            <em className='notification red absolute flex flex-v-center flex-h-center no-select'>3</em>
+            <em className='notification red absolute flex flex-v-center flex-h-center no-select'>
+              3
+            </em>
           </Link>
         </div>
         <div ref={wrapperRef} className='flex flex-v-center flex-gap-medium'>
           <Link to='/members/account'>
             {picture ? (
-              <div className='user-photo cover active-opacity' style={{ backgroundImage: `url('${picture}')` }} />
+              <div
+                className='user-photo cover active-opacity'
+                style={{ backgroundImage: `url('${picture}')` }}
+              />
             ) : (
               <div className='user-photo flex flex-v-center flex-h-center active-opacity'>
                 <em>
@@ -51,7 +56,11 @@ const Profile = ({ name, lastname, picture }: IProps): React.JSX.Element => {
               </div>
             )}
           </Link>
-          <button className='flex flex-v-center flex-gap-small pointer active-opacity' onClick={() => setDropdown(!dropdown)}>
+          <button
+            type='button'
+            className='flex flex-v-center flex-gap-small pointer active-opacity'
+            onClick={() => setDropdown(!dropdown)}
+          >
             <strong>{name}</strong>
             <span className='material-symbols-outlined dropdown-arrow'>
               {dropdown ? 'expand_less' : 'expand_more'}
@@ -59,8 +68,16 @@ const Profile = ({ name, lastname, picture }: IProps): React.JSX.Element => {
           </button>
           {dropdown && (
             <Dropdown color='gray'>
-              <DropdownItem url='/members/account' text='Account' active={pathname === '/members/account' ? true : false} />
-              <DropdownItem url='/members/notifications' text='Notifications' active={pathname === '/members/notifications' ? true : false} />
+              <DropdownItem
+                url='/members/account'
+                text='Account'
+                active={pathname === '/members/account'}
+              />
+              <DropdownItem
+                url='/members/notifications'
+                text='Notifications'
+                active={pathname === '/members/notifications'}
+              />
               <hr />
               <DropdownItem url='/members/signout' text='Sign out' />
             </Dropdown>

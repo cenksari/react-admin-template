@@ -43,7 +43,7 @@ const Signin = (): React.JSX.Element => {
     setValues({
       ...values,
       [name]: checked,
-    })
+    });
   };
 
   const handleSubmit = (e: React.FormEvent): void => {
@@ -134,7 +134,7 @@ const Signin = (): React.JSX.Element => {
                   name='password'
                   type='password'
                   value={values.password}
-                  tabIndex={1}
+                  tabIndex={-1}
                   maxLength={32}
                   onChange={handleTextChange}
                   placeholder='Please enter your password'
@@ -161,7 +161,7 @@ const Signin = (): React.JSX.Element => {
         </form>
       </Container>
     </Single>
-  )
-}
+  );
+};
 
 export default Signin;

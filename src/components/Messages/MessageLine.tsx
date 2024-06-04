@@ -9,9 +9,8 @@ interface IProps {
   subject: string;
 }
 
-const MessageLine = ({ id, from, image, subject }: IProps): React.JSX.Element => {
-  return (
-    <div className='message flex flex-gap flex-v-center flex-space-between'>
+const MessageLine = ({ id, from, image, subject }: IProps): React.JSX.Element => (
+  <div className='message flex flex-gap flex-v-center flex-space-between'>
     <div>
       <div className='cover user-photo' style={{ backgroundImage: `url('${image}')` }} />
     </div>
@@ -29,7 +28,6 @@ const MessageLine = ({ id, from, image, subject }: IProps): React.JSX.Element =>
       </button>
     </div>
   </div>
-  );
-};
+);
 
 export default MessageLine;

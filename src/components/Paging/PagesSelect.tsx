@@ -5,7 +5,7 @@ interface IProps {
   currentPage: number;
 }
 
-const PagesSelect = ({ totalPages, currentPage }: IProps): React.JSX.Element => {
+const PagesSelect = ({ totalPages, currentPage }: IProps): React.JSX.Element[] => {
   const pageArray: React.JSX.Element[] = [];
 
   for (let i = 1; i <= totalPages; i += 1) {
@@ -24,7 +24,7 @@ const PagesSelect = ({ totalPages, currentPage }: IProps): React.JSX.Element => 
     }
   }
 
-  return <>{pageArray}</>
+  return pageArray;
 };
 
 export default PagesSelect;

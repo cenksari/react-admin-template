@@ -22,7 +22,7 @@ const Header = (): React.JSX.Element => {
     );
   }
 
-  return <></>;
+  return <div />;
 };
 
 export default Header;

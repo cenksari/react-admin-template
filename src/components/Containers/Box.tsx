@@ -4,7 +4,7 @@ interface IProps {
   type: string;
   icon: string;
   title: string;
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 const Box = ({ type, icon, title, children }: IProps): React.JSX.Element => {
@@ -16,9 +16,7 @@ const Box = ({ type, icon, title, children }: IProps): React.JSX.Element => {
             <span className='box-title no-select'>{title}</span>
             <span className='material-symbols-outlined'>{icon}</span>
           </div>
-          <div className='box-content'>
-            {children}
-          </div>
+          <div className='box-content'>{children}</div>
         </div>
       </div>
     );
@@ -31,9 +29,7 @@ const Box = ({ type, icon, title, children }: IProps): React.JSX.Element => {
           <span className='box-title no-select'>{title}</span>
           <span className='material-symbols-outlined'>{icon}</span>
         </div>
-        <div className='box-content'>
-          {children}
-        </div>
+        <div className='box-content'>{children}</div>
       </div>
     </div>
   );

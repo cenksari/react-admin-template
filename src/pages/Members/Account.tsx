@@ -24,10 +24,12 @@ const Account = (): React.JSX.Element => {
   const [values, setValues] = React.useState<IFormValues>({
     name: 'Cenk',
     lastname: 'SARI',
-    email: 'cenk@cenksari.com'
+    email: 'cenk@cenksari.com',
   });
 
-  const handleTextChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>): void => {
+  const handleTextChange = (
+    e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>
+  ): void => {
     const { name, value } = e.target;
 
     setValues({
@@ -50,7 +52,10 @@ const Account = (): React.JSX.Element => {
           </div>
         </Heading>
         <div className='flex flex-h-center'>
-          <div className='user-photo large cover' style={{ backgroundImage: `url('${member?.picture}')` }} />
+          <div
+            className='user-photo large cover'
+            style={{ backgroundImage: `url('${member?.picture}')` }}
+          />
         </div>
 
         <Spacer />

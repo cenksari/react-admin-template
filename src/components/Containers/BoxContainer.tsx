@@ -6,9 +6,7 @@ interface IProps {
 }
 
 const BoxContainer = ({ boxes, children }: IProps): React.JSX.Element => (
-  <div className={`box-container box-container-${boxes}`}>
-    {children}
-  </div>
+  <div className={`box-container box-container-${boxes}`}>{children}</div>
 );
 
 export default BoxContainer;

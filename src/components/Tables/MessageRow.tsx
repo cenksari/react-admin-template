@@ -14,7 +14,14 @@ interface IProps {
   attachments: boolean;
 }
 
-const MessageRow = ({ id, name, image, subject, status, attachments }: IProps): React.JSX.Element => {  
+const MessageRow = ({
+  id,
+  name,
+  image,
+  subject,
+  status,
+  attachments,
+}: IProps): React.JSX.Element => {
   const [state, setState] = React.useState<boolean>(false);
 
   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -26,9 +33,7 @@ const MessageRow = ({ id, name, image, subject, status, attachments }: IProps): 
       <td>
         <Checkbox name={`cb-${id}`} checked={state} onChange={handleCheckboxChange} />
       </td>
-      <td>
-        {attachments && <span className='material-symbols-outlined'>attach_file</span>}
-      </td>
+      <td>{attachments && <span className='material-symbols-outlined'>attach_file</span>}</td>
       <td>
         <div className='cover user-photo' style={{ backgroundImage: `url('${image}')` }} />
       </td>

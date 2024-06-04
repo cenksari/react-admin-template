@@ -21,6 +21,14 @@
     "jsx": "preserve"
   },
   "include": [
-    "src"
-  ]
+    "src",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.cjs",
+    "**/*.mjs",
+    ".eslintrc.cjs",
+    ".prettierrc.cjs",
+    ".eslint.config.mjs"
+  ],
+  "exclude": ["node_modules"]
 }

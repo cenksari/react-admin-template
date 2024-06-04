@@ -34,7 +34,10 @@ const Forgot = (): React.JSX.Element => {
     <Single>
       <Container>
         <h1>Forgot password</h1>
-        <p>Please enter your email address, we will send an email message to you for password reset instructions.</p>
+        <p>
+          Please enter your email address, we will send an email message to you for password reset
+          instructions.
+        </p>
         <Spacer />
         <form noValidate onSubmit={handleSubmit}>
           <div className='form-elements'>
@@ -65,7 +68,7 @@ const Forgot = (): React.JSX.Element => {
         </form>
       </Container>
     </Single>
-  )
-}
+  );
+};
 
 export default Forgot;

@@ -15,22 +15,37 @@ const Notifications = (): React.JSX.Element => (
       <Heading text='Notifications'>
         <div className='flex flex-gap'>
           <Button type='button' text='Delete selected' />
-          <Button separator type='button' text='Mark all as' rightIcon='expand_all' className='light' />
+          <Button
+            separator
+            type='button'
+            text='Mark all as'
+            rightIcon='expand_all'
+            className='light'
+          />
         </div>
       </Heading>
 
-      <Table header={
-        <tr>
-          <th></th>
-          <th></th>
-          <th>Date</th>
-          <th>Message</th>
-          <th></th>
-        </tr>
-      }>
-        {notifications && notifications.map((notification) => (
-          <NotificationRow key={notification.id} id={notification.id} date={notification.date} message={notification.message} status={notification.status} />
-        ))}
+      <Table
+        header={
+          <tr>
+            <th />
+            <th />
+            <th>Date</th>
+            <th>Message</th>
+            <th />
+          </tr>
+        }
+      >
+        {notifications &&
+          notifications.map((notification) => (
+            <NotificationRow
+              key={notification.id}
+              id={notification.id}
+              date={notification.date}
+              message={notification.message}
+              status={notification.status}
+            />
+          ))}
       </Table>
     </Container>
   </Master>

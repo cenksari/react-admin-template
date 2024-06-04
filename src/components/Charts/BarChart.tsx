@@ -35,7 +35,20 @@ const options: ApexOptions = {
   },
   xaxis: {
     type: 'category',
-    categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    categories: [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec',
+    ],
     position: 'bottom',
     axisBorder: {
       show: false,
@@ -56,8 +69,8 @@ const options: ApexOptions = {
     },
     labels: {
       show: false,
-      formatter: function (val: number) {
-        return val + "%";
+      formatter(val: number) {
+        return `${val}%`;
       },
     },
   },
@@ -68,10 +81,10 @@ interface IProps {
     name: string;
     data: number[];
   }[];
-};
+}
 
 const BarChart = ({ series }: IProps): React.JSX.Element => (
-  <ReactApexChart options={options} series={series} type="bar" height={350} />
+  <ReactApexChart options={options} series={series} type='bar' height={350} />
 );
 
 export default BarChart;

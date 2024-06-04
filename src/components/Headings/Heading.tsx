@@ -8,11 +8,7 @@ interface IProps {
 const Heading = ({ text, children }: IProps): React.JSX.Element => (
   <div className='flex flex-space-between heading'>
     <h1>{text}</h1>
-    {children && (
-      <div className='input-group'>
-        {children}
-      </div>
-    )}
+    {children && <div className='input-group'>{children}</div>}
   </div>
 );
 

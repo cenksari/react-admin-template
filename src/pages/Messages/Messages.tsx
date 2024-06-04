@@ -63,20 +63,31 @@ const Messages = (): React.JSX.Element => (
 
       <Spacer />
 
-      <Table header={
-        <tr>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th>From</th>
-          <th>Subject</th>
-          <th className='center'>Status</th>
-          <th></th>
-        </tr>
-      }>
-        {messages && messages.map((message) => (
-          <MessageRow key={message.id} id={message.id} name={`${message.name} ${message.lastname}`} image={message.image} subject={message.subject} status={message.status} attachments={message.attachments} />
-        ))}
+      <Table
+        header={
+          <tr>
+            <th />
+            <th />
+            <th />
+            <th>From</th>
+            <th>Subject</th>
+            <th className='center'>Status</th>
+            <th />
+          </tr>
+        }
+      >
+        {messages &&
+          messages.map((message) => (
+            <MessageRow
+              key={message.id}
+              id={message.id}
+              name={`${message.name} ${message.lastname}`}
+              image={message.image}
+              subject={message.subject}
+              status={message.status}
+              attachments={message.attachments}
+            />
+          ))}
       </Table>
 
       <Paging url='/messages' pageSize={30} totalRows={100} currentPage={1} />

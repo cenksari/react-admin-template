@@ -22,10 +22,10 @@ import useMember from '../hooks/useMember';
 
 const Navigation = (): React.JSX.Element => {
   const { member } = useMember();
-  
+
   return (
     <Routes>
-      { member ? (
+      {member ? (
         <>
           <Route path='/' element={<Dashboard />} />
           <Route path='/users' element={<Users />} />

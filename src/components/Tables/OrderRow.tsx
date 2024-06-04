@@ -18,8 +18,8 @@ interface IProps {
   status: string;
 }
 
-const OrderRow = ({ id, date, user, products, totalPrice, status }: IProps): React.JSX.Element => {  
-  const wrapperRef = React.useRef<any>();
+const OrderRow = ({ id, date, user, products, totalPrice, status }: IProps): React.JSX.Element => {
+  const wrapperRef = React.useRef<HTMLTableCellElement>(null);
 
   const [dropdown, setDropdown] = React.useState<boolean>(false);
 
@@ -47,7 +47,14 @@ const OrderRow = ({ id, date, user, products, totalPrice, status }: IProps): Rea
         <Badge text={status} color='white' />
       </td>
       <td ref={wrapperRef} className='flex flex-v-center flex-end flex-gap-small'>
-        <span className='material-symbols-outlined pointer active-opacity' onClick={() => setDropdown(!dropdown)}>more_vert</span>
+        <span
+          role='button'
+          tabIndex={0}
+          className='material-symbols-outlined pointer active-opacity'
+          onClick={() => setDropdown(!dropdown)}
+        >
+          more_vert
+        </span>
         {dropdown && (
           <Dropdown color='gray'>
             <DropdownItem icon='settings' url={`/order/edit/${id}`} text='Edit' />

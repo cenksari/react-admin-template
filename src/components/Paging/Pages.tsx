@@ -8,7 +8,7 @@ interface IProps {
   currentPage: number;
 }
 
-const Pages = ({ url, totalPages, currentPage }: IProps): React.JSX.Element => {
+const Pages = ({ url, totalPages, currentPage }: IProps): React.JSX.Element[] => {
   const pageArray: React.JSX.Element[] = [];
 
   for (let i = 1; i <= totalPages; i += 1) {
@@ -18,7 +18,7 @@ const Pages = ({ url, totalPages, currentPage }: IProps): React.JSX.Element => {
           <span>{i}</span>
         </li>
       );
-     } else {
+    } else {
       pageArray.push(
         <li key={i}>
           <Link to={`${url}?page=${i}`}>
@@ -29,7 +29,7 @@ const Pages = ({ url, totalPages, currentPage }: IProps): React.JSX.Element => {
     }
   }
 
-  return <>{pageArray}</>
+  return pageArray;
 };
 
 export default Pages;

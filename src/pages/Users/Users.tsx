@@ -63,20 +63,31 @@ const Users = (): React.JSX.Element => (
 
       <Spacer />
 
-      <Table header={
-        <tr>
-          <th></th>
-          <th></th>
-          <th>Name</th>
-          <th>E-mail</th>
-          <th>Country</th>
-          <th className='center'>Activation</th>
-          <th></th>
-        </tr>
-      }>
-        {users && users.map((user) => (
-          <UserRow key={user.id} id={user.id} name={user.name} email={user.email} image={user.image} country={user.country} status={user.status} />
-        ))}
+      <Table
+        header={
+          <tr>
+            <th />
+            <th />
+            <th>Name</th>
+            <th>E-mail</th>
+            <th>Country</th>
+            <th className='center'>Activation</th>
+            <th />
+          </tr>
+        }
+      >
+        {users &&
+          users.map((user) => (
+            <UserRow
+              key={user.id}
+              id={user.id}
+              name={user.name}
+              email={user.email}
+              image={user.image}
+              country={user.country}
+              status={user.status}
+            />
+          ))}
       </Table>
 
       <Paging url='/users' pageSize={30} totalRows={150} currentPage={1} />

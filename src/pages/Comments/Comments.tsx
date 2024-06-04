@@ -62,9 +62,18 @@ const Comments = (): React.JSX.Element => (
 
       <Spacer />
 
-      {comments && comments.map((comment) => (
-        <CommentRow key={comment.id} name={comment.name} date={comment.date} image={comment.image} product={comment.product} comment={comment.comment} status={comment.status} />
-      ))}
+      {comments &&
+        comments.map((comment) => (
+          <CommentRow
+            key={comment.id}
+            name={comment.name}
+            date={comment.date}
+            image={comment.image}
+            product={comment.product}
+            comment={comment.comment}
+            status={comment.status}
+          />
+        ))}
 
       <Paging url='/comments' pageSize={30} totalRows={150} currentPage={1} />
     </Container>

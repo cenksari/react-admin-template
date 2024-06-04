@@ -10,17 +10,23 @@ interface IProps {
   className?: string;
 }
 
-const ButtonLink = ({ url, className = 'dark', leftIcon, rightIcon, text }: IProps): React.JSX.Element => (
+const ButtonLink = ({
+  url,
+  className = 'dark',
+  leftIcon,
+  rightIcon,
+  text,
+}: IProps): React.JSX.Element => (
   <Link to={url} className={`button ${className}`}>
     {leftIcon && (
       <div className='flex flex-v-center flex-h-center'>
-        <span className="material-symbols-outlined left-icon">{leftIcon}</span>
+        <span className='material-symbols-outlined left-icon'>{leftIcon}</span>
       </div>
     )}
     <em>{text}</em>
     {rightIcon && (
       <div className='flex flex-v-center flex-h-center'>
-        <span className="material-symbols-outlined right-icon">{rightIcon}</span>
+        <span className='material-symbols-outlined right-icon'>{rightIcon}</span>
       </div>
     )}
   </Link>

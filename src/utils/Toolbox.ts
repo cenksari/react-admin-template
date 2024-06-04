@@ -11,3 +11,5 @@ export const formatCurrency = (value: number): string =>
     minimumFractionDigits: 0,
     currencyDisplay: 'symbol',
   }).format(value);
+
+export default { formatCurrency };

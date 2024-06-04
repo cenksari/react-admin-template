@@ -7,7 +7,7 @@ interface IProps {
     id: number;
     url: string;
     text: string;
-    active?: boolean
+    active?: boolean;
   }[];
 }
 

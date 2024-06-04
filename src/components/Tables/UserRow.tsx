@@ -16,8 +16,8 @@ interface IProps {
   status: boolean;
 }
 
-const UserRow = ({ id, name, email, image, country, status }: IProps): React.JSX.Element => {  
-  const wrapperRef = React.useRef<any>();
+const UserRow = ({ id, name, email, image, country, status }: IProps): React.JSX.Element => {
+  const wrapperRef = React.useRef<HTMLTableCellElement>(null);
 
   const [dropdown, setDropdown] = React.useState<boolean>(false);
 
@@ -43,10 +43,17 @@ const UserRow = ({ id, name, email, image, country, status }: IProps): React.JSX
       <td>{email}</td>
       <td>{country}</td>
       <td className='center'>
-        {status ? (<Badge text='Active' color='white' />) : (<Badge text='Passive' color='dark' />)}
+        {status ? <Badge text='Active' color='white' /> : <Badge text='Passive' color='dark' />}
       </td>
       <td ref={wrapperRef} className='flex flex-v-center flex-end flex-gap-small'>
-        <span className='material-symbols-outlined pointer active-opacity' onClick={() => setDropdown(!dropdown)}>more_vert</span>
+        <span
+          role='button'
+          tabIndex={0}
+          className='material-symbols-outlined pointer active-opacity'
+          onClick={() => setDropdown(!dropdown)}
+        >
+          more_vert
+        </span>
         {dropdown && (
           <Dropdown color='gray'>
             <DropdownItem icon='settings' url={`/user/edit/${id}`} text='Edit' />

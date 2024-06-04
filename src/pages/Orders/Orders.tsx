@@ -69,21 +69,32 @@ const Orders = (): React.JSX.Element => (
 
       <Spacer />
 
-      <Table header={
-        <tr>
-          <th></th>
-          <th>ID</th>
-          <th>Date</th>
-          <th>User</th>
-          <th className='center'>Products</th>
-          <th className='center'>Total price</th>
-          <th className='center'>Status</th>
-          <th></th>
-        </tr>
-      }>
-        {orders && orders.map((order) => (
-          <OrderRow key={order.id} id={order.id} date={order.date} user={order.user} products={order.products} totalPrice={order.totalPrice} status={order.status} />
-        ))}
+      <Table
+        header={
+          <tr>
+            <th />
+            <th>ID</th>
+            <th>Date</th>
+            <th>User</th>
+            <th className='center'>Products</th>
+            <th className='center'>Total price</th>
+            <th className='center'>Status</th>
+            <th />
+          </tr>
+        }
+      >
+        {orders &&
+          orders.map((order) => (
+            <OrderRow
+              key={order.id}
+              id={order.id}
+              date={order.date}
+              user={order.user}
+              products={order.products}
+              totalPrice={order.totalPrice}
+              status={order.status}
+            />
+          ))}
       </Table>
 
       <Paging url='/orders' pageSize={30} totalRows={150} currentPage={1} />
