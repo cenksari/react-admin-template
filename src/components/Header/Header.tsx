@@ -5,24 +5,14 @@ import Links from './Links';
 import Profile from './Profile';
 import Container from '../Containers/Container';
 
-import useMember from '../../hooks/useMember';
-
-const Header = (): React.JSX.Element | null => {
-  const { member } = useMember();
-
-  if (member) {
-    return (
-      <header>
-        <Container className='container flex flex-v-center flex-space-between'>
-          <Menu />
-          <Links />
-          <Profile name={member.name} lastname={member.lastname} picture={member.picture} />
-        </Container>
-      </header>
-    );
-  }
-
-  return null;
-};
+const Header = (): React.JSX.Element => (
+  <header>
+    <Container className='container flex flex-v-center flex-space-between'>
+      <Menu />
+      <Links />
+      <Profile name='Cenk' lastname='SARI' picture='https://i.pravatar.cc/300?img=60' />
+    </Container>
+  </header>
+);
 
 export default Header;

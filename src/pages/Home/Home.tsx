@@ -38,30 +38,30 @@ const buttonGroup = [
   {
     id: 1,
     text: 'Overview',
-    url: '/',
+    url: '/home',
     active: true,
   },
   {
     id: 2,
     text: 'Focused',
-    url: '/dashboard/focused',
+    url: '/home/focused',
     active: false,
   },
   {
     id: 3,
     text: 'Detailed',
-    url: '/dashboard/detailed',
+    url: '/home/detailed',
     active: false,
   },
   {
     id: 4,
     text: 'Financial',
-    url: '/dashboard/financial',
+    url: '/home/financial',
     active: false,
   },
 ];
 
-const Dashboard = (): React.JSX.Element => (
+const Home = (): React.JSX.Element => (
   <Master>
     <Container>
       <Heading text='Dashboard'>
@@ -172,4 +172,4 @@ const Dashboard = (): React.JSX.Element => (
   </Master>
 );
 
-export default Dashboard;
+export default Home;

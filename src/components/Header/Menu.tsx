@@ -35,7 +35,7 @@ const Menu = (): React.JSX.Element => {
       </div>
       {dropdown && (
         <Dropdown color='gray'>
-          <DropdownItem url='/' text='Dashboard' active={splitLocation[1] === ''} />
+          <DropdownItem url='/home' text='Dashboard' active={splitLocation[1] === 'home'} />
           <DropdownItem url='/users' text='Users' active={splitLocation[1] === 'users'} />
           <DropdownItem url='/orders' text='Orders' active={splitLocation[1] === 'orders'} />
           <DropdownItem url='/products' text='Products' active={splitLocation[1] === 'products'} />

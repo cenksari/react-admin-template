@@ -10,8 +10,6 @@ import Heading from '../../components/Headings/Heading';
 import ButtonLink from '../../components/Forms/ButtonLink';
 import Container from '../../components/Containers/Container';
 
-import useMember from '../../hooks/useMember';
-
 interface IFormValues {
   name: string;
   lastname: string;
@@ -19,8 +17,6 @@ interface IFormValues {
 }
 
 const Account = (): React.JSX.Element => {
-  const { member } = useMember();
-
   const [values, setValues] = React.useState<IFormValues>({
     name: 'Cenk',
     lastname: 'SARI',
@@ -54,7 +50,7 @@ const Account = (): React.JSX.Element => {
         <div className='flex flex-h-center'>
           <div
             className='user-photo large cover'
-            style={{ backgroundImage: `url('${member?.picture}')` }}
+            style={{ backgroundImage: `url('https://i.pravatar.cc/300?img=60')` }}
           />
         </div>
 

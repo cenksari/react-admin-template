@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import Input from '../../components/Forms/Input';
 import Button from '../../components/Forms/Button';
@@ -9,10 +9,6 @@ import Spacer from '../../components/Spacer/Spacer';
 import Checkbox from '../../components/Forms/Checkbox';
 import Container from '../../components/Containers/Container';
 
-import { type IMember } from '../../contexts/MemberContext';
-
-import useMember from '../../hooks/useMember';
-
 interface IFormValues {
   email: string;
   password: string;
@@ -20,7 +16,7 @@ interface IFormValues {
 }
 
 const Signin = (): React.JSX.Element => {
-  const { addMember } = useMember();
+  const navigate = useNavigate();
 
   const [values, setValues] = React.useState<IFormValues>({
     email: '',
@@ -49,16 +45,7 @@ const Signin = (): React.JSX.Element => {
   const handleSubmit = (e: React.FormEvent): void => {
     e.preventDefault();
 
-    const details: IMember = {
-      id: 1,
-      name: 'Cenk',
-      lastname: 'SARI',
-      email: 'cenk@cenksari.com',
-      token: '12345678901234567890',
-      picture: 'https://i.pravatar.cc/300?img=60',
-    };
-
-    addMember(details);
+    navigate('/home', { replace: true });
   };
 
   return (

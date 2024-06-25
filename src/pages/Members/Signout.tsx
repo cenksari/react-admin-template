@@ -7,16 +7,7 @@ import Spacer from '../../components/Spacer/Spacer';
 import ButtonLink from '../../components/Forms/ButtonLink';
 import Container from '../../components/Containers/Container';
 
-import useMember from '../../hooks/useMember';
-
 const Signout = (): React.JSX.Element => {
-  const { removeMember } = useMember();
-
-  React.useEffect(() => {
-    removeMember();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   return (
     <Single>
       <Container>
@@ -26,7 +17,7 @@ const Signout = (): React.JSX.Element => {
           <Link to='/' className='active-opacity'>
             Click here
           </Link>{' '}
-          to go to home page.
+          to go to sign in page.
         </p>
         <Spacer />
         <div className='flex flex-h-center'>
