@@ -6,21 +6,21 @@ If you like this resource, please follow me on GitHub. Thank you!
 
 ## Screenshots
 
-![Dashboard](https://raw.githubusercontent.com/cenksari/react-admin/master/screenshots/dashboard.png)
+![Dashboard](https://raw.githubusercontent.com/cenksari/react-admin-template/master/screenshots/dashboard.png)
 
-![Products](https://raw.githubusercontent.com/cenksari/react-admin/master/screenshots/products.png)
+![Products](https://raw.githubusercontent.com/cenksari/react-admin-template/master/screenshots/products.png)
 
-![Product](https://raw.githubusercontent.com/cenksari/react-admin/master/screenshots/product.png)
+![Product](https://raw.githubusercontent.com/cenksari/react-admin-template/master/screenshots/product.png)
 
-![Tables](https://raw.githubusercontent.com/cenksari/react-admin/master/screenshots/tables.png)
+![Tables](https://raw.githubusercontent.com/cenksari/react-admin-template/master/screenshots/tables.png)
 
-![Signin](https://raw.githubusercontent.com/cenksari/react-admin/master/screenshots/signin.png)
+![Signin](https://raw.githubusercontent.com/cenksari/react-admin-template/master/screenshots/signin.png)
 
-![Messages](https://raw.githubusercontent.com/cenksari/react-admin/master/screenshots/messages.png)
+![Messages](https://raw.githubusercontent.com/cenksari/react-admin-template/master/screenshots/messages.png)
 
-![Comments](https://raw.githubusercontent.com/cenksari/react-admin/master/screenshots/comments.png)
+![Comments](https://raw.githubusercontent.com/cenksari/react-admin-template/master/screenshots/comments.png)
 
-![Forms](https://raw.githubusercontent.com/cenksari/react-admin/master/screenshots/forms.png)
+![Forms](https://raw.githubusercontent.com/cenksari/react-admin-template/master/screenshots/forms.png)
 
 ## Authors
 
