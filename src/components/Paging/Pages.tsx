@@ -8,7 +8,7 @@ interface IProps {
   currentPage: number;
 }
 
-const Pages = ({ url, totalPages, currentPage }: IProps): React.JSX.Element[] => {
+const Pages = ({ url, totalPages, currentPage }: IProps): any => {
   const pageArray: React.JSX.Element[] = [];
 
   for (let i = 1; i <= totalPages; i += 1) {

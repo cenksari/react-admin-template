@@ -49,7 +49,6 @@ const Comments = (): React.JSX.Element => (
             name='keyword'
             type='text'
             value=''
-            tabIndex={0}
             maxLength={64}
             onChange={() => {}}
             placeholder='Please enter keyword'

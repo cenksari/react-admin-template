@@ -54,7 +54,6 @@ const Forgot = (): React.JSX.Element => {
                   name='email'
                   type='email'
                   value={values.email}
-                  tabIndex={0}
                   maxLength={128}
                   onChange={handleTextChange}
                   placeholder='Please enter your email address'

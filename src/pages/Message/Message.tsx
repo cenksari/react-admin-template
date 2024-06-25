@@ -18,7 +18,7 @@ interface IFormValues {
   message: string;
 }
 
-const Message = (): React.JSX.Element => {
+const Message = (): React.JSX.Element | null => {
   const { id } = useParams();
 
   const [values, setValues] = React.useState<IFormValues>({
@@ -49,7 +49,7 @@ const Message = (): React.JSX.Element => {
   };
 
   if (current === undefined) {
-    return <div />;
+    return null;
   }
 
   return (
@@ -62,7 +62,6 @@ const Message = (): React.JSX.Element => {
               name='keyword'
               type='text'
               value=''
-              tabIndex={0}
               maxLength={64}
               onChange={() => {}}
               placeholder='Please enter keyword'
@@ -243,7 +242,6 @@ const Message = (): React.JSX.Element => {
                     required
                     name='message'
                     value={values.message}
-                    tabIndex={0}
                     maxLength={128}
                     onChange={handleTextChange}
                     placeholder='Please enter your message'

@@ -10,15 +10,15 @@ interface IProps {
   currentPage: number;
 }
 
-const Paging = ({ url, pageSize, totalRows, currentPage }: IProps): React.JSX.Element => {
+const Paging = ({ url, pageSize, totalRows, currentPage }: IProps): React.JSX.Element | null => {
   const totalPages = Math.floor((totalRows + pageSize - 1) / pageSize);
 
   if (totalPages < 1) {
-    return <div />;
+    return null;
   }
 
   if (currentPage > totalPages) {
-    return <div />;
+    return null;
   }
 
   const prevPage = () => {
@@ -178,7 +178,7 @@ const Paging = ({ url, pageSize, totalRows, currentPage }: IProps): React.JSX.El
     );
   }
 
-  return <div />;
+  return null;
 };
 
 export default Paging;

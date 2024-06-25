@@ -45,7 +45,7 @@ const series3 = [
   },
 ];
 
-const Product = (): React.JSX.Element => {
+const Product = (): React.JSX.Element | null => {
   const { id } = useParams();
 
   const [current, setCurrent] = React.useState<IProduct | undefined>();
@@ -57,7 +57,7 @@ const Product = (): React.JSX.Element => {
   }, [id]);
 
   if (current === undefined) {
-    return <div />;
+    return null;
   }
 
   return (
@@ -70,7 +70,6 @@ const Product = (): React.JSX.Element => {
               name='keyword'
               type='text'
               value=''
-              tabIndex={0}
               maxLength={64}
               onChange={() => {}}
               placeholder='Please enter keyword'

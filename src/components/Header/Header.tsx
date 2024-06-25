@@ -7,7 +7,7 @@ import Container from '../Containers/Container';
 
 import useMember from '../../hooks/useMember';
 
-const Header = (): React.JSX.Element => {
+const Header = (): React.JSX.Element | null => {
   const { member } = useMember();
 
   if (member) {
@@ -22,7 +22,7 @@ const Header = (): React.JSX.Element => {
     );
   }
 
-  return <div />;
+  return null;
 };
 
 export default Header;

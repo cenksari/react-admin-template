@@ -132,7 +132,6 @@ const Settings = (): React.JSX.Element => {
                     name='siteName'
                     type='text'
                     value={values.siteName}
-                    tabIndex={0}
                     maxLength={128}
                     onChange={handleTextChange}
                     placeholder='Please enter site name'
@@ -149,7 +148,6 @@ const Settings = (): React.JSX.Element => {
                     name='siteDesc'
                     type='text'
                     value={values.siteDesc}
-                    tabIndex={0}
                     maxLength={128}
                     onChange={handleTextChange}
                     placeholder='Please enter site description'
@@ -193,7 +191,6 @@ const Settings = (): React.JSX.Element => {
                   required
                   name='maintenanceMessage'
                   value={values.maintenanceMessage}
-                  tabIndex={0}
                   maxLength={128}
                   onChange={handleTextChange}
                   placeholder='Please enter maintenance message'
@@ -213,7 +210,6 @@ const Settings = (): React.JSX.Element => {
                     name='fromName'
                     type='text'
                     value={values.fromName}
-                    tabIndex={0}
                     maxLength={128}
                     onChange={handleTextChange}
                     placeholder='Please enter from name'
@@ -230,7 +226,6 @@ const Settings = (): React.JSX.Element => {
                     name='fromMail'
                     type='email'
                     value={values.fromMail}
-                    tabIndex={0}
                     maxLength={128}
                     onChange={handleTextChange}
                     placeholder='Please enter from email'
@@ -249,7 +244,6 @@ const Settings = (): React.JSX.Element => {
                     name='smtpAddress'
                     type='text'
                     value={values.smtpAddress}
-                    tabIndex={0}
                     maxLength={128}
                     onChange={handleTextChange}
                     placeholder='Please enter SMTP address'
@@ -266,7 +260,6 @@ const Settings = (): React.JSX.Element => {
                     name='smtpPort'
                     type='number'
                     value={values.smtpPort}
-                    tabIndex={0}
                     maxLength={3}
                     onChange={handleTextChange}
                     placeholder='Please enter SMTP port'

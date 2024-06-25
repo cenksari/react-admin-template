@@ -4,7 +4,6 @@ interface IProps {
   rows: number;
   name: string;
   value: string;
-  tabIndex: number;
   required: boolean;
   maxLength: number;
   placeholder: string;
@@ -15,7 +14,6 @@ const Input = ({
   rows,
   name,
   value,
-  tabIndex,
   required,
   maxLength,
   placeholder,
@@ -29,7 +27,6 @@ const Input = ({
     placeholder={placeholder}
     required={required}
     maxLength={maxLength}
-    tabIndex={tabIndex}
     value={value}
     autoComplete='off'
     onChange={onChange}

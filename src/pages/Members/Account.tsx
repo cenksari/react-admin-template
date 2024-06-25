@@ -74,7 +74,6 @@ const Account = (): React.JSX.Element => {
                     name='name'
                     type='text'
                     value={values.name}
-                    tabIndex={0}
                     maxLength={32}
                     onChange={handleTextChange}
                     placeholder='Please enter your name'
@@ -91,7 +90,6 @@ const Account = (): React.JSX.Element => {
                     name='lastname'
                     type='text'
                     value={values.lastname}
-                    tabIndex={0}
                     maxLength={32}
                     onChange={handleTextChange}
                     placeholder='Please enter last name'
@@ -113,7 +111,6 @@ const Account = (): React.JSX.Element => {
                     name='email'
                     type='email'
                     value={values.email}
-                    tabIndex={0}
                     maxLength={128}
                     onChange={handleTextChange}
                     placeholder='Please enter email address'
@@ -133,7 +130,6 @@ const Account = (): React.JSX.Element => {
                     name='password'
                     type='password'
                     value='dummypasswordgoeshere'
-                    tabIndex={0}
                     maxLength={32}
                     onChange={handleTextChange}
                     placeholder='Please enter your password'

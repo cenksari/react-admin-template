@@ -114,7 +114,6 @@ const Signin = (): React.JSX.Element => {
                   name='email'
                   type='email'
                   value={values.email}
-                  tabIndex={0}
                   maxLength={128}
                   onChange={handleTextChange}
                   placeholder='Please enter your email address'
@@ -134,7 +133,6 @@ const Signin = (): React.JSX.Element => {
                   name='password'
                   type='password'
                   value={values.password}
-                  tabIndex={-1}
                   maxLength={32}
                   onChange={handleTextChange}
                   placeholder='Please enter your password'
