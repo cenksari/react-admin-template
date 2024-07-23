@@ -2,10 +2,13 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
+// components
 import Stock from './Stock';
 
+// utils
 import { formatCurrency } from '../../utils/Toolbox';
 
+// interfaces
 interface IProps {
   url: string;
   name: string;

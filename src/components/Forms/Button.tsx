@@ -1,5 +1,6 @@
 import React from 'react';
 
+// interfaces
 interface IProps extends React.HTMLProps<HTMLButtonElement> {
   text: string;
   leftIcon?: string;

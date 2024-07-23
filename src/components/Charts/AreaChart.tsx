@@ -3,6 +3,7 @@ import ReactApexChart from 'react-apexcharts';
 
 import { type ApexOptions } from 'apexcharts';
 
+// variables
 const options: ApexOptions = {
   stroke: {
     curve: 'smooth',
@@ -76,6 +77,7 @@ const options: ApexOptions = {
   },
 };
 
+// interfaces
 interface IProps {
   series: {
     name: string;

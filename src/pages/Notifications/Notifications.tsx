@@ -1,5 +1,6 @@
 import React from 'react';
 
+// components
 import Button from '../../components/Forms/Button';
 import Master from '../../components/Layout/Master';
 import Heading from '../../components/Headings/Heading';
@@ -7,6 +8,7 @@ import Container from '../../components/Containers/Container';
 import Table from '../../components/Tables/Table';
 import NotificationRow from '../../components/Tables/NotificationRow';
 
+// data
 import notifications from '../../data/notifications.json';
 
 const Notifications = (): React.JSX.Element => (

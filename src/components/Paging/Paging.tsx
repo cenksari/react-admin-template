@@ -1,8 +1,10 @@
 import React from 'react';
 
+// components
 import Pages from './Pages';
 import PagesSelect from './PagesSelect';
 
+// interfaces
 interface IProps {
   url: string;
   pageSize: number;
@@ -21,7 +23,14 @@ const Paging = ({ url, pageSize, totalRows, currentPage }: IProps): React.JSX.El
     return null;
   }
 
-  const prevPage = () => {
+  /**
+   * Calculates the previous page number based on the current page.
+   * If the current page is greater than 1, it decrements the current page by 1.
+   * If the current page is 1 or less, it sets the previous page to 1.
+   *
+   * @returns The previous page number.
+   */
+  const prevPage = (): number => {
     let prev = currentPage;
 
     if (prev > 1) {
@@ -33,6 +42,13 @@ const Paging = ({ url, pageSize, totalRows, currentPage }: IProps): React.JSX.El
     return prev;
   };
 
+  /**
+   * Calculates the next page number based on the current page and total pages.
+   * If the current page is less than the total pages, it increments the current page by 1.
+   * If the current page is equal to or greater than the total pages, it sets the next page to the total pages.
+   *
+   * @returns The next page number.
+   */
   const nextPage = () => {
     let next = currentPage;
 
@@ -45,6 +61,12 @@ const Paging = ({ url, pageSize, totalRows, currentPage }: IProps): React.JSX.El
     return next;
   };
 
+  /**
+   * Handles the change event of the page select element.
+   * Redirects to the new page based on the selected value.
+   *
+   * @param {React.ChangeEvent<HTMLSelectElement>} e - The change event.
+   */
   const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const curr = e.target.value;
 

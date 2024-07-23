@@ -1,7 +1,9 @@
 import React from 'react';
 
+// components
 import ButtonGroupItem from './ButtonGroupItem';
 
+// interfaces
 interface IProps {
   items: {
     id: number;

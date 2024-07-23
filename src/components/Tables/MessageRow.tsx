@@ -2,9 +2,11 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
+// components
 import Badge from '../Badge/Badge';
 import Checkbox from '../Forms/Checkbox';
 
+// interfaces
 interface IProps {
   id: number;
   name: string;
@@ -24,6 +26,12 @@ const MessageRow = ({
 }: IProps): React.JSX.Element => {
   const [state, setState] = React.useState<boolean>(false);
 
+  /**
+   * Handles the change event of the checkbox.
+   * Updates the state based on the checkbox's checked property.
+   *
+   * @param {React.ChangeEvent<HTMLInputElement>} e - The change event.
+   */
   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setState(e.target.checked);
   };

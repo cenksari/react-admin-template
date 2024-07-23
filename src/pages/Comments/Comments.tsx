@@ -1,5 +1,6 @@
 import React from 'react';
 
+// components
 import Input from '../../components/Forms/Input';
 import Button from '../../components/Forms/Button';
 import Paging from '../../components/Paging/Paging';
@@ -10,8 +11,10 @@ import CommentRow from '../../components/Tables/CommentRow';
 import Container from '../../components/Containers/Container';
 import ButtonGroup from '../../components/ButtonGroup/ButtonGroup';
 
+// data
 import comments from '../../data/comments.json';
 
+// variables
 const buttonGroup = [
   {
     id: 1,

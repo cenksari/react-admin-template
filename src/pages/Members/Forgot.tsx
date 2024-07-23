@@ -2,12 +2,14 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
+// components
 import Input from '../../components/Forms/Input';
 import Button from '../../components/Forms/Button';
 import Single from '../../components/Layout/Single';
 import Spacer from '../../components/Spacer/Spacer';
 import Container from '../../components/Containers/Container';
 
+// interfaces
 interface IFormValues {
   email: string;
 }
@@ -17,6 +19,12 @@ const Forgot = (): React.JSX.Element => {
     email: '',
   });
 
+  /**
+   * Handles the change event for text inputs.
+   * Updates the state with the new value for the corresponding field.
+   *
+   * @param {React.ChangeEvent<HTMLInputElement>} e - The change event.
+   */
   const handleTextChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const { name, value } = e.target;
 
@@ -26,6 +34,12 @@ const Forgot = (): React.JSX.Element => {
     });
   };
 
+  /**
+   * Handles the form submission event.
+   * Prevents the default form submission behavior.
+   *
+   * @param {React.FormEvent} e - The form submission event.
+   */
   const handleSubmit = (e: React.FormEvent): void => {
     e.preventDefault();
   };

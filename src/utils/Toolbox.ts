@@ -1,8 +1,8 @@
 /**
- * Format number as british currency.
+ * Formats a number as a currency string in GBP with the symbol.
  *
- * @param {number} value - Currency
- * @return {string} - Formatted string value
+ * @param {number} value - The number to format.
+ * @returns {string} The formatted currency string.
  */
 export const formatCurrency = (value: number): string =>
   new Intl.NumberFormat('en-GB', {

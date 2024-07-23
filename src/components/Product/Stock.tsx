@@ -1,7 +1,9 @@
 import React from 'react';
 
+// components
 import Badge from '../Badge/Badge';
 
+// interfaces
 interface IProps {
   quantity: number;
 }

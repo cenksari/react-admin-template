@@ -2,11 +2,14 @@ import React from 'react';
 
 import { Link, useLocation } from 'react-router-dom';
 
+// hooks
+import useClickOutside from '../../hooks/useClickOutside';
+
+// components
 import Dropdown from '../Dropdown/Dropdown';
 import DropdownItem from '../Dropdown/DropdownItem';
 
-import useClickOutside from '../../hooks/useClickOutside';
-
+// interfaces
 interface IProps {
   name: string;
   lastname: string;
@@ -20,6 +23,9 @@ const Profile = ({ name, lastname, picture }: IProps): React.JSX.Element => {
 
   const [dropdown, setDropdown] = React.useState<boolean>(false);
 
+  /**
+   * Handles the click outside event to close the dropdown.
+   */
   useClickOutside(wrapperRef, () => {
     setDropdown(false);
   });

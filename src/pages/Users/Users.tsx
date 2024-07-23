@@ -1,5 +1,6 @@
 import React from 'react';
 
+// components
 import Table from '../../components/Tables/Table';
 import Input from '../../components/Forms/Input';
 import Button from '../../components/Forms/Button';
@@ -11,8 +12,10 @@ import Heading from '../../components/Headings/Heading';
 import Container from '../../components/Containers/Container';
 import ButtonGroup from '../../components/ButtonGroup/ButtonGroup';
 
+// data
 import users from '../../data/users.json';
 
+// variables
 const buttonGroup = [
   {
     id: 1,

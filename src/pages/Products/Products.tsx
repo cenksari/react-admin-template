@@ -1,5 +1,6 @@
 import React from 'react';
 
+// components
 import Box from '../../components/Containers/Box';
 import Input from '../../components/Forms/Input';
 import Button from '../../components/Forms/Button';
@@ -11,8 +12,10 @@ import Container from '../../components/Containers/Container';
 import ButtonGroup from '../../components/ButtonGroup/ButtonGroup';
 import BoxContainer from '../../components/Containers/BoxContainer';
 
+// data
 import products from '../../data/products.json';
 
+// variables
 const buttonGroup = [
   {
     id: 1,

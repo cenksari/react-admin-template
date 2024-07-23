@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Routes, Route } from 'react-router-dom';
 
+// pages
 import Signin from '../pages/Members/Signin';
 import Forgot from '../pages/Members/Forgot';
 
@@ -18,25 +19,23 @@ import Comments from '../pages/Comments/Comments';
 import Messages from '../pages/Messages/Messages';
 import Notifications from '../pages/Notifications/Notifications';
 
-const Navigation = (): React.JSX.Element => {
-  return (
-    <Routes>
-      <Route path='/' element={<Signin />} />
-      <Route path='/home' element={<Home />} />
-      <Route path='/users' element={<Users />} />
-      <Route path='/orders' element={<Orders />} />
-      <Route path='/settings' element={<Settings />} />
-      <Route path='/products' element={<Products />} />
-      <Route path='/comments' element={<Comments />} />
-      <Route path='/messages' element={<Messages />} />
-      <Route path='/message/:id' element={<Message />} />
-      <Route path='/product/:id' element={<Product />} />
-      <Route path='/members/account' element={<Account />} />
-      <Route path='/members/notifications' element={<Notifications />} />
-      <Route path='/forgot-password' element={<Forgot />} />
-      <Route path='/members/signout' element={<Signout />} />
-    </Routes>
-  );
-};
+const Navigation = (): React.JSX.Element => (
+  <Routes>
+    <Route path='/' element={<Signin />} />
+    <Route path='/home' element={<Home />} />
+    <Route path='/users' element={<Users />} />
+    <Route path='/orders' element={<Orders />} />
+    <Route path='/settings' element={<Settings />} />
+    <Route path='/products' element={<Products />} />
+    <Route path='/comments' element={<Comments />} />
+    <Route path='/messages' element={<Messages />} />
+    <Route path='/message/:id' element={<Message />} />
+    <Route path='/product/:id' element={<Product />} />
+    <Route path='/members/account' element={<Account />} />
+    <Route path='/members/notifications' element={<Notifications />} />
+    <Route path='/forgot-password' element={<Forgot />} />
+    <Route path='/members/signout' element={<Signout />} />
+  </Routes>
+);
 
 export default Navigation;

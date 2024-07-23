@@ -2,8 +2,10 @@ import React from 'react';
 
 import { useParams } from 'react-router-dom';
 
+// types
 import { type IProduct } from '../../types/types';
 
+// components
 import Box from '../../components/Containers/Box';
 import Input from '../../components/Forms/Input';
 import Button from '../../components/Forms/Button';
@@ -19,11 +21,14 @@ import ButtonLink from '../../components/Forms/ButtonLink';
 import Container from '../../components/Containers/Container';
 import BoxContainer from '../../components/Containers/BoxContainer';
 
+// data
 import orders from '../../data/orders.json';
 import products from '../../data/products.json';
 
+// utils
 import { formatCurrency } from '../../utils/Toolbox';
 
+// variables
 const series1 = [
   {
     name: 'Orders',

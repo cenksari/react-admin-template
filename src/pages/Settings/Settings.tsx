@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
+// components
 import Input from '../../components/Forms/Input';
 import Button from '../../components/Forms/Button';
 import Master from '../../components/Layout/Master';
@@ -12,6 +13,7 @@ import Heading from '../../components/Headings/Heading';
 import Container from '../../components/Containers/Container';
 import ButtonGroup from '../../components/ButtonGroup/ButtonGroup';
 
+// interfaces
 interface IFormValues {
   name: '';
   maintenance: boolean;
@@ -29,6 +31,7 @@ interface IFormValues {
   guestCheckout: boolean;
 }
 
+// variables
 const buttonGroup = [
   {
     id: 1,
@@ -74,6 +77,12 @@ const Settings = (): React.JSX.Element => {
     guestCheckout: true,
   });
 
+  /**
+   * Handles the change event for text inputs and text areas.
+   * Updates the state with the new value for the corresponding field.
+   *
+   * @param {React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>} e - The change event.
+   */
   const handleTextChange = (
     e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>
   ): void => {
@@ -85,6 +94,12 @@ const Settings = (): React.JSX.Element => {
     });
   };
 
+  /**
+   * Handles the change event for radio inputs.
+   * Updates the state with the new value for the corresponding field.
+   *
+   * @param {React.ChangeEvent<HTMLInputElement>} e - The change event.
+   */
   const handleRadioChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const { name, checked } = e.target;
 
@@ -94,6 +109,12 @@ const Settings = (): React.JSX.Element => {
     });
   };
 
+  /**
+   * Handles the form submission event.
+   * Prevents the default form submission behavior.
+   *
+   * @param {React.FormEvent} e - The form submission event.
+   */
   const handleSubmit = (e: React.FormEvent): void => {
     e.preventDefault();
   };

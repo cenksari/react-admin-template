@@ -1,12 +1,15 @@
 import React from 'react';
 
+// hooks
+import useClickOutside from '../../hooks/useClickOutside';
+
+// components
 import Badge from '../Badge/Badge';
 import Checkbox from '../Forms/Checkbox';
 import Dropdown from '../Dropdown/Dropdown';
 import DropdownItem from '../Dropdown/DropdownItem';
 
-import useClickOutside from '../../hooks/useClickOutside';
-
+// interfaces
 interface IProps {
   id: number;
   name: string;
@@ -19,14 +22,22 @@ interface IProps {
 const UserRow = ({ id, name, email, image, country, status }: IProps): React.JSX.Element => {
   const wrapperRef = React.useRef<HTMLTableCellElement>(null);
 
+  const [state, setState] = React.useState<boolean>(false);
   const [dropdown, setDropdown] = React.useState<boolean>(false);
 
-  const [state, setState] = React.useState<boolean>(false);
-
+  /**
+   * Sets the dropdown state to false when clicked outside the wrapperRef element.
+   */
   useClickOutside(wrapperRef, () => {
     setDropdown(false);
   });
 
+  /**
+   * Handles the change event of the checkbox.
+   * Updates the state based on the checkbox's checked property.
+   *
+   * @param {React.ChangeEvent<HTMLInputElement>} e - The change event.
+   */
   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setState(e.target.checked);
   };

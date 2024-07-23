@@ -1,5 +1,6 @@
 import React from 'react';
 
+// components
 import Box from '../../components/Containers/Box';
 import Input from '../../components/Forms/Input';
 import Button from '../../components/Forms/Button';
@@ -15,11 +16,14 @@ import MessageLine from '../../components/Messages/MessageLine';
 import ButtonGroup from '../../components/ButtonGroup/ButtonGroup';
 import BoxContainer from '../../components/Containers/BoxContainer';
 
+// utils
 import { formatCurrency } from '../../utils/Toolbox';
 
+// data
 import messages from '../../data/messages.json';
 import products from '../../data/products.json';
 
+// variables
 const series1 = [
   {
     name: 'Orders',

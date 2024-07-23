@@ -2,10 +2,12 @@ import React from 'react';
 
 import { useLocation } from 'react-router-dom';
 
+// hooks
+import useClickOutside from '../../hooks/useClickOutside';
+
+// components
 import Dropdown from '../Dropdown/Dropdown';
 import DropdownItem from '../Dropdown/DropdownItem';
-
-import useClickOutside from '../../hooks/useClickOutside';
 
 const Menu = (): React.JSX.Element => {
   const location = useLocation();
@@ -14,6 +16,9 @@ const Menu = (): React.JSX.Element => {
 
   const [dropdown, setDropdown] = React.useState<boolean>(false);
 
+  /**
+   * Handles the click outside event to close the dropdown.
+   */
   useClickOutside(wrapperRef, () => {
     setDropdown(false);
   });

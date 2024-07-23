@@ -2,8 +2,10 @@ import React from 'react';
 
 import { useParams } from 'react-router-dom';
 
+// types
 import { type IMessage } from '../../types/types';
 
+// components
 import Input from '../../components/Forms/Input';
 import Button from '../../components/Forms/Button';
 import Master from '../../components/Layout/Master';
@@ -12,8 +14,10 @@ import Textarea from '../../components/Forms/Textarea';
 import Heading from '../../components/Headings/Heading';
 import Container from '../../components/Containers/Container';
 
+// data
 import messages from '../../data/messages.json';
 
+// interfaces
 interface IFormValues {
   message: string;
 }
@@ -33,6 +37,12 @@ const Message = (): React.JSX.Element | null => {
     setCurrent(message);
   }, [id]);
 
+  /**
+   * Handles the change event for text inputs and text areas.
+   * Updates the state with the new value for the corresponding field.
+   *
+   * @param {React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>} e - The change event.
+   */
   const handleTextChange = (
     e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>
   ): void => {
@@ -44,6 +54,12 @@ const Message = (): React.JSX.Element | null => {
     });
   };
 
+  /**
+   * Handles the form submission event.
+   * Prevents the default form submission behavior.
+   *
+   * @param {React.FormEvent} e - The form submission event.
+   */
   const handleSubmit = (e: React.FormEvent): void => {
     e.preventDefault();
   };

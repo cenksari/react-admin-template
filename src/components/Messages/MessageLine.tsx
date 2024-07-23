@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
+// interfaces
 interface IProps {
   id: string;
   from: string;

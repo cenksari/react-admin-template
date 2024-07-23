@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
+// components
 import Input from '../../components/Forms/Input';
 import Button from '../../components/Forms/Button';
 import Spacer from '../../components/Spacer/Spacer';
@@ -10,6 +11,7 @@ import Heading from '../../components/Headings/Heading';
 import ButtonLink from '../../components/Forms/ButtonLink';
 import Container from '../../components/Containers/Container';
 
+// interfaces
 interface IFormValues {
   name: string;
   lastname: string;
@@ -23,6 +25,12 @@ const Account = (): React.JSX.Element => {
     email: 'cenk@cenksari.com',
   });
 
+  /**
+   * Handles the change event for text inputs and text areas.
+   * Updates the state with the new value for the corresponding field.
+   *
+   * @param {React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>} e - The change event.
+   */
   const handleTextChange = (
     e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>
   ): void => {
@@ -34,6 +42,12 @@ const Account = (): React.JSX.Element => {
     });
   };
 
+  /**
+   * Handles the form submission event.
+   * Prevents the default form submission behavior.
+   *
+   * @param {React.FormEvent} e - The form submission event.
+   */
   const handleSubmit = (e: React.FormEvent): void => {
     e.preventDefault();
   };

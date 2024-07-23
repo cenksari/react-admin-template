@@ -1,5 +1,6 @@
 import React from 'react';
 
+// interfaces
 interface IProps {
   header: React.ReactNode;
   children: React.ReactNode;
