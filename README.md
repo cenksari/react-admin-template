@@ -4,11 +4,11 @@ This template is designed to help you kick-start your next React project with a 
 
 **Key Features:**
 
-* **Responsive Design**: The template is fully responsive, ensuring a seamless user experience across various devices and screen sizes.
-* **Customizable**: Tailor the template to your needs with ease, thanks to its modular structure and extensive documentation.
-* **Feature-Rich**: Includes a wide range of pages and components, such as a dashboard, products, tables, signin, messages, comments, and forms.
-* **Easy to Use**: Built with React, the template is easy to integrate and extend, making it perfect for developers of all skill levels.
-* **Regular Updates**: Stay up-to-date with the latest trends and technologies, as the template is regularly updated with new resources and pages.
+- **Responsive Design**: The template is fully responsive, ensuring a seamless user experience across various devices and screen sizes.
+- **Customizable**: Tailor the template to your needs with ease, thanks to its modular structure and extensive documentation.
+- **Feature-Rich**: Includes a wide range of pages and components, such as a dashboard, products, tables, signin, messages, comments, and forms.
+- **Easy to Use**: Built with React, the template is easy to integrate and extend, making it perfect for developers of all skill levels.
+- **Regular Updates**: Stay up-to-date with the latest trends and technologies, as the template is regularly updated with new resources and pages.
 
 **Get Started:**
 
