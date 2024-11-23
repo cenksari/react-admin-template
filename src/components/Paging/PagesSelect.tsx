@@ -1,5 +1,3 @@
-import React from 'react';
-
 // interfaces
 interface IProps {
   totalPages: number;
@@ -7,7 +5,7 @@ interface IProps {
 }
 
 const PagesSelect = ({ totalPages, currentPage }: IProps): any => {
-  const pageArray: React.JSX.Element[] = [];
+  const pageArray: JSX.Element[] = [];
 
   for (let i = 1; i <= totalPages; i += 1) {
     if (i === currentPage) {

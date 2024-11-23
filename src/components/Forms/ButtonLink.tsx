@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Link } from 'react-router-dom';
 
 // interfaces
@@ -17,7 +15,7 @@ const ButtonLink = ({
   leftIcon,
   rightIcon,
   text,
-}: IProps): React.JSX.Element => (
+}: IProps): JSX.Element => (
   <Link to={url} className={`button ${className}`}>
     {leftIcon && (
       <div className='flex flex-v-center flex-h-center'>

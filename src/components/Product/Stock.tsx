@@ -1,5 +1,3 @@
-import React from 'react';
-
 // components
 import Badge from '../Badge/Badge';
 
@@ -8,7 +6,7 @@ interface IProps {
   quantity: number;
 }
 
-const Stock = ({ quantity }: IProps): React.JSX.Element => {
+const Stock = ({ quantity }: IProps): JSX.Element => {
   if (quantity === 0) {
     return <Badge icon='close' text='Out of stock' color='disabled' />;
   }

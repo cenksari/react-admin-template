@@ -1,5 +1,3 @@
-import React from 'react';
-
 // interfaces
 interface IProps {
   type: string;
@@ -8,7 +6,7 @@ interface IProps {
   children: React.ReactNode;
 }
 
-const Box = ({ type, icon, title, children }: IProps): React.JSX.Element => {
+const Box = ({ type, icon, title, children }: IProps): JSX.Element => {
   if (type === 'multi') {
     return (
       <div className='box flex-inline'>

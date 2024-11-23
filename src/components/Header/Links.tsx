@@ -1,8 +1,6 @@
-import React from 'react';
-
 import { Link } from 'react-router-dom';
 
-const Links = (): React.JSX.Element => (
+const Links = (): JSX.Element => (
   <div className='header-links flex flex-grow flex-gap'>
     <Link to='/orders' className='active-opacity'>
       Orders

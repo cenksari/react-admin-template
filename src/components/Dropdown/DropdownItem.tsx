@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Link } from 'react-router-dom';
 
 // interfaces
@@ -10,7 +8,7 @@ interface IProps {
   active?: boolean;
 }
 
-const DropdownItem = ({ url, text, icon, active }: IProps): React.JSX.Element => (
+const DropdownItem = ({ url, text, icon, active }: IProps): JSX.Element => (
   <Link
     className={
       active === true

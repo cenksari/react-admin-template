@@ -1,5 +1,3 @@
-import React from 'react';
-
 // components
 import Pages from './Pages';
 import PagesSelect from './PagesSelect';
@@ -12,7 +10,7 @@ interface IProps {
   currentPage: number;
 }
 
-const Paging = ({ url, pageSize, totalRows, currentPage }: IProps): React.JSX.Element | null => {
+const Paging = ({ url, pageSize, totalRows, currentPage }: IProps): JSX.Element | null => {
   const totalPages = Math.floor((totalRows + pageSize - 1) / pageSize);
 
   if (totalPages < 1) {

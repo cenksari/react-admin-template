@@ -1,5 +1,3 @@
-import React from 'react';
-
 // interfaces
 interface IProps {
   text: string;
@@ -7,7 +5,7 @@ interface IProps {
   color: string;
 }
 
-const Badge = ({ text, icon, color }: IProps): React.JSX.Element => (
+const Badge = ({ text, icon, color }: IProps): JSX.Element => (
   <div className={`badge no-select flex flex-v-center flex-gap-small ${color}`}>
     {icon && <span className='material-symbols-outlined'>{icon}</span>}
     <em>{text}</em>

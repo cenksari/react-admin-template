@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Link } from 'react-router-dom';
 
 // components
@@ -18,7 +16,7 @@ interface IProps {
   orders: number;
 }
 
-const Product = ({ url, name, price, image, stock, orders }: IProps): React.JSX.Element => (
+const Product = ({ url, name, price, image, stock, orders }: IProps): JSX.Element => (
   <Link to={url} className='product active-opacity'>
     <div className='cover image' style={{ backgroundImage: `url('${image}')` }} />
     <span className='name'>{name}</span>

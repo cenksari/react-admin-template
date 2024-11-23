@@ -1,5 +1,3 @@
-import React from 'react';
-
 // interfaces
 interface IProps extends React.HTMLProps<HTMLButtonElement> {
   text: string;
@@ -19,7 +17,7 @@ const Button = ({
   rightIcon,
   disabled = false,
   separator = false,
-}: IProps): React.JSX.Element => (
+}: IProps): JSX.Element => (
   <button
     type={type === 'button' ? 'button' : 'submit'}
     className={`button ${className}`}

@@ -1,5 +1,3 @@
-import React from 'react';
-
 // components
 import Box from '../../components/Containers/Box';
 import Input from '../../components/Forms/Input';
@@ -65,7 +63,7 @@ const buttonGroup = [
   },
 ];
 
-const Home = (): React.JSX.Element => (
+const Home = (): JSX.Element => (
   <Master>
     <Container>
       <Heading text='Dashboard'>

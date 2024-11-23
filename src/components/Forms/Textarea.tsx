@@ -1,5 +1,3 @@
-import React from 'react';
-
 // interfaces
 interface IProps {
   rows: number;
@@ -19,7 +17,7 @@ const Input = ({
   maxLength,
   placeholder,
   onChange = () => {},
-}: IProps): React.JSX.Element => (
+}: IProps): JSX.Element => (
   <textarea
     rows={rows}
     name={name}

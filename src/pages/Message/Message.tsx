@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 
 import { useParams } from 'react-router-dom';
 
@@ -22,16 +22,16 @@ interface IFormValues {
   message: string;
 }
 
-const Message = (): React.JSX.Element | null => {
+const Message = (): JSX.Element | null => {
   const { id } = useParams();
 
-  const [values, setValues] = React.useState<IFormValues>({
+  const [values, setValues] = useState<IFormValues>({
     message: '',
   });
 
-  const [current, setCurrent] = React.useState<IMessage | undefined>();
+  const [current, setCurrent] = useState<IMessage | undefined>();
 
-  React.useEffect(() => {
+  useEffect(() => {
     const message = messages.find((item) => item.id === Number(id));
 
     setCurrent(message);

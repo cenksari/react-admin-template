@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Link } from 'react-router-dom';
 
 // interfaces
@@ -10,7 +8,7 @@ interface IProps {
 }
 
 const Pages = ({ url, totalPages, currentPage }: IProps): any => {
-  const pageArray: React.JSX.Element[] = [];
+  const pageArray: JSX.Element[] = [];
 
   for (let i = 1; i <= totalPages; i += 1) {
     if (i === currentPage) {

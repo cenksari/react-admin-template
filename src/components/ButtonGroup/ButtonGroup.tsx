@@ -1,5 +1,3 @@
-import React from 'react';
-
 // components
 import ButtonGroupItem from './ButtonGroupItem';
 
@@ -13,7 +11,7 @@ interface IProps {
   }[];
 }
 
-const ButtonGroup = ({ items }: IProps): React.JSX.Element => (
+const ButtonGroup = ({ items }: IProps): JSX.Element => (
   <ul className='button-group flex-inline no-select scroller-horizontal'>
     {items.map((item) => (
       <ButtonGroupItem key={item.id} url={item.url} text={item.text} active={item.active} />

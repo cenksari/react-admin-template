@@ -1,5 +1,3 @@
-import React from 'react';
-
 // interfaces
 interface IProps {
   name: string;
@@ -13,7 +11,7 @@ const Checkbox = ({
   checked = false,
   placeholder,
   onChange = () => {},
-}: IProps): React.JSX.Element => (
+}: IProps): JSX.Element => (
   <div className='checkbox'>
     <div className='radio-container flex flex-v-center'>
       <label className='radio blue'>

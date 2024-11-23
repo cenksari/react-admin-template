@@ -1,5 +1,3 @@
-import React from 'react';
-
 // components
 import Input from '../../components/Forms/Input';
 import Button from '../../components/Forms/Button';
@@ -42,7 +40,7 @@ const buttonGroup = [
   },
 ];
 
-const Comments = (): React.JSX.Element => (
+const Comments = (): JSX.Element => (
   <Master>
     <Container>
       <Heading text='Comments'>

@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
@@ -59,8 +59,8 @@ const buttonGroup = [
   },
 ];
 
-const Settings = (): React.JSX.Element => {
-  const [values, setValues] = React.useState<IFormValues>({
+const Settings = (): JSX.Element => {
+  const [values, setValues] = useState<IFormValues>({
     name: '',
     maintenance: false,
     maintenanceMessage: 'Site is under maintenance. Thank you for your patience.',

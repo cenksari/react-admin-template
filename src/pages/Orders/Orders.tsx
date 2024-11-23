@@ -1,5 +1,3 @@
-import React from 'react';
-
 // components
 import Input from '../../components/Forms/Input';
 import Table from '../../components/Tables/Table';
@@ -49,7 +47,7 @@ const buttonGroup = [
   },
 ];
 
-const Orders = (): React.JSX.Element => (
+const Orders = (): JSX.Element => (
   <Master>
     <Container>
       <Heading text='Orders'>

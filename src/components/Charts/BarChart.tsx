@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactApexChart from 'react-apexcharts';
 
 import { type ApexOptions } from 'apexcharts';
@@ -85,7 +84,7 @@ interface IProps {
   }[];
 }
 
-const BarChart = ({ series }: IProps): React.JSX.Element => (
+const BarChart = ({ series }: IProps): JSX.Element => (
   <ReactApexChart options={options} series={series} type='bar' height={350} />
 );
 

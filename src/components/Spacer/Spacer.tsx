@@ -1,5 +1,3 @@
-import React from 'react';
-
-const Spacer = (): React.JSX.Element => <div className='spacing' />;
+const Spacer = (): JSX.Element => <div className='spacing' />;
 
 export default Spacer;

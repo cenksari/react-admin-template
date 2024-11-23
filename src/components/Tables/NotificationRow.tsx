@@ -1,4 +1,4 @@
-import React from 'react';
+import { useRef, useState } from 'react';
 
 // hooks
 import useClickOutside from '../../hooks/useClickOutside';
@@ -16,11 +16,11 @@ interface IProps {
   message: string;
 }
 
-const NotificationRow = ({ id, date, status, message }: IProps): React.JSX.Element => {
-  const wrapperRef = React.useRef<HTMLTableCellElement>(null);
+const NotificationRow = ({ id, date, status, message }: IProps): JSX.Element => {
+  const wrapperRef = useRef<HTMLTableCellElement>(null);
 
-  const [state, setState] = React.useState<boolean>(false);
-  const [dropdown, setDropdown] = React.useState<boolean>(false);
+  const [state, setState] = useState<boolean>(false);
+  const [dropdown, setDropdown] = useState<boolean>(false);
 
   /**
    * Sets the dropdown state to false when clicked outside the wrapperRef element.
@@ -55,8 +55,9 @@ const NotificationRow = ({ id, date, status, message }: IProps): React.JSX.Eleme
       <td>{message}</td>
       <td ref={wrapperRef} className='flex flex-v-center flex-end flex-gap-small'>
         <span
-          role='button'
           tabIndex={0}
+          role='button'
+          onKeyDown={() => {}}
           className='material-symbols-outlined pointer active-opacity'
           onClick={() => setDropdown(!dropdown)}
         >

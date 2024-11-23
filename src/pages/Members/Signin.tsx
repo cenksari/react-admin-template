@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -17,10 +17,10 @@ interface IFormValues {
   remember: boolean;
 }
 
-const Signin = (): React.JSX.Element => {
+const Signin = (): JSX.Element => {
   const navigate = useNavigate();
 
-  const [values, setValues] = React.useState<IFormValues>({
+  const [values, setValues] = useState<IFormValues>({
     email: '',
     password: '',
     remember: false,

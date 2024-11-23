@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
@@ -16,15 +16,8 @@ interface IProps {
   attachments: boolean;
 }
 
-const MessageRow = ({
-  id,
-  name,
-  image,
-  subject,
-  status,
-  attachments,
-}: IProps): React.JSX.Element => {
-  const [state, setState] = React.useState<boolean>(false);
+const MessageRow = ({ id, name, image, subject, status, attachments }: IProps): JSX.Element => {
+  const [state, setState] = useState<boolean>(false);
 
   /**
    * Handles the change event of the checkbox.

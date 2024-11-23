@@ -1,4 +1,4 @@
-import React from 'react';
+import { useRef, useState } from 'react';
 
 import { useLocation } from 'react-router-dom';
 
@@ -9,12 +9,12 @@ import useClickOutside from '../../hooks/useClickOutside';
 import Dropdown from '../Dropdown/Dropdown';
 import DropdownItem from '../Dropdown/DropdownItem';
 
-const Menu = (): React.JSX.Element => {
+const Menu = (): JSX.Element => {
   const location = useLocation();
 
-  const wrapperRef = React.useRef<HTMLDivElement>(null);
+  const wrapperRef = useRef<HTMLDivElement>(null);
 
-  const [dropdown, setDropdown] = React.useState<boolean>(false);
+  const [dropdown, setDropdown] = useState<boolean>(false);
 
   /**
    * Handles the click outside event to close the dropdown.
@@ -30,8 +30,9 @@ const Menu = (): React.JSX.Element => {
   return (
     <div ref={wrapperRef} className='header-dropdown'>
       <div
-        role='button'
         tabIndex={0}
+        role='button'
+        onKeyDown={() => {}}
         className='header-menu flex flex-grow flex-v-center flex-space-between pointer no-select'
         onClick={() => setDropdown(!dropdown)}
       >

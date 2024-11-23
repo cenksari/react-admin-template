@@ -1,4 +1,4 @@
-import React from 'react';
+import { useRef, useState } from 'react';
 
 import { Link, useLocation } from 'react-router-dom';
 
@@ -16,12 +16,12 @@ interface IProps {
   picture?: string;
 }
 
-const Profile = ({ name, lastname, picture }: IProps): React.JSX.Element => {
+const Profile = ({ name, lastname, picture }: IProps): JSX.Element => {
   const location = useLocation();
 
-  const wrapperRef = React.useRef<HTMLDivElement>(null);
+  const wrapperRef = useRef<HTMLDivElement>(null);
 
-  const [dropdown, setDropdown] = React.useState<boolean>(false);
+  const [dropdown, setDropdown] = useState<boolean>(false);
 
   /**
    * Handles the click outside event to close the dropdown.

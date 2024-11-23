@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Link } from 'react-router-dom';
 
 // components
@@ -8,7 +6,7 @@ import Spacer from '../../components/Spacer/Spacer';
 import ButtonLink from '../../components/Forms/ButtonLink';
 import Container from '../../components/Containers/Container';
 
-const Signout = (): React.JSX.Element => (
+const Signout = (): JSX.Element => (
   <Single>
     <Container>
       <h1>Signed out</h1>

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Link } from 'react-router-dom';
 
 // interfaces
@@ -10,7 +8,7 @@ interface IProps {
   subject: string;
 }
 
-const MessageLine = ({ id, from, image, subject }: IProps): React.JSX.Element => (
+const MessageLine = ({ id, from, image, subject }: IProps): JSX.Element => (
   <div className='message flex flex-gap flex-v-center flex-space-between'>
     <div>
       <div className='cover user-photo' style={{ backgroundImage: `url('${image}')` }} />

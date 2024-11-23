@@ -1,5 +1,3 @@
-import React from 'react';
-
 // components
 import Button from '../../components/Forms/Button';
 import Master from '../../components/Layout/Master';
@@ -11,7 +9,7 @@ import NotificationRow from '../../components/Tables/NotificationRow';
 // data
 import notifications from '../../data/notifications.json';
 
-const Notifications = (): React.JSX.Element => (
+const Notifications = (): JSX.Element => (
   <Master>
     <Container>
       <Heading text='Notifications'>

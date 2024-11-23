@@ -1,5 +1,3 @@
-import React from 'react';
-
 // components
 import Input from '../../components/Forms/Input';
 import Table from '../../components/Tables/Table';
@@ -43,7 +41,7 @@ const buttonGroup = [
   },
 ];
 
-const Messages = (): React.JSX.Element => (
+const Messages = (): JSX.Element => (
   <Master>
     <Container>
       <Heading text='Messages'>

@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 
 import { useParams } from 'react-router-dom';
 
@@ -50,12 +50,12 @@ const series3 = [
   },
 ];
 
-const Product = (): React.JSX.Element | null => {
+const Product = (): JSX.Element | null => {
   const { id } = useParams();
 
-  const [current, setCurrent] = React.useState<IProduct | undefined>();
+  const [current, setCurrent] = useState<IProduct | undefined>();
 
-  React.useEffect(() => {
+  useEffect(() => {
     const product = products.find((item) => item.id === Number(id));
 
     setCurrent(product);

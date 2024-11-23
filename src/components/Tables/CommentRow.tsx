@@ -1,5 +1,3 @@
-import React from 'react';
-
 // components
 import Button from '../Forms/Button';
 
@@ -13,7 +11,7 @@ interface IProps {
   status: string;
 }
 
-const CommentRow = ({ name, date, image, product, comment, status }: IProps): React.JSX.Element => (
+const CommentRow = ({ name, date, image, product, comment, status }: IProps): JSX.Element => (
   <div className='comment'>
     <div>
       <div className='flex flex-gap flex-v-center flex-space-between'>

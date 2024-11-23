@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
@@ -14,8 +14,8 @@ interface IFormValues {
   email: string;
 }
 
-const Forgot = (): React.JSX.Element => {
-  const [values, setValues] = React.useState<IFormValues>({
+const Forgot = (): JSX.Element => {
+  const [values, setValues] = useState<IFormValues>({
     email: '',
   });
 

@@ -1,12 +1,10 @@
-import React from 'react';
-
 // interfaces
 interface IProps {
   children: React.ReactNode;
   className?: string;
 }
 
-const Container = ({ children, className }: IProps): React.JSX.Element => (
+const Container = ({ children, className }: IProps): JSX.Element => (
   <div className={className ? `container ${className}` : 'container'}>{children}</div>
 );
 

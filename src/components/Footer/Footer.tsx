@@ -1,6 +1,4 @@
-import React from 'react';
-
-const Footer = (): React.JSX.Element => (
+const Footer = (): JSX.Element => (
   <footer className='no-select'>
     <strong>React Admin v.1.0</strong>
     <div className='flex flex-h-center'>

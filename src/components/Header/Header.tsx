@@ -1,12 +1,10 @@
-import React from 'react';
-
 // components
 import Menu from './Menu';
 import Links from './Links';
 import Profile from './Profile';
 import Container from '../Containers/Container';
 
-const Header = (): React.JSX.Element => (
+const Header = (): JSX.Element => (
   <header>
     <Container className='container flex flex-v-center flex-space-between'>
       <Menu />

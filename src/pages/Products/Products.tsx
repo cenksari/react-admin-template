@@ -1,5 +1,3 @@
-import React from 'react';
-
 // components
 import Box from '../../components/Containers/Box';
 import Input from '../../components/Forms/Input';
@@ -49,7 +47,7 @@ const buttonGroup = [
   },
 ];
 
-const Products = (): React.JSX.Element => (
+const Products = (): JSX.Element => (
   <Master>
     <Container>
       <Heading text='Products'>
