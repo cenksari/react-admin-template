@@ -41,7 +41,7 @@ const buttonGroup = [
   },
 ];
 
-const Messages = (): JSX.Element => (
+const Messages: React.FC = () => (
   <Master>
     <Container>
       <Heading text='Messages'>

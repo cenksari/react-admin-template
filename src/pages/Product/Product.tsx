@@ -50,7 +50,7 @@ const series3 = [
   },
 ];
 
-const Product = (): JSX.Element | null => {
+const Product: React.FC = () => {
   const { id } = useParams();
 
   const [current, setCurrent] = useState<IProduct | undefined>();

@@ -4,7 +4,7 @@ interface IProps {
   children: React.ReactNode;
 }
 
-const Table = ({ header, children }: IProps): JSX.Element => (
+const Table: React.FC<IProps> = ({ header, children }) => (
   <div className='table-containment scroller-horizontal scroller-vertical'>
     <table className='table'>
       <thead>{header}</thead>

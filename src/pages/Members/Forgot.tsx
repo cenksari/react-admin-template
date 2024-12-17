@@ -14,7 +14,7 @@ interface IFormValues {
   email: string;
 }
 
-const Forgot = (): JSX.Element => {
+const Forgot: React.FC = () => {
   const [values, setValues] = useState<IFormValues>({
     email: '',
   });

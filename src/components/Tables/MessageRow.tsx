@@ -16,7 +16,7 @@ interface IProps {
   attachments: boolean;
 }
 
-const MessageRow = ({ id, name, image, subject, status, attachments }: IProps): JSX.Element => {
+const MessageRow: React.FC<IProps> = ({ id, name, image, subject, status, attachments }) => {
   const [state, setState] = useState<boolean>(false);
 
   /**

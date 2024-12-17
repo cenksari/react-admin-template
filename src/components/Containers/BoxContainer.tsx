@@ -4,7 +4,7 @@ interface IProps {
   children: React.ReactNode;
 }
 
-const BoxContainer = ({ boxes, children }: IProps): JSX.Element => (
+const BoxContainer: React.FC<IProps> = ({ boxes, children }) => (
   <div className={`box-container box-container-${boxes}`}>{children}</div>
 );
 

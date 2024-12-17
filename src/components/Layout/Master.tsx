@@ -7,7 +7,7 @@ interface IProps {
   children: React.ReactNode;
 }
 
-const Master = ({ children }: IProps): JSX.Element => (
+const Master: React.FC<IProps> = ({ children }) => (
   <div className='site-frame'>
     <Header />
     {children}

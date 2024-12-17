@@ -17,7 +17,7 @@ interface IFormValues {
   remember: boolean;
 }
 
-const Signin = (): JSX.Element => {
+const Signin: React.FC = () => {
   const navigate = useNavigate();
 
   const [values, setValues] = useState<IFormValues>({

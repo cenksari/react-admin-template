@@ -9,7 +9,7 @@ import useClickOutside from '../../hooks/useClickOutside';
 import Dropdown from '../Dropdown/Dropdown';
 import DropdownItem from '../Dropdown/DropdownItem';
 
-const Menu = (): JSX.Element => {
+const Menu: React.FC = () => {
   const location = useLocation();
 
   const wrapperRef = useRef<HTMLDivElement>(null);

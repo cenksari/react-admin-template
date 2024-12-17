@@ -84,7 +84,7 @@ interface IProps {
   }[];
 }
 
-const AreaChart = ({ series }: IProps): JSX.Element => (
+const AreaChart: React.FC<IProps> = ({ series }) => (
   <ReactApexChart options={options} series={series} type='area' height={350} />
 );
 

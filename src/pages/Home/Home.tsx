@@ -63,7 +63,7 @@ const buttonGroup = [
   },
 ];
 
-const Home = (): JSX.Element => (
+const Home: React.FC = () => (
   <Master>
     <Container>
       <Heading text='Dashboard'>

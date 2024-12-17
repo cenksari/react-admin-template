@@ -9,7 +9,7 @@ interface IProps {
   onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
-const Input = ({
+const Input: React.FC<IProps> = ({
   rows,
   name,
   value,
@@ -17,7 +17,7 @@ const Input = ({
   maxLength,
   placeholder,
   onChange = () => {},
-}: IProps): JSX.Element => (
+}) => (
   <textarea
     rows={rows}
     name={name}

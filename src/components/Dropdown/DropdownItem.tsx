@@ -8,7 +8,7 @@ interface IProps {
   active?: boolean;
 }
 
-const DropdownItem = ({ url, text, icon, active }: IProps): JSX.Element => (
+const DropdownItem: React.FC<IProps> = ({ url, text, icon, active }) => (
   <Link
     className={
       active === true

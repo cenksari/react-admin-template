@@ -6,7 +6,7 @@ import Spacer from '../../components/Spacer/Spacer';
 import ButtonLink from '../../components/Forms/ButtonLink';
 import Container from '../../components/Containers/Container';
 
-const Signout = (): JSX.Element => (
+const Signout: React.FC = () => (
   <Single>
     <Container>
       <h1>Signed out</h1>

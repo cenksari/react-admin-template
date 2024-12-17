@@ -16,7 +16,7 @@ interface IProps {
   picture?: string;
 }
 
-const Profile = ({ name, lastname, picture }: IProps): JSX.Element => {
+const Profile: React.FC<IProps> = ({ name, lastname, picture }) => {
   const location = useLocation();
 
   const wrapperRef = useRef<HTMLDivElement>(null);

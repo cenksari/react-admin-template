@@ -9,7 +9,7 @@ interface IProps extends React.HTMLProps<HTMLButtonElement> {
   type: 'submit' | 'reset' | 'button';
 }
 
-const Button = ({
+const Button: React.FC<IProps> = ({
   type,
   className = 'dark',
   text,
@@ -17,7 +17,7 @@ const Button = ({
   rightIcon,
   disabled = false,
   separator = false,
-}: IProps): JSX.Element => (
+}) => (
   <button
     type={type === 'button' ? 'button' : 'submit'}
     className={`button ${className}`}

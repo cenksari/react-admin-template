@@ -6,7 +6,7 @@ interface IProps {
   children: React.ReactNode;
 }
 
-const Box = ({ type, icon, title, children }: IProps): JSX.Element => {
+const Box: React.FC<IProps> = ({ type, icon, title, children }) => {
   if (type === 'multi') {
     return (
       <div className='box flex-inline'>

@@ -4,7 +4,7 @@ import Links from './Links';
 import Profile from './Profile';
 import Container from '../Containers/Container';
 
-const Header = (): JSX.Element => (
+const Header: React.FC = () => (
   <header>
     <Container className='container flex flex-v-center flex-space-between'>
       <Menu />

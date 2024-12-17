@@ -11,7 +11,7 @@ interface IProps {
   status: string;
 }
 
-const CommentRow = ({ name, date, image, product, comment, status }: IProps): JSX.Element => (
+const CommentRow: React.FC<IProps> = ({ name, date, image, product, comment, status }) => (
   <div className='comment'>
     <div>
       <div className='flex flex-gap flex-v-center flex-space-between'>

@@ -1,3 +1,3 @@
-const Spacer = (): JSX.Element => <div className='spacing' />;
+const Spacer: React.FC = () => <div className='spacing' />;
 
 export default Spacer;

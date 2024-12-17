@@ -4,8 +4,8 @@ interface IProps {
   currentPage: number;
 }
 
-const PagesSelect = ({ totalPages, currentPage }: IProps): any => {
-  const pageArray: JSX.Element[] = [];
+const PagesSelect: React.FC<IProps> = ({ totalPages, currentPage }) => {
+  const pageArray = [];
 
   for (let i = 1; i <= totalPages; i += 1) {
     if (i === currentPage) {

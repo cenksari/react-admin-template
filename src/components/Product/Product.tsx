@@ -16,7 +16,7 @@ interface IProps {
   orders: number;
 }
 
-const Product = ({ url, name, price, image, stock, orders }: IProps): JSX.Element => (
+const Product: React.FC<IProps> = ({ url, name, price, image, stock, orders }) => (
   <Link to={url} className='product active-opacity'>
     <div className='cover image' style={{ backgroundImage: `url('${image}')` }} />
     <span className='name'>{name}</span>

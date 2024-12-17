@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const Links = (): JSX.Element => (
+const Links: React.FC = () => (
   <div className='header-links flex flex-grow flex-gap'>
     <Link to='/orders' className='active-opacity'>
       Orders

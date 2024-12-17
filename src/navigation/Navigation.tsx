@@ -17,7 +17,7 @@ import Comments from '../pages/Comments/Comments';
 import Messages from '../pages/Messages/Messages';
 import Notifications from '../pages/Notifications/Notifications';
 
-const Navigation = (): JSX.Element => (
+const Navigation: React.FC = () => (
   <Routes>
     <Route path='/' element={<Signin />} />
     <Route path='/home' element={<Home />} />

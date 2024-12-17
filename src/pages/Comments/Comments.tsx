@@ -40,7 +40,7 @@ const buttonGroup = [
   },
 ];
 
-const Comments = (): JSX.Element => (
+const Comments: React.FC = () => (
   <Master>
     <Container>
       <Heading text='Comments'>

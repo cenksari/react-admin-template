@@ -47,7 +47,7 @@ const buttonGroup = [
   },
 ];
 
-const Orders = (): JSX.Element => (
+const Orders: React.FC = () => (
   <Master>
     <Container>
       <Heading text='Orders'>

@@ -19,7 +19,7 @@ interface IProps {
   status: boolean;
 }
 
-const UserRow = ({ id, name, email, image, country, status }: IProps): JSX.Element => {
+const UserRow: React.FC<IProps> = ({ id, name, email, image, country, status }) => {
   const wrapperRef = useRef<HTMLTableCellElement>(null);
 
   const [state, setState] = useState<boolean>(false);

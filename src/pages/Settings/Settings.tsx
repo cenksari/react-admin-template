@@ -59,7 +59,7 @@ const buttonGroup = [
   },
 ];
 
-const Settings = (): JSX.Element => {
+const Settings: React.FC = () => {
   const [values, setValues] = useState<IFormValues>({
     name: '',
     maintenance: false,

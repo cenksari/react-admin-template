@@ -6,7 +6,7 @@ interface IProps {
   quantity: number;
 }
 
-const Stock = ({ quantity }: IProps): JSX.Element => {
+const Stock: React.FC<IProps> = ({ quantity }) => {
   if (quantity === 0) {
     return <Badge icon='close' text='Out of stock' color='disabled' />;
   }

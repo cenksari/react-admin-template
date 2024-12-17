@@ -4,7 +4,7 @@ interface IProps {
   className?: string;
 }
 
-const Container = ({ children, className }: IProps): JSX.Element => (
+const Container: React.FC<IProps> = ({ children, className }) => (
   <div className={className ? `container ${className}` : 'container'}>{children}</div>
 );
 

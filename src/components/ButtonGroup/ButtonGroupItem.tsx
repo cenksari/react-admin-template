@@ -7,7 +7,7 @@ interface IProps {
   active?: boolean;
 }
 
-const ButtonGroupItem = ({ url, text, active = false }: IProps): JSX.Element => (
+const ButtonGroupItem: React.FC<IProps> = ({ url, text, active = false }) => (
   <li className={active ? 'active' : ''}>
     <Link to={url}>{text}</Link>
   </li>

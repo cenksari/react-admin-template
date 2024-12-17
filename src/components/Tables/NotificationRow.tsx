@@ -16,7 +16,7 @@ interface IProps {
   message: string;
 }
 
-const NotificationRow = ({ id, date, status, message }: IProps): JSX.Element => {
+const NotificationRow: React.FC<IProps> = ({ id, date, status, message }) => {
   const wrapperRef = useRef<HTMLTableCellElement>(null);
 
   const [state, setState] = useState<boolean>(false);

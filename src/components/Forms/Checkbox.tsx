@@ -6,12 +6,12 @@ interface IProps {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Checkbox = ({
+const Checkbox: React.FC<IProps> = ({
   name,
   checked = false,
   placeholder,
   onChange = () => {},
-}: IProps): JSX.Element => (
+}) => (
   <div className='checkbox'>
     <div className='radio-container flex flex-v-center'>
       <label className='radio blue'>

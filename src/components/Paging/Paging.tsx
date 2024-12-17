@@ -10,7 +10,7 @@ interface IProps {
   currentPage: number;
 }
 
-const Paging = ({ url, pageSize, totalRows, currentPage }: IProps): JSX.Element | null => {
+const Paging: React.FC<IProps> = ({ url, pageSize, totalRows, currentPage }) => {
   const totalPages = Math.floor((totalRows + pageSize - 1) / pageSize);
 
   if (totalPages < 1) {

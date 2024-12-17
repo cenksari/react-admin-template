@@ -22,7 +22,7 @@ interface IProps {
   status: string;
 }
 
-const OrderRow = ({ id, date, user, products, totalPrice, status }: IProps): JSX.Element => {
+const OrderRow: React.FC<IProps> = ({ id, date, user, products, totalPrice, status }) => {
   const wrapperRef = useRef<HTMLTableCellElement>(null);
 
   const [state, setState] = useState<boolean>(false);

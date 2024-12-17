@@ -9,7 +9,7 @@ import NotificationRow from '../../components/Tables/NotificationRow';
 // data
 import notifications from '../../data/notifications.json';
 
-const Notifications = (): JSX.Element => (
+const Notifications: React.FC = () => (
   <Master>
     <Container>
       <Heading text='Notifications'>

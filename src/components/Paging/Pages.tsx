@@ -7,8 +7,8 @@ interface IProps {
   currentPage: number;
 }
 
-const Pages = ({ url, totalPages, currentPage }: IProps): any => {
-  const pageArray: JSX.Element[] = [];
+const Pages: React.FC<IProps> = ({ url, totalPages, currentPage }) => {
+  const pageArray = [];
 
   for (let i = 1; i <= totalPages; i += 1) {
     if (i === currentPage) {

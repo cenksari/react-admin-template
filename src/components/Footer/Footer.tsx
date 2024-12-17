@@ -1,4 +1,4 @@
-const Footer = (): JSX.Element => (
+const Footer: React.FC = () => (
   <footer className='no-select'>
     <strong>React Admin v.1.0</strong>
     <div className='flex flex-h-center'>

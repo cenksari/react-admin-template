@@ -11,7 +11,7 @@ interface IProps {
   }[];
 }
 
-const ButtonGroup = ({ items }: IProps): JSX.Element => (
+const ButtonGroup: React.FC<IProps> = ({ items }) => (
   <ul className='button-group flex-inline no-select scroller-horizontal'>
     {items.map((item) => (
       <ButtonGroupItem key={item.id} url={item.url} text={item.text} active={item.active} />

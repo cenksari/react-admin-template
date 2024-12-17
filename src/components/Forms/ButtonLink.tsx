@@ -9,13 +9,7 @@ interface IProps {
   className?: string;
 }
 
-const ButtonLink = ({
-  url,
-  className = 'dark',
-  leftIcon,
-  rightIcon,
-  text,
-}: IProps): JSX.Element => (
+const ButtonLink: React.FC<IProps> = ({ url, className = 'dark', leftIcon, rightIcon, text }) => (
   <Link to={url} className={`button ${className}`}>
     {leftIcon && (
       <div className='flex flex-v-center flex-h-center'>

@@ -18,7 +18,7 @@ interface IFormValues {
   email: string;
 }
 
-const Account = (): JSX.Element => {
+const Account: React.FC = () => {
   const [values, setValues] = useState<IFormValues>({
     name: 'Cenk',
     lastname: 'SARI',

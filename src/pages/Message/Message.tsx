@@ -22,7 +22,7 @@ interface IFormValues {
   message: string;
 }
 
-const Message = (): JSX.Element | null => {
+const Message: React.FC = () => {
   const { id } = useParams();
 
   const [values, setValues] = useState<IFormValues>({
