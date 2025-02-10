@@ -6,16 +6,18 @@ interface IProps {
   text: string;
   icon?: string;
   active?: boolean;
+  onClick?: () => void;
 }
 
-const DropdownItem: React.FC<IProps> = ({ url, text, icon, active }) => (
+const DropdownItem: React.FC<IProps> = ({ url, text, icon, active, onClick }) => (
   <Link
     className={
-      active === true
+      active
         ? 'flex flex-gap-medium flex-v-center active'
         : 'flex flex-gap-medium flex-v-center passive active-opacity'
     }
     to={url}
+    onClick={onClick}
   >
     {icon && <span className='material-symbols-outlined'>{icon}</span>}
     <em>{text}</em>
