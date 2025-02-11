@@ -16,6 +16,17 @@ const Menu: React.FC = () => {
 
   const [dropdown, setDropdown] = useState<boolean>(false);
 
+  const menuItems = [
+    { url: '/home', text: 'Dashboard' },
+    { url: '/users', text: 'Users' },
+    { url: '/orders', text: 'Orders' },
+    { url: '/products', text: 'Products' },
+    { url: '/messages', text: 'Messages' },
+    { url: '/comments', text: 'Comments' },
+    { url: '/settings', text: 'Settings' },
+    { url: '/settings/admins', text: 'Administrators' },
+  ];
+
   /**
    * Handles the click outside event to close the dropdown.
    */
@@ -27,33 +38,37 @@ const Menu: React.FC = () => {
 
   const splitLocation = pathname.split('/');
 
+  const [menuLabel, setMenuLabel] = useState<string>(() => {
+    return menuItems.find((item) => item.url === pathname)?.text || 'Dashboard';
+  });
+
+  const handleMenuItemClick = (text: string) => {
+    setMenuLabel(text);
+    setDropdown(false);
+  };
+
   return (
     <div ref={wrapperRef} className='header-dropdown'>
       <div
         tabIndex={0}
         role='button'
-        onKeyDown={() => {}}
         className='header-menu flex flex-grow flex-v-center flex-space-between pointer no-select'
         onClick={() => setDropdown(!dropdown)}
       >
-        <span className='value'>Dashboard</span>
+        <span className='value'>{menuLabel}</span>
         <span className='material-symbols-outlined'>expand_all</span>
       </div>
       {dropdown && (
         <Dropdown color='gray'>
-          <DropdownItem url='/home' text='Dashboard' active={splitLocation[1] === 'home'} />
-          <DropdownItem url='/users' text='Users' active={splitLocation[1] === 'users'} />
-          <DropdownItem url='/orders' text='Orders' active={splitLocation[1] === 'orders'} />
-          <DropdownItem url='/products' text='Products' active={splitLocation[1] === 'products'} />
-          <DropdownItem url='/messages' text='Messages' active={splitLocation[1] === 'messages'} />
-          <DropdownItem url='/comments' text='Comments' active={splitLocation[1] === 'comments'} />
-          <hr />
-          <DropdownItem url='/settings' text='Settings' active={splitLocation[1] === 'settings'} />
-          <DropdownItem
-            url='/settings/admins'
-            text='Administrators'
-            active={splitLocation[1] === 'admins'}
-          />
+          {menuItems.map((item) => (
+            <DropdownItem
+              key={item.url}
+              url={item.url}
+              text={item.text}
+              active={splitLocation[1] === item.url.split('/')[1]}
+              onClick={() => handleMenuItemClick(item.text)}
+            />
+          ))}
         </Dropdown>
       )}
     </div>
