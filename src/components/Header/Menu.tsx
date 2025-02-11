@@ -52,6 +52,7 @@ const Menu: React.FC = () => {
       <div
         tabIndex={0}
         role='button'
+        onKeyDown={() => {}}
         className='header-menu flex flex-grow flex-v-center flex-space-between pointer no-select'
         onClick={() => setDropdown(!dropdown)}
       >
