@@ -19,7 +19,7 @@ const Paging: React.FC<IProps> = ({ pageSize, totalRows, currentPage }) => {
 
   const totalPages = Math.ceil(totalRows / pageSize);
 
-  if (totalPages < 1 || currentPage > totalPages) return null;
+  if (totalPages <= 1 || currentPage > totalPages) return null;
 
   /**
    * Navigates to a specific page number.
@@ -42,32 +42,23 @@ const Paging: React.FC<IProps> = ({ pageSize, totalRows, currentPage }) => {
   const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>): void | Promise<void> =>
     navigate(buildUrl(Number(e.target.value)));
 
+  const renderNavButton = (page: number, label: string, title: string, disabled: boolean) => (
+    <li className={disabled ? 'disabled' : ''}>
+      {disabled ? (
+        <span className='material-symbols-outlined'>{label}</span>
+      ) : (
+        <Link to={buildUrl(page)} title={title}>
+          <span className='material-symbols-outlined'>{label}</span>
+        </Link>
+      )}
+    </li>
+  );
+
   return (
     <div className='paging flex flex-v-center flex-h-center no-select'>
       <ul className='flex flex-v-center flex-h-center'>
-        {currentPage === 1 ? (
-          <>
-            <li className='disabled'>
-              <span className='material-symbols-outlined'>skip_previous</span>
-            </li>
-            <li className='disabled'>
-              <span className='material-symbols-outlined'>navigate_before</span>
-            </li>
-          </>
-        ) : (
-          <>
-            <li>
-              <Link to={buildUrl(1)} title='First page'>
-                <span className='material-symbols-outlined'>skip_previous</span>
-              </Link>
-            </li>
-            <li>
-              <Link to={buildUrl(currentPage - 1)} title='Previous page'>
-                <span className='material-symbols-outlined'>navigate_before</span>
-              </Link>
-            </li>
-          </>
-        )}
+        {renderNavButton(1, 'skip_previous', 'First page', currentPage === 1)}
+        {renderNavButton(currentPage - 1, 'navigate_before', 'Previous page', currentPage === 1)}
 
         {totalPages > 8 ? (
           <li className='select-container'>
@@ -86,29 +77,8 @@ const Paging: React.FC<IProps> = ({ pageSize, totalRows, currentPage }) => {
           <Pages urlBuilder={buildUrl} totalPages={totalPages} currentPage={currentPage} />
         )}
 
-        {currentPage >= totalPages ? (
-          <>
-            <li className='disabled'>
-              <span className='material-symbols-outlined'>navigate_next</span>
-            </li>
-            <li className='disabled'>
-              <span className='material-symbols-outlined'>skip_next</span>
-            </li>
-          </>
-        ) : (
-          <>
-            <li>
-              <Link to={buildUrl(currentPage + 1)} title='Next page'>
-                <span className='material-symbols-outlined'>navigate_next</span>
-              </Link>
-            </li>
-            <li>
-              <Link to={buildUrl(totalPages)} title='Last page'>
-                <span className='material-symbols-outlined'>skip_next</span>
-              </Link>
-            </li>
-          </>
-        )}
+        {renderNavButton(currentPage + 1, 'navigate_next', 'Next page', currentPage >= totalPages)}
+        {renderNavButton(totalPages, 'skip_next', 'Last page', currentPage >= totalPages)}
       </ul>
     </div>
   );
