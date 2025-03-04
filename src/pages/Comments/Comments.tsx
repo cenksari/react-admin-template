@@ -47,9 +47,9 @@ const Comments: React.FC = () => (
         <form className='flex flex-gap' noValidate>
           <Input
             required
-            name='keyword'
-            type='text'
             value=''
+            type='text'
+            name='keyword'
             maxLength={64}
             onChange={() => {}}
             placeholder='Please enter keyword'
@@ -69,13 +69,13 @@ const Comments: React.FC = () => (
             name={comment.name}
             date={comment.date}
             image={comment.image}
+            status={comment.status}
             product={comment.product}
             comment={comment.comment}
-            status={comment.status}
           />
         ))}
 
-      <Paging url='/comments' pageSize={30} totalRows={150} currentPage={1} />
+      <Paging pageSize={30} totalRows={150} currentPage={1} />
     </Container>
   </Master>
 );

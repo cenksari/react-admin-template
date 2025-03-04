@@ -54,9 +54,9 @@ const Orders: React.FC = () => (
         <form className='flex flex-gap' noValidate>
           <Input
             required
-            name='keyword'
-            type='text'
             value=''
+            type='text'
+            name='keyword'
             maxLength={64}
             onChange={() => {}}
             placeholder='Please enter keyword'
@@ -86,18 +86,18 @@ const Orders: React.FC = () => (
         {orders &&
           orders.map((order) => (
             <OrderRow
-              key={order.id}
               id={order.id}
+              key={order.id}
               date={order.date}
               user={order.user}
+              status={order.status}
               products={order.products}
               totalPrice={order.totalPrice}
-              status={order.status}
             />
           ))}
       </Table>
 
-      <Paging url='/orders' pageSize={30} totalRows={150} currentPage={1} />
+      <Paging pageSize={30} totalRows={150} currentPage={1} />
     </Container>
   </Master>
 );

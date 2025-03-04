@@ -48,9 +48,9 @@ const Users: React.FC = () => (
         <form className='flex flex-gap' noValidate>
           <Input
             required
-            name='keyword'
-            type='text'
             value=''
+            type='text'
+            name='keyword'
             maxLength={64}
             onChange={() => {}}
             placeholder='Please enter keyword'
@@ -79,18 +79,18 @@ const Users: React.FC = () => (
         {users &&
           users.map((user) => (
             <UserRow
-              key={user.id}
               id={user.id}
+              key={user.id}
               name={user.name}
               email={user.email}
               image={user.image}
-              country={user.country}
               status={user.status}
+              country={user.country}
             />
           ))}
       </Table>
 
-      <Paging url='/users' pageSize={30} totalRows={150} currentPage={1} />
+      <Paging pageSize={30} totalRows={150} currentPage={1} />
     </Container>
   </Master>
 );

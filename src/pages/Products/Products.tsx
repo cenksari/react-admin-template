@@ -54,9 +54,9 @@ const Products: React.FC = () => (
         <form className='flex flex-gap' noValidate>
           <Input
             required
-            name='keyword'
-            type='text'
             value=''
+            type='text'
+            name='keyword'
             maxLength={64}
             onChange={() => {}}
             placeholder='Please enter keyword'
@@ -85,7 +85,7 @@ const Products: React.FC = () => (
           ))}
       </BoxContainer>
 
-      <Paging url='/products' pageSize={30} totalRows={150} currentPage={1} />
+      <Paging pageSize={30} totalRows={150} currentPage={1} />
     </Container>
   </Master>
 );

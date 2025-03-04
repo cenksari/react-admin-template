@@ -48,9 +48,9 @@ const Messages: React.FC = () => (
         <form className='flex flex-gap' noValidate>
           <Input
             required
-            name='keyword'
-            type='text'
             value=''
+            type='text'
+            name='keyword'
             maxLength={64}
             onChange={() => {}}
             placeholder='Please enter keyword'
@@ -79,18 +79,18 @@ const Messages: React.FC = () => (
         {messages &&
           messages.map((message) => (
             <MessageRow
-              key={message.id}
               id={message.id}
-              name={`${message.name} ${message.lastname}`}
+              key={message.id}
               image={message.image}
-              subject={message.subject}
               status={message.status}
+              subject={message.subject}
               attachments={message.attachments}
+              name={`${message.name} ${message.lastname}`}
             />
           ))}
       </Table>
 
-      <Paging url='/messages' pageSize={30} totalRows={100} currentPage={1} />
+      <Paging pageSize={30} totalRows={100} currentPage={1} />
     </Container>
   </Master>
 );

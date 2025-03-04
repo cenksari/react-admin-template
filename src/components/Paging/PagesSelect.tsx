@@ -8,19 +8,11 @@ const PagesSelect: React.FC<IProps> = ({ totalPages, currentPage }) => {
   const pageArray = [];
 
   for (let i = 1; i <= totalPages; i += 1) {
-    if (i === currentPage) {
-      pageArray.push(
-        <option key={i} value={i} disabled>
-          {i}
-        </option>
-      );
-    } else {
-      pageArray.push(
-        <option key={i} value={i}>
-          {i}
-        </option>
-      );
-    }
+    pageArray.push(
+      <option key={i} value={i} disabled={i === currentPage}>
+        {i}
+      </option>
+    );
   }
 
   return pageArray;

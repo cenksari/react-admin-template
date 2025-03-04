@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom';
 
 // interfaces
 interface IProps {
-  url: string;
   totalPages: number;
   currentPage: number;
+  urlBuilder: (pn: number) => string;
 }
 
-const Pages: React.FC<IProps> = ({ url, totalPages, currentPage }) => {
+const Pages: React.FC<IProps> = ({ totalPages, currentPage, urlBuilder }) => {
   const pageArray = [];
 
   for (let i = 1; i <= totalPages; i += 1) {
@@ -20,7 +20,7 @@ const Pages: React.FC<IProps> = ({ url, totalPages, currentPage }) => {
     } else {
       pageArray.push(
         <li key={i}>
-          <Link to={`${url}?page=${i}`}>
+          <Link to={urlBuilder(i)}>
             <span>{i}</span>
           </Link>
         </li>
